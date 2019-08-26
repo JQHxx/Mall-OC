@@ -1,0 +1,28 @@
+//
+//  Mall-header.pch
+//  Mall
+//
+//  Created by midland on 2019/8/26.
+//  Copyright © 2019 JQHxx. All rights reserved.
+//
+
+// 只会在OC的代码中被引用
+#ifdef __OBJC__
+
+#pragma mark: - 通用
+#import "API.h"
+#import "Config.h"
+#import "Singleton.h"
+#import "HttpRequest.h"
+
+#pragma mark: - Extension
+
+#pragma mark: - 第三方
+
+#pragma mark: - 其他
+#ifdef DEBUG
+// 如果要禁止
+// #define NULLSAFE_ENABLED 0
+#endif
+
+#endif

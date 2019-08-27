@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^SuccessBlock)(id result);
-typedef void(^FailureBlock)(NSString *result);
+typedef void(^FailureBlock)(NSError *error);
+typedef void(^ProgressBlock)(NSProgress *progress);
 
 @class BaseRequest;
 @interface HttpRequest : NSObject
@@ -20,15 +21,10 @@ typedef void(^FailureBlock)(NSString *result);
  * common request
  */
 - (void) sendRequest:(BaseRequest *) request
+            progress: (ProgressBlock) progressBlock
              success: (SuccessBlock) successBlock
              failure: (FailureBlock) failureBlock;
 
-/**
- * upload file
- */
-- (void) uploadRequest:(BaseRequest *) request
-               success: (SuccessBlock) successBlock
-               failure: (FailureBlock) failureBlock;
 
 @end
 

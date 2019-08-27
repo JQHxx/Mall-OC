@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 设置主窗口,并设置根控制器
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    [self.window makeKeyAndVisible];
+    MainTabBarController *rootViewController = [[MainTabBarController alloc] init];
+    [self.window setRootViewController:rootViewController];
+    [self setUpNavigationBarAppearance];
     return YES;
 }
 
@@ -45,6 +52,36 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark: - Private methods
+/**
+ *  设置navigationBar样式
+ */
+- (void)setUpNavigationBarAppearance {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    UIColor *backgroundColor = [UIColor whiteColor];
+    NSDictionary *textAttributes = nil;
+    UIColor *labelColor =   [UIColor blackColor];
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        textAttributes = @{
+                           NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName : labelColor,
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        textAttributes = @{
+                           UITextAttributeFont : [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor : labelColor,
+                           UITextAttributeTextShadowColor : [UIColor clearColor],
+                           UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    [navigationBarAppearance setBarTintColor:backgroundColor];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
 

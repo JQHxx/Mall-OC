@@ -7,17 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 typedef NS_ENUM(NSInteger,RequestType) {
     RequestTypeGET = 0,
     RequestTypePOST = 1,
     RequestTypeUpload = 2,
-};
-
-const NSString *RequestTypesMap[] = {
-    [RequestTypeGET] = @"GET",
-    [RequestTypePOST] = @"POST",
-    [RequestTypeUpload] = @"UPLOAD",
 };
 
 @interface BaseRequest : NSObject
@@ -31,9 +26,11 @@ const NSString *RequestTypesMap[] = {
 // 请求参数
 @property (nonatomic, strong) NSDictionary *params;
 // 请求的Header头
-@property (nonatomic, strong) NSDictionary *header;
+@property (nonatomic, strong) NSDictionary<NSString *, NSString *> *header;
 // 超时时间
 @property (nonatomic, assign) NSTimeInterval timeout;
+// 文件参数
+@property (nonatomic, copy) void (^filesData)(id<AFMultipartFormData>);
 
 @end
 

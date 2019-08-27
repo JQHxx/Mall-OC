@@ -8,6 +8,7 @@
 
 #import "BaseRequest.h"
 
+
 @implementation BaseRequest
 
 - (NSString *)baseURL {
@@ -18,7 +19,7 @@
     return @"";
 }
 
-- (NSDictionary *)header {
+- (NSDictionary<NSString *, NSString *> *)header {
     return [NSDictionary dictionary];
 }
 

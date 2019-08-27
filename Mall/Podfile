@@ -1,28 +1,27 @@
 platform :ios, '9.0'
 # use_frameworks!
-
-# source "https://gitee.com/aiwoba/Specs.git"
+inhibit_all_warnings!
 
 target 'Mall' do
   
   pod 'CYLTabBarController', '~> 1.24.0'
   # OC风格自动布局 参考https://www.jianshu.com/p/f8d1a660ec30
-  pod 'PureLayout'
+  pod 'PureLayout', '~> 3.1.4'
   pod 'AFNetworking', '~> 3.0'
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'MJRefresh', '~> 3.1.16'
-  pod 'MJExtension'
+  pod 'MJExtension', '~> 3.1.0'
   pod 'TYPagerController', '~> 2.1.2'
   pod 'AFNetworking', '~> 3.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'SDCycleScrollView','~> 1.80'
-  pod 'NullSafe'
+  pod 'NullSafe', '~> 2.0'
   # 资源选择
   # pod 'ZLPhotoBrowser'
-  pod 'TZImagePickerController'
+  pod 'TZImagePickerController', '~> 3.2.1'
   # 图片浏览 
-  pod 'LBPhotoBrowser'
+  # pod 'LBPhotoBrowser', '~> 2.2.2'
 
   target 'MallTests' do
     inherit! :search_paths

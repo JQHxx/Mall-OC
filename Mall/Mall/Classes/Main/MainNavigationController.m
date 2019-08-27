@@ -18,5 +18,15 @@
     [super viewDidLoad];
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    } else {
+        viewController.hidesBottomBarWhenPushed = NO;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
+
 
 @end

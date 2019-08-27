@@ -9,7 +9,7 @@
 #import "Config.h"
 
 @implementation Config
-SingletonM(Config)
+
 - (instancetype)init
 {
     self = [super init];
@@ -19,12 +19,5 @@ SingletonM(Config)
     return self;
 }
 
-- (NSString *)getQqAppId {
-    return @"";
-}
-
-- (NSString *)getQqAppKey {
-    return @"";
-}
 
 @end

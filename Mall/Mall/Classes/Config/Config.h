@@ -11,9 +11,8 @@
 
 @interface Config : NSObject
 
-SingletonH(Config)
 
-@property(nonatomic, copy, getter=getQqAppId) NSString *qqAppId;
-@property(nonatomic, copy, getter=getQqAppKey) NSString *qqAppKey;
+@property(nonatomic, copy) NSString *qqAppId;
+@property(nonatomic, copy) NSString *qqAppKey;
 
 @end

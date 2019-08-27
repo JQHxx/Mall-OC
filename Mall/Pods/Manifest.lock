@@ -1,0 +1,79 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - CYLTabBarController (1.24.2):
+    - CYLTabBarController/Core (= 1.24.2)
+  - CYLTabBarController/Core (1.24.2)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.1.0)
+  - MJRefresh (3.1.17)
+  - NullSafe (2.0)
+  - PureLayout (3.1.4)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
+  - SVProgressHUD (2.2.5)
+  - TYPagerController (2.1.2)
+  - TZImagePickerController (3.2.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - CYLTabBarController (~> 1.24.0)
+  - MBProgressHUD (~> 1.1.0)
+  - MJExtension (~> 3.1.0)
+  - MJRefresh (~> 3.1.16)
+  - NullSafe (~> 2.0)
+  - PureLayout (~> 3.1.4)
+  - SDCycleScrollView (~> 1.80)
+  - SDWebImage (~> 5.0)
+  - SVProgressHUD (~> 2.2.5)
+  - TYPagerController (~> 2.1.2)
+  - TZImagePickerController (~> 3.2.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CYLTabBarController
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - NullSafe
+    - PureLayout
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - TYPagerController
+    - TZImagePickerController
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
+  MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
+  NullSafe: 948feba938f03abede5ed3758694a9fe5b3a65ce
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
+  TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
+
+PODFILE CHECKSUM: fe708d5d5a5cc43e3ffd757c0232f3d0da7d05d8
+
+COCOAPODS: 1.7.5

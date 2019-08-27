@@ -8,9 +8,18 @@
 
 #import "HttpRequest.h"
 #import "BaseRequest.h"
+#import "AFNetworking.h"
+
+const NSString *RequestTypesMap[] = {
+    [RequestTypeGET] = @"GET",
+    [RequestTypePOST] = @"POST",
+    [RequestTypeUpload] = @"UPLOAD",
+};
 
 @interface HttpRequest()
 
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
 
@@ -22,6 +31,7 @@ static HttpRequest *_instance = nil;
     dispatch_once(&onceToken, ^{
         _instance = [[HttpRequest alloc]init];
     });
+    return _instance;
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
@@ -32,22 +42,106 @@ static HttpRequest *_instance = nil;
     return _instance;
 }
 
+#pragma mark: - Setter & Getter
+- (AFHTTPSessionManager *)manager {
+    if (_manager == nil) {
+        _manager = [AFHTTPSessionManager manager];
+        _manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
+        // 这样设置是解析好的json
+        // _manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:(NSJSONReadingAllowFragments)];
+        //AFNetWorking 自动处理返回 null 对象的异常
+        AFJSONResponseSerializer *jsonResponse = (AFJSONResponseSerializer *)_manager.responseSerializer;
+        jsonResponse.removesKeysWithNullValues = YES;
+        _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain",@"image/jpg", nil];
+    }
+    return _manager;
+}
+
 /**
- * GET/POST request
+ * GET/POST/UPLOAD request
  */
 - (void) sendRequest:(BaseRequest *) request
+            progress: (ProgressBlock) progressBlock
              success: (SuccessBlock) successBlock
              failure: (FailureBlock) failureBlock {
     switch (request.requestType) {
         case RequestTypeGET:
-            [self getRequest:request success:successBlock failure:failureBlock];
+            [self getRequest:request progress: progressBlock success:successBlock failure:failureBlock];
             break;
         case RequestTypePOST:
-            [self postRequest:request success:successBlock failure:failureBlock];
+            [self postRequest:request progress: progressBlock success:successBlock failure:failureBlock];
             break;
         case RequestTypeUpload:
+            [self uploadRequest:request progress: progressBlock success:successBlock failure:failureBlock];
             break;
     }
+    
+}
+
+
+#pragma mark: - private methdos
+- (void)getRequest:(BaseRequest *) request
+          progress: (ProgressBlock) progressBlock
+           success: (SuccessBlock) successBlock
+           failure: (FailureBlock) failureBlock {
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
+    
+    // 设置请求超时时间
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    // 设置header
+    if (request.header) {
+        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+        }];
+    }
+    [_manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
+        if (progressBlock) {
+            progressBlock(downloadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
+    
+}
+
+- (void)postRequest:(BaseRequest *) request
+           progress: (ProgressBlock) progressBlock
+           success: (SuccessBlock) successBlock
+           failure: (FailureBlock) failureBlock {
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
+    // 设置请求超时时间
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    
+    // 设置header
+    if (request.header) {
+        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+        }];
+    }
+    [_manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progressBlock) {
+            progressBlock(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
     
 }
 
@@ -55,25 +149,39 @@ static HttpRequest *_instance = nil;
  * UPLOAD request
  */
 - (void) uploadRequest:(BaseRequest *)request
+              progress: (ProgressBlock) progressBlock
                success:(SuccessBlock)successBlock
                failure:(FailureBlock)failureBlock {
     
-}
-
-#pragma mark: - private methdos
-- (void)getRequest:(BaseRequest *) request
-           success: (SuccessBlock) successBlock
-           failure: (FailureBlock) failureBlock {
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
+    
+    // 设置请求超时时间
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    
+    // 设置header
+    if (request.header) {
+        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+        }];
+    }
+    
+    [_manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progressBlock) {
+            progressBlock(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
     
 }
-
-- (void)postRequest:(BaseRequest *) request
-           success: (SuccessBlock) successBlock
-           failure: (FailureBlock) failureBlock {
-    
-}
-
-
 
 
 @end

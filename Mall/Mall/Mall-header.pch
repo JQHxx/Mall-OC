@@ -12,7 +12,6 @@
 #pragma mark: - 通用
 #import "API.h"
 #import "Config.h"
-#import "Singleton.h"
 #import "HttpRequest.h"
 
 #pragma mark: - Extension

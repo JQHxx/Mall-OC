@@ -17,6 +17,7 @@
 #pragma mark: - Extension
 
 #pragma mark: - 第三方
+#import "UIImageView+SDWebImage.h"
 
 #pragma mark: - 其他
 #ifdef DEBUG

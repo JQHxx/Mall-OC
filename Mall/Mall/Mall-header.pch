@@ -13,6 +13,7 @@
 #import "API.h"
 #import "Config.h"
 #import "HttpRequest.h"
+#import "BaseRequest.h"
 
 #pragma mark: - Extension
 

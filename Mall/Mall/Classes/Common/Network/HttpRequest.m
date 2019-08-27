@@ -51,8 +51,6 @@ static HttpRequest *_instance = nil;
         // 这样设置是解析好的json
         // _manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:(NSJSONReadingAllowFragments)];
         //AFNetWorking 自动处理返回 null 对象的异常
-        AFJSONResponseSerializer *jsonResponse = (AFJSONResponseSerializer *)_manager.responseSerializer;
-        jsonResponse.removesKeysWithNullValues = YES;
         _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain",@"image/jpg", nil];
     }
     return _manager;
@@ -65,6 +63,8 @@ static HttpRequest *_instance = nil;
             progress: (ProgressBlock) progressBlock
              success: (SuccessBlock) successBlock
              failure: (FailureBlock) failureBlock {
+    
+    NSLog(@"请求链接：%@ 请求参数：%@", [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName], request.params);
     switch (request.requestType) {
         case RequestTypeGET:
             [self getRequest:request progress: progressBlock success:successBlock failure:failureBlock];
@@ -88,16 +88,16 @@ static HttpRequest *_instance = nil;
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     
     // 设置请求超时时间
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    self.manager.requestSerializer.timeoutInterval = request.timeout;
+    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [_manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
         if (progressBlock) {
             progressBlock(downloadProgress);
         }
@@ -119,17 +119,18 @@ static HttpRequest *_instance = nil;
            failure: (FailureBlock) failureBlock {
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     // 设置请求超时时间
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    self.manager.requestSerializer.timeoutInterval = request.timeout;
+    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [_manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+    [self.manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress);
         }
@@ -156,18 +157,18 @@ static HttpRequest *_instance = nil;
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     
     // 设置请求超时时间
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    self.manager.requestSerializer.timeoutInterval = request.timeout;
+    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
     
-    [_manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress);
         }

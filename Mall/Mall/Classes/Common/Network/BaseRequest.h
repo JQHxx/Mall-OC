@@ -32,5 +32,7 @@ typedef NS_ENUM(NSInteger,RequestType) {
 // 文件参数
 @property (nonatomic, copy) void (^filesData)(id<AFMultipartFormData>);
 
+// 后续待添加缓存的相关逻辑
+
 @end
 

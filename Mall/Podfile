@@ -8,7 +8,7 @@ target 'Mall' do
   # OC风格自动布局 参考https://www.jianshu.com/p/f8d1a660ec30
   pod 'PureLayout', '~> 3.1.4'
   pod 'AFNetworking', '~> 3.0'
-  pod 'SVProgressHUD', '~> 2.2.5'
+  # pod 'SVProgressHUD', '~> 2.2.5'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'MJRefresh', '~> 3.1.16'
   pod 'MJExtension', '~> 3.1.0'

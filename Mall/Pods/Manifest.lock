@@ -27,7 +27,6 @@ PODS:
   - SDWebImage (5.1.0):
     - SDWebImage/Core (= 5.1.0)
   - SDWebImage/Core (5.1.0)
-  - SVProgressHUD (2.2.5)
   - TYPagerController (2.1.2)
   - TZImagePickerController (3.2.1)
 
@@ -41,7 +40,6 @@ DEPENDENCIES:
   - PureLayout (~> 3.1.4)
   - SDCycleScrollView (~> 1.80)
   - SDWebImage (~> 5.0)
-  - SVProgressHUD (~> 2.2.5)
   - TYPagerController (~> 2.1.2)
   - TZImagePickerController (~> 3.2.1)
 
@@ -56,7 +54,6 @@ SPEC REPOS:
     - PureLayout
     - SDCycleScrollView
     - SDWebImage
-    - SVProgressHUD
     - TYPagerController
     - TZImagePickerController
 
@@ -70,10 +67,9 @@ SPEC CHECKSUMS:
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
 
-PODFILE CHECKSUM: fe708d5d5a5cc43e3ffd757c0232f3d0da7d05d8
+PODFILE CHECKSUM: 0cfd2ab06001ab557b4ce0bda66ae873de138108
 
 COCOAPODS: 1.7.5

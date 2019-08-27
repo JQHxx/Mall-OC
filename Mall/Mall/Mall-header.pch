@@ -8,12 +8,16 @@
 
 // 只会在OC的代码中被引用
 #ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#endif
 
 #pragma mark: - 通用
 #import "Network.h"
 #import "Config.h"
+#import "Common.h"
 
 #pragma mark: - Extension
+#import "Extension.h"
 
 #pragma mark: - 第三方
 #import "UIImageView+SDWebImage.h"
@@ -28,4 +32,12 @@
 // #define NULLSAFE_ENABLED 0
 #endif
 
+#ifndef __OPTIMIZE__
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+
 #endif
+
+

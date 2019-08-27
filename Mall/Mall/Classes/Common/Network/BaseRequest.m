@@ -12,7 +12,7 @@
 @implementation BaseRequest
 
 - (NSString *)baseURL {
-    return KBaseServer;
+    return API_BASE_SERVER;
 }
 
 - (NSString *)methodName {

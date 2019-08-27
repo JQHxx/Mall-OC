@@ -1,0 +1,28 @@
+//
+//  NSString+Helper.h
+//  Mall
+//
+//  Created by midland on 2019/8/27.
+//  Copyright © 2019 JQHxx. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NSString (Helper)
+
+/**
+ *  清空字符串中的空白字符
+ *
+ *  @return 清空空白字符串之后的字符串
+ */
+- (NSString *)trimString;
+
+/**
+ *  是否空字符串
+ *
+ *  @return 如果字符串为nil或者长度为0返回YES
+ */
+- (BOOL)isEmptyString;
+
+@end
+

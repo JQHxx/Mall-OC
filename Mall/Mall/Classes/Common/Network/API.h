@@ -9,10 +9,10 @@
 // 接口地址
 
 #pragma mark: - 通用
-#define KBaseServer @"https://www.baidu.com";
+#define API_BASE_SERVER @"https://www.baidu.com";
 
 #pragma mark: - 消息
-#define KMessageList @"/messageList"
+#define API_MESSAGE_LIST @"/messageList"
 
 #pragma mark: - 功能
 

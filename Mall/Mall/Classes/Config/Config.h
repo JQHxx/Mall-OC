@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ * Key管理
+ */
 @interface Config : NSObject
 
 @property(nonatomic, copy) NSString *qqAppId;

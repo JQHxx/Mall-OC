@@ -12,6 +12,7 @@
 #endif
 
 #pragma mark: - 通用
+#import "Macro.h"
 #import "Network.h"
 #import "Config.h"
 #import "Common.h"

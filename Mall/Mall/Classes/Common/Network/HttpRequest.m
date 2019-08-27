@@ -26,6 +26,15 @@ const NSString *RequestTypesMap[] = {
 @implementation HttpRequest
 static HttpRequest *_instance = nil;
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self manager];
+    }
+    return self;
+}
+
 + (instancetype)shareRequest {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -88,16 +97,16 @@ static HttpRequest *_instance = nil;
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     
     // 设置请求超时时间
-    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    self.manager.requestSerializer.timeoutInterval = request.timeout;
-    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [self.manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [_manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
         if (progressBlock) {
             progressBlock(downloadProgress);
         }
@@ -119,18 +128,18 @@ static HttpRequest *_instance = nil;
            failure: (FailureBlock) failureBlock {
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     // 设置请求超时时间
-    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    self.manager.requestSerializer.timeoutInterval = request.timeout;
-    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
     
-    [self.manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [_manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress);
         }
@@ -157,18 +166,18 @@ static HttpRequest *_instance = nil;
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     
     // 设置请求超时时间
-    [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    self.manager.requestSerializer.timeoutInterval = request.timeout;
-    [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     // 设置header
     if (request.header) {
         [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self.manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
     
-    [self.manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
+    [_manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress);
         }

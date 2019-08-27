@@ -70,7 +70,6 @@
 		5E06678D23139DBD00EE3331 /* UIView+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Core.h"; sourceTree = "<group>"; };
 		5E06678E23139DBD00EE3331 /* UIView+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Core.m"; sourceTree = "<group>"; };
 		5E0667912313CCC700EE3331 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
-		5E0667922313CCE800EE3331 /* ThirdPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPart.h; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -174,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				5ED1F72E23150AD90095C5A9 /* SDWebImage */,
-				5E0667922313CCE800EE3331 /* ThirdPart.h */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";

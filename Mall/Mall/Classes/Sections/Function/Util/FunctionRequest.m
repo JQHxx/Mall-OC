@@ -16,6 +16,7 @@
 
 - (NSDictionary *)params {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"key"] = @"value";
     return dict;
 }
 

@@ -17,5 +17,6 @@
 
 - (NSData *) queryData: (NSString *) url;
 
+- (void) deleteData: (NSString *) url;
 
 @end

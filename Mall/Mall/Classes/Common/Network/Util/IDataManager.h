@@ -13,7 +13,7 @@
 
 + (NSDictionary *) dataToDict: (NSData *) data;
 
-+ (NSData *) dictToData: (NSDictionary *) dict;
++ (NSData *) objToData: (id) obj;
 
 @end
 

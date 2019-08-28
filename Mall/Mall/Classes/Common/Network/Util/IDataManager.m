@@ -20,11 +20,10 @@
     
 }
 
-+ (NSData *) dictToData: (NSDictionary *) dict {
-    if (!dict) {
++ (NSData *) objToData: (id) obj {
+    if (!obj) {
         return [NSData new];
     }
-    return [NSJSONSerialization dataWithJSONObject:dict options:0 error:nil];
+    return [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
 }
-
 @end

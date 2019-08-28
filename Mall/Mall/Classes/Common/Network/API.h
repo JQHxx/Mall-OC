@@ -9,12 +9,13 @@
 // 接口地址
 
 #pragma mark: - 通用
-#define API_BASE_SERVER @"https://www.baidu.com";
+#define API_BASE_SERVER @"http://120.76.240.104:8017";
 
 #pragma mark: - 消息
 #define API_MESSAGE_LIST @"/messageList"
 
 #pragma mark: - 功能
+#define API_HOME @"/api/index/index"
 
 #pragma mark: - 客服
 

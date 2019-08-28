@@ -7,5 +7,7 @@
 //
 
 #import "API.h"
-#import "HttpRequest.h"
-#import "BaseRequest.h"
+#import "IHttpRequest.h"
+#import "IBaseRequest.h"
+#import "ICacheConfig.h"
+

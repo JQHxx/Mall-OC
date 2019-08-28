@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		5E06677423138DC600EE3331 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677323138DC600EE3331 /* Config.m */; };
 		5E0667792313960900EE3331 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0667782313960900EE3331 /* MainNavigationController.m */; };
-		5E06677C2313986F00EE3331 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677B2313986F00EE3331 /* HttpRequest.m */; };
-		5E06677F231398AE00EE3331 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677E231398AE00EE3331 /* BaseRequest.m */; };
+		5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677B2313986F00EE3331 /* IHttpRequest.m */; };
+		5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677E231398AE00EE3331 /* IBaseRequest.m */; };
 		5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678223139D5300EE3331 /* ServiceViewController.m */; };
 		5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678523139D6400EE3331 /* FunctionViewController.m */; };
 		5E06678923139D7000EE3331 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678823139D7000EE3331 /* MineViewController.m */; };
 		5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678B23139D7E00EE3331 /* MessageViewController.m */; };
 		5E06678F23139DBD00EE3331 /* UIView+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678E23139DBD00EE3331 /* UIView+Core.m */; };
+		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
+		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
+		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
+		5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365C231612FE006C8ED7 /* IDataBase.m */; };
+		5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84366023161A0D006C8ED7 /* IDataManager.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -58,10 +63,10 @@
 		5E0667752313926100EE3331 /* Mall-header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mall-header.pch"; sourceTree = "<group>"; };
 		5E0667772313960900EE3331 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		5E0667782313960900EE3331 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
-		5E06677A2313986F00EE3331 /* HttpRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		5E06677B2313986F00EE3331 /* HttpRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		5E06677D231398AE00EE3331 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
-		5E06677E231398AE00EE3331 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		5E06677A2313986F00EE3331 /* IHttpRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpRequest.h; sourceTree = "<group>"; };
+		5E06677B2313986F00EE3331 /* IHttpRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpRequest.m; sourceTree = "<group>"; };
+		5E06677D231398AE00EE3331 /* IBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBaseRequest.h; sourceTree = "<group>"; };
+		5E06677E231398AE00EE3331 /* IBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBaseRequest.m; sourceTree = "<group>"; };
 		5E066780231398E000EE3331 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		5E06678123139D5300EE3331 /* ServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
 		5E06678223139D5300EE3331 /* ServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
@@ -74,6 +79,16 @@
 		5E06678D23139DBD00EE3331 /* UIView+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Core.h"; sourceTree = "<group>"; };
 		5E06678E23139DBD00EE3331 /* UIView+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Core.m"; sourceTree = "<group>"; };
 		5E0667912313CCC700EE3331 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
+		5E84365023160820006C8ED7 /* IHttpCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpCache.m; sourceTree = "<group>"; };
+		5E8436522316094A006C8ED7 /* ICacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheConfig.h; sourceTree = "<group>"; };
+		5E8436532316094A006C8ED7 /* ICacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICacheConfig.m; sourceTree = "<group>"; };
+		5E84365523160A35006C8ED7 /* ICacheKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheKey.h; sourceTree = "<group>"; };
+		5E84365623160A35006C8ED7 /* ICacheKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICacheKey.m; sourceTree = "<group>"; };
+		5E84365B231612FE006C8ED7 /* IDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataBase.h; sourceTree = "<group>"; };
+		5E84365C231612FE006C8ED7 /* IDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDataBase.m; sourceTree = "<group>"; };
+		5E84365F23161A0D006C8ED7 /* IDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataManager.h; sourceTree = "<group>"; };
+		5E84366023161A0D006C8ED7 /* IDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDataManager.m; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -226,10 +241,10 @@
 		5E06676D231388C400EE3331 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5E06677A2313986F00EE3331 /* HttpRequest.h */,
-				5E06677B2313986F00EE3331 /* HttpRequest.m */,
-				5E06677D231398AE00EE3331 /* BaseRequest.h */,
-				5E06677E231398AE00EE3331 /* BaseRequest.m */,
+				5E84365E231619F2006C8ED7 /* Util */,
+				5E84365A231612DF006C8ED7 /* DB */,
+				5E843659231610F4006C8ED7 /* Request */,
+				5E843658231610D7006C8ED7 /* Cache */,
 				5E066780231398E000EE3331 /* API.h */,
 				5ED1F737231525610095C5A9 /* Network.h */,
 			);
@@ -279,6 +294,48 @@
 				5E0667912313CCC700EE3331 /* Resource.h */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5E843658231610D7006C8ED7 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5E84364F23160820006C8ED7 /* IHttpCache.h */,
+				5E84365023160820006C8ED7 /* IHttpCache.m */,
+				5E8436522316094A006C8ED7 /* ICacheConfig.h */,
+				5E8436532316094A006C8ED7 /* ICacheConfig.m */,
+				5E84365523160A35006C8ED7 /* ICacheKey.h */,
+				5E84365623160A35006C8ED7 /* ICacheKey.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		5E843659231610F4006C8ED7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5E06677A2313986F00EE3331 /* IHttpRequest.h */,
+				5E06677B2313986F00EE3331 /* IHttpRequest.m */,
+				5E06677D231398AE00EE3331 /* IBaseRequest.h */,
+				5E06677E231398AE00EE3331 /* IBaseRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5E84365A231612DF006C8ED7 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				5E84365B231612FE006C8ED7 /* IDataBase.h */,
+				5E84365C231612FE006C8ED7 /* IDataBase.m */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		5E84365E231619F2006C8ED7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5E84365F23161A0D006C8ED7 /* IDataManager.h */,
+				5E84366023161A0D006C8ED7 /* IDataManager.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		5EBD3EAF2313786200DC2F8F = {
@@ -614,22 +671,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
+				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,
 				5E06678F23139DBD00EE3331 /* UIView+Core.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
+				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
 				5E0667792313960900EE3331 /* MainNavigationController.m in Sources */,
 				5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */,
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
-				5E06677C2313986F00EE3331 /* HttpRequest.m in Sources */,
+				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
+				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
-				5E06677F231398AE00EE3331 /* BaseRequest.m in Sources */,
+				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
+				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

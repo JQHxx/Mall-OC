@@ -12,10 +12,11 @@
 typedef NS_ENUM(NSInteger,RequestType) {
     RequestTypeGET = 0,
     RequestTypePOST = 1,
-    RequestTypeUpload = 2,
+    RequestTypeUPLOAD = 2,
 };
 
-@interface BaseRequest : NSObject
+@class ICacheConfig;
+@interface IBaseRequest : NSObject
 
 // 服务器地址
 @property (nonatomic, copy) NSString *baseURL;
@@ -33,6 +34,7 @@ typedef NS_ENUM(NSInteger,RequestType) {
 @property (nonatomic, copy) void (^filesData)(id<AFMultipartFormData>);
 
 // 后续待添加缓存的相关逻辑
+@property (nonatomic, strong) ICacheConfig *cacheConfig;
 
 @end
 

@@ -11,12 +11,11 @@
 @implementation FunctionRequest
 
 - (NSString *)methodName {
-    return @"/Test";
+    return API_HOME;
 }
 
 - (NSDictionary *)params {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[@"key"] = @"name";
     return dict;
 }
 

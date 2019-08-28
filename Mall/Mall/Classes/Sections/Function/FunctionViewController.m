@@ -20,9 +20,13 @@
     self.navigationItem.title = @"首页";
     
     FunctionRequest *request = [[FunctionRequest alloc]init];
-    [[HttpRequest shareRequest] sendRequest:request progress:^(NSProgress *progress) {
+    request.cacheConfig = [[ICacheConfig alloc]init];
+    [request.cacheConfig setIsRead:YES];
+    [request.cacheConfig setIsSave:YES];
+    [[IHttpRequest shareRequest] sendRequest:request progress:^(NSProgress *progress) {
         
-    } success:^(id result) {
+    } success:^(id result, BOOL isCache) {
+        NSLog(@"%@", [NSString stringWithFormat:@"%@", result]);
         NSLog(@"请求成功%@", request);
     } failure:^(NSError *error) {
         NSLog(@"请求失败%@", error);

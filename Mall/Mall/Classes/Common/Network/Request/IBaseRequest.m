@@ -6,10 +6,11 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "BaseRequest.h"
+#import "IBaseRequest.h"
+#import "ICacheConfig.h"
 
 
-@implementation BaseRequest
+@implementation IBaseRequest
 
 - (NSString *)baseURL {
     return API_BASE_SERVER;
@@ -34,5 +35,6 @@
 - (NSTimeInterval)timeout {
     return 15;
 }
+
 
 @end

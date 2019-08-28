@@ -84,6 +84,7 @@ static IDataBase *_intance = nil;
                 tempData = data;
             }
         }
+        [rs close];
     }];
     return tempData;
 }
@@ -122,6 +123,7 @@ static IDataBase *_intance = nil;
         if ([rs next]) {
             isExist = YES;
         }
+        [rs close];
     }];
     return isExist;
 }

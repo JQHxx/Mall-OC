@@ -88,6 +88,7 @@ static IDataBase *_intance = nil;
     return tempData;
 }
 
+// 注意：插入基本类型会报错
 - (void) saveData: (NSString *) url data: (NSData *) data cacheTime: (double) cacheTime {
     
     if ([self isAlreadyExist:url]) {

@@ -132,14 +132,7 @@ static IHttpRequest *_instance = nil;
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (request.cacheConfig.isSave) {
-            NSData *resultData;
-            if ([responseObject isKindOfClass:[NSString class]]) {
-                resultData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
-            } else if ([responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]]) {
-                resultData = [IDataManager objToData:responseObject];
-            } else if ([responseObject isKindOfClass:[NSData class]]) {
-                resultData = responseObject;
-            }
+            NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {
                 [IHttpCache save:cacheKey data: resultData request: request];
             }
@@ -184,14 +177,7 @@ static IHttpRequest *_instance = nil;
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (request.cacheConfig.isSave) {
-            NSData *resultData;
-            if ([responseObject isKindOfClass:[NSString class]]) {
-                resultData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
-            } else if ([responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]]) {
-                resultData = [IDataManager objToData:responseObject];
-            } else if ([responseObject isKindOfClass:[NSData class]]) {
-                resultData = responseObject;
-            }
+            NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {
                 [IHttpCache save:cacheKey data: resultData request: request];
             }
@@ -240,14 +226,7 @@ static IHttpRequest *_instance = nil;
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (request.cacheConfig.isSave) {
-            NSData *resultData;
-            if ([responseObject isKindOfClass:[NSString class]]) {
-                resultData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
-            } else if ([responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]]) {
-                resultData = [IDataManager objToData:responseObject];
-            } else if ([responseObject isKindOfClass:[NSData class]]) {
-                resultData = responseObject;
-            }
+            NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {
                 [IHttpCache save:cacheKey data: resultData request: request];
             }

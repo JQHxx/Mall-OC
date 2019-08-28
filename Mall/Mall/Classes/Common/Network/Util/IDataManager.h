@@ -15,5 +15,7 @@
 
 + (NSData *) objToData: (id) obj;
 
++ (NSData *)getData:(id) responseObject;
+
 @end
 

@@ -26,4 +26,17 @@
     }
     return [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
 }
+
++ (NSData *)getData:(id) responseObject {
+    NSData *resultData = [[NSData alloc]init];
+    if ([responseObject isKindOfClass:[NSString class]]) {
+        resultData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
+    } else if ([responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]]) {
+        resultData = [IDataManager objToData:responseObject];
+    } else if ([responseObject isKindOfClass:[NSData class]]) {
+        resultData = responseObject;
+    }
+    return resultData;
+}
+
 @end

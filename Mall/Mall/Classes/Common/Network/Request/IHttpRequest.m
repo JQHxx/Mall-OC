@@ -24,7 +24,6 @@ const NSString *RequestTypesMap[] = {
 
 @interface IHttpRequest()
 
-
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
@@ -131,6 +130,7 @@ static IHttpRequest *_instance = nil;
             progressBlock(downloadProgress);
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@ 响应结果=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
         if (request.cacheConfig.isSave) {
             NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {
@@ -176,6 +176,7 @@ static IHttpRequest *_instance = nil;
             progressBlock(uploadProgress);
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@ 响应结果=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
         if (request.cacheConfig.isSave) {
             NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {
@@ -225,6 +226,7 @@ static IHttpRequest *_instance = nil;
             progressBlock(uploadProgress);
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@ 成功响应=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
         if (request.cacheConfig.isSave) {
             NSData *resultData = [IDataManager getData:responseObject];
             if (resultData) {

@@ -10,5 +10,4 @@
 #import "NSString+Helper.h"
 
 #pragma mark: - UIKit
-#import "UIView+Core.h"
 #import "UIDevice+Core.h"

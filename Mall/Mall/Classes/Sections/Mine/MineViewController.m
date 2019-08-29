@@ -22,7 +22,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"http://www.1200.com.cn" useSonicMode:YES unStrictMode:YES];
+    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"https://www.baidu.com" useSonicMode:YES unStrictMode:YES];
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

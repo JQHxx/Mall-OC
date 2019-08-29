@@ -25,6 +25,7 @@ target 'Mall' do
   # pod 'YBImageBrowser', '~> 3.0.3'
   # 数据库
   pod 'FMDB', '~> 2.7.5'
+  # 为了低于iOS 9系统可以使用
   pod 'FDStackView', '~> 1.0.1'
   
   # h5秒开方案

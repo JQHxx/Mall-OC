@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "Sonic.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //NSURLProtocol
+    [NSURLProtocol registerClass:[SonicURLProtocol class]];
+        
+    //start web thread
+    UIWebView *webPool = [[UIWebView alloc]initWithFrame:CGRectZero];
+    [webPool loadHTMLString:@"" baseURL:nil];
+    
+    
     // 设置主窗口,并设置根控制器
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;

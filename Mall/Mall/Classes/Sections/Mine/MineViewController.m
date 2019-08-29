@@ -7,6 +7,7 @@
 //
 
 #import "MineViewController.h"
+#import "SonicWebViewController.h"
 
 @interface MineViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.title = @"我的";
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"http://www.1200.com.cn" useSonicMode:YES unStrictMode:YES];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 

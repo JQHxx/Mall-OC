@@ -33,6 +33,7 @@
 		5ED1F73F23152C340095C5A9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73E23152C340095C5A9 /* Common.m */; };
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
+		5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED300802317898D00C8A48C /* SonicWebViewController.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -117,6 +118,8 @@
 		5ED1F74623152F8B0095C5A9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		5ED1F747231530FB0095C5A9 /* UIDevice+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Core.h"; sourceTree = "<group>"; };
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
+		5ED3007F2317898D00C8A48C /* SonicWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SonicWebViewController.h; sourceTree = "<group>"; };
+		5ED300802317898D00C8A48C /* SonicWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SonicWebViewController.m; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5ED3007E231788F200C8A48C /* Sonic */,
 				5ED1F72E23150AD90095C5A9 /* SDWebImage */,
 			);
 			path = ThirdPart;
@@ -440,6 +444,15 @@
 				5ED1F74323152D630095C5A9 /* NSString+Helper.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5ED3007E231788F200C8A48C /* Sonic */ = {
+			isa = PBXGroup;
+			children = (
+				5ED3007F2317898D00C8A48C /* SonicWebViewController.h */,
+				5ED300802317898D00C8A48C /* SonicWebViewController.m */,
+			);
+			path = Sonic;
 			sourceTree = "<group>";
 		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
@@ -692,6 +705,7 @@
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
+				5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

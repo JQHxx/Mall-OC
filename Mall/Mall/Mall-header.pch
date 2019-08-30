@@ -49,6 +49,16 @@
 #define MYLog(format, ...)
 #endif
 
+#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+if (@available(iOS 11.0,*))  {\
+scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;\
+} else {\
+self.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+
 
 #pragma clang diagnostic ignored "-Wunused-variable" 未使用的变量
 #pragma clang diagnostic ignored "-W#warnings" 通过 #warning主动添加的警告

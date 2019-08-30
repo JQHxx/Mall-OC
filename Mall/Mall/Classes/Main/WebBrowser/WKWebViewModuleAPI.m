@@ -10,8 +10,8 @@
 #import "BaseWebBrowserViewController.h"
 
 @implementation WKWebViewModuleAPI
-
 static WKWebViewModuleAPI *_instance = nil;
+
 + (instancetype)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -19,7 +19,6 @@ static WKWebViewModuleAPI *_instance = nil;
     });
     return _instance;
 }
-
 
 #pragma mark: - setter and geter
 - (UIViewController *)wkWebViewVC {

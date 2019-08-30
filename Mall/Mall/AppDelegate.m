@@ -34,6 +34,7 @@
     MainTabBarController *rootViewController = [[MainTabBarController alloc] init];
     [self.window setRootViewController:rootViewController];
     [self setUpNavigationBarAppearance];
+    [self adapterSystemVersion];
     return YES;
 }
 
@@ -94,5 +95,10 @@
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
+- (void) adapterSystemVersion {
+    if (@available(iOS 11.0,*))  {
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+}
 
 @end

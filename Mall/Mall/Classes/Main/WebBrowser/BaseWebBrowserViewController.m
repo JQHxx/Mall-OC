@@ -9,7 +9,7 @@
 #import "BaseWebBrowserViewController.h"
 #import "WKDelegateViewController.h"
 
-@interface BaseWebBrowserViewController () <WKScriptMessageHandler,WKDelegateViewControllerDelegate,WKNavigationDelegate,WKUIDelegate>
+@interface BaseWebBrowserViewController () <WKScriptMessageHandler, WKDelegateViewControllerDelegate, WKNavigationDelegate, WKUIDelegate>
 {
     NSString *_urlStr;
     WKWebViewLoadType _loadType;
@@ -25,6 +25,7 @@
 
 @implementation BaseWebBrowserViewController
 
+#pragma mark: - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = YES;
@@ -35,7 +36,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.wkwebView.frame = self.view.bounds;
-    self.progressView.frame = CGRectMake(0, 64, self.view.bounds.size.width, 2.0);
+    self.progressView.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height + 44.0, self.view.bounds.size.width, 2.0);
 }
 
 - (void)dealloc {
@@ -150,6 +151,7 @@
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
         configuration.userContentController = self.userContentController;
         _wkwebView = [[WKWebView alloc]initWithFrame:CGRectZero configuration:configuration];
+        _wkwebView.opaque = NO;
         _wkwebView.UIDelegate = self;
         _wkwebView.navigationDelegate = self;
         [_wkwebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];

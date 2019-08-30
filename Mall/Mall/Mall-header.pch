@@ -42,6 +42,14 @@
 #endif
 
 
+//
+#ifdef DEBUG
+#define MYLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define MYLog(format, ...)
+#endif
+
+
 #pragma clang diagnostic ignored "-Wunused-variable" 未使用的变量
 #pragma clang diagnostic ignored "-W#warnings" 通过 #warning主动添加的警告
 #pragma clang diagnostic ignored "-Wformat" 字符串格式化警告

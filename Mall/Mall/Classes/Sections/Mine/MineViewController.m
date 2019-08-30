@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import "SonicWebViewController.h"
+#import "BaseWebBrowserViewController.h"
 
 @interface MineViewController ()
 
@@ -22,7 +23,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"https://www.baidu.com" useSonicMode:YES unStrictMode:YES];
+//    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"https://www.baidu.com" useSonicMode:YES unStrictMode:YES];
+//    [self.navigationController pushViewController:webVC animated:YES];
+    
+    BaseWebBrowserViewController *webVC = [[BaseWebBrowserViewController alloc]init];
+    [webVC loadWebWithUrlStr:@"https://www.baidu.com" loadType: WKWebViewLoadTypeRemote title:@"百度首页"];
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

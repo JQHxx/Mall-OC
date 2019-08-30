@@ -15,6 +15,9 @@
 		5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678523139D6400EE3331 /* FunctionViewController.m */; };
 		5E06678923139D7000EE3331 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678823139D7000EE3331 /* MineViewController.m */; };
 		5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06678B23139D7E00EE3331 /* MessageViewController.m */; };
+		5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC52318D34900F77E6F /* BaseWebBrowserViewController.m */; };
+		5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */; };
+		5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */; };
 		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
 		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
 		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
@@ -77,6 +80,13 @@
 		5E06678A23139D7E00EE3331 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		5E06678B23139D7E00EE3331 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		5E0667912313CCC700EE3331 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		5E1CCCC52318D34900F77E6F /* BaseWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebBrowserViewController.m; sourceTree = "<group>"; };
+		5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDelegateViewController.m; sourceTree = "<group>"; };
+		5E1CCCC72318D34900F77E6F /* WKWebViewModuleAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewModuleAPI.h; sourceTree = "<group>"; };
+		5E1CCCC82318D34900F77E6F /* WKWebViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewBase.h; sourceTree = "<group>"; };
+		5E1CCCC92318D34900F77E6F /* BaseWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebBrowserViewController.h; sourceTree = "<group>"; };
+		5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewModuleAPI.m; sourceTree = "<group>"; };
+		5E1CCCCB2318D34900F77E6F /* WKDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDelegateViewController.h; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
 		5E84365023160820006C8ED7 /* IHttpCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpCache.m; sourceTree = "<group>"; };
 		5E8436522316094A006C8ED7 /* ICacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheConfig.h; sourceTree = "<group>"; };
@@ -222,6 +232,7 @@
 		5E06676B231388A600EE3331 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5E1CCCC42318D34900F77E6F /* WebBrowser */,
 				5E0667772313960900EE3331 /* MainNavigationController.h */,
 				5E0667782313960900EE3331 /* MainNavigationController.m */,
 				5ED1F72B2314E1240095C5A9 /* MainTabBarController.h */,
@@ -295,6 +306,20 @@
 				5E0667912313CCC700EE3331 /* Resource.h */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5E1CCCC42318D34900F77E6F /* WebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				5E1CCCC92318D34900F77E6F /* BaseWebBrowserViewController.h */,
+				5E1CCCC52318D34900F77E6F /* BaseWebBrowserViewController.m */,
+				5E1CCCC72318D34900F77E6F /* WKWebViewModuleAPI.h */,
+				5E1CCCC82318D34900F77E6F /* WKWebViewBase.h */,
+				5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */,
+				5E1CCCCB2318D34900F77E6F /* WKDelegateViewController.h */,
+				5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */,
+			);
+			path = WebBrowser;
 			sourceTree = "<group>";
 		};
 		5E843658231610D7006C8ED7 /* Cache */ = {
@@ -684,6 +709,7 @@
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
+				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
@@ -696,6 +722,8 @@
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
 				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
+				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
+				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,

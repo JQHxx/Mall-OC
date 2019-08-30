@@ -11,13 +11,13 @@
 
 @implementation WKWebViewModuleAPI
 
-static WKWebViewModuleAPI *_shareInstance = nil;
+static WKWebViewModuleAPI *_instance = nil;
 + (instancetype)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _shareInstance = [[self alloc]init];
+        _instance = [[self alloc]init];
     });
-    return _shareInstance;
+    return _instance;
 }
 
 

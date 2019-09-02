@@ -30,7 +30,7 @@ target 'Mall' do
   # 为了低于iOS 9系统可以使用
   pod 'FDStackView', '~> 1.0.1'
   
-  # h5秒开方案
+  # h5秒开方案 腾讯X5内核
   pod 'VasSonic', '~> 3.1.1'
 
   target 'MallTests' do

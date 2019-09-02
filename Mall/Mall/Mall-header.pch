@@ -49,6 +49,7 @@
 #define MYLog(format, ...)
 #endif
 
+// 适配iOS 11 scrollView
 #define  adjustsScrollViewInsets_NO(scrollView,vc)\
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \

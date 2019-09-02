@@ -13,6 +13,9 @@
 
 + (NSDictionary *) dataToDict: (NSData *) data;
 
+/**
+ * array or dictionary to data
+ */
 + (NSData *) objToData: (id) obj;
 
 + (NSData *)getData:(id) responseObject;

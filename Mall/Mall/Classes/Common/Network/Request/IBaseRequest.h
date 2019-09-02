@@ -18,22 +18,22 @@ typedef NS_ENUM(NSInteger,RequestType) {
 @class ICacheConfig;
 @interface IBaseRequest : NSObject
 
-// 服务器地址
+// server address
 @property (nonatomic, copy) NSString *baseURL;
-// 请求的接口名
+// requet method anem
 @property (nonatomic, copy) NSString *methodName;
-// 默认为POST请求方式
+// default POST request
 @property (nonatomic, assign) RequestType requestType;
-// 请求参数
+// request params
 @property (nonatomic, strong) NSDictionary *params;
-// 请求的Header头
+// requet header
 @property (nonatomic, strong) NSDictionary<NSString *, NSString *> *header;
-// 超时时间
+// request time out
 @property (nonatomic, assign) NSTimeInterval timeout;
-// 文件参数
+// file params
 @property (nonatomic, copy) void (^filesData)(id<AFMultipartFormData>);
 
-// 后续待添加缓存的相关逻辑
+// cache config
 @property (nonatomic, strong) ICacheConfig *cacheConfig;
 
 @end

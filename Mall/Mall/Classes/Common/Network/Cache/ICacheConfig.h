@@ -16,17 +16,17 @@
 @property (nonatomic, copy) NSString *userId;
 
 /**
- * 缓存的有效时长（-1 为无限期 单位为秒 默认缓存7天 7 * 60 * 60 * 60）
+ * The effective time（-1 is indefinite in seconds, deafault 7 days 7 * 60 * 60 * 60）
  */
 @property (nonatomic, assign) NSTimeInterval effectiveTime;
 
 /**
- * 是否保存到本地
+ * Whether to save locally
  */
 @property (nonatomic, assign) BOOL isSave;
 
 /**
- * 是否从本地读取
+ * Whether to read locally
  */
 @property (nonatomic, assign) BOOL isRead;
 

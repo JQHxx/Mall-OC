@@ -8,15 +8,15 @@
 
 // 接口地址
 
-#pragma mark: - 通用
+#pragma mark: - Common
 #define API_BASE_SERVER @"http://120.76.240.104:8017";
 
-#pragma mark: - 消息
+#pragma mark: - Message
 #define API_MESSAGE_LIST @"/messageList"
 
-#pragma mark: - 功能
+#pragma mark: - Function
 #define API_HOME @"/api/index/index"
 
-#pragma mark: - 客服
+#pragma mark: - Server
 
-#pragma mark: - 我的
+#pragma mark: - Mine

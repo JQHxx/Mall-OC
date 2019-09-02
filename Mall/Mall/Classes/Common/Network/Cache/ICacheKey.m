@@ -19,7 +19,6 @@
     if(!params || params.count == 0){
         return requestURL;
     }
-    // 将参数字典转换成字符串
     NSData *stringData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
     NSString *paraString = [[NSString alloc] initWithData:stringData encoding:NSUTF8StringEncoding];
     NSString *originalStr = [NSString stringWithFormat:@"%@%@",requestURL,paraString];

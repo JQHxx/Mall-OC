@@ -11,13 +11,22 @@
 
 @interface IDataManager : NSObject
 
+/**
+ * @brief local data to diction
+ * @param data local data
+ */
 + (NSDictionary *) dataToDict: (NSData *) data;
 
 /**
- * array or dictionary to data
+ * @brief array or dictionary to data
+ * @param obj array or dictionary
  */
 + (NSData *) objToData: (id) obj;
 
+/**
+ * @brief handle response data
+ * @param responseObject network response data
+ */
 + (NSData *)getData:(id) responseObject;
 
 @end

@@ -12,7 +12,7 @@
 @interface ICacheKey : NSObject
 
 /**
- * get cache key
+ * @brief get cache key
  */
 + (NSString *)getKey: (NSString *)requestURL params: (NSDictionary *)params;
 

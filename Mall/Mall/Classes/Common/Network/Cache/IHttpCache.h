@@ -11,12 +11,12 @@
 @interface IHttpCache : NSObject
 
 /**
- * save to local
+ * @brief save to local
  */
 + (void) save: (NSString *) key data: (NSData *) data request: (IBaseRequest *) request;
 
 /**
- * read local
+ * @brief read local
  */
 + (NSData *) read: (NSString *) key request: (IBaseRequest *) request;
 

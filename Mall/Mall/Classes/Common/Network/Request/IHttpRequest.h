@@ -21,7 +21,10 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 + (instancetype) shareRequest;
 
 /**
- * request
+ * @brief request
+ * @param progressBlock progress callback
+ * @param successBlock success callback
+ * @param failureBlock failure callback
  */
 - (NSURLSessionDataTask *) sendRequest: (IBaseRequest *) request
                               progress: (ProgressBlock) progressBlock

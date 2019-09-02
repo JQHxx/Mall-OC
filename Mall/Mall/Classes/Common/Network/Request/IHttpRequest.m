@@ -76,7 +76,7 @@ static IHttpRequest *_instance = nil;
                                failure: (FailureBlock) failureBlock {
     
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
-    NSLog(@"请求链接 ==> %@ 请求参数：%@", requestURL, request.params);
+    NSLog(@"Request URL ==> %@ Params ==> %@", requestURL, request.params);
     NSString *cacheKey = [ICacheKey getKey:requestURL params:[self getTempParams:request]];
     
      [self setupConfig:request];

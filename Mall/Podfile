@@ -16,6 +16,7 @@ target 'Mall' do
   pod 'AFNetworking', '~> 3.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'SDCycleScrollView','~> 1.80'
+  # 主要为了解决网络请求返回json 含有NSNull问题
   pod 'NullSafe', '~> 2.0'
   # 资源选择
   # pod 'ZLPhotoBrowser'

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 typedef void(^SuccessBlock)(id result, BOOL isCache);
 typedef void(^FailureBlock)(NSError *error);
@@ -14,6 +15,8 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 
 @class IBaseRequest;
 @interface IHttpRequest : NSObject
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 + (instancetype) shareRequest;
 

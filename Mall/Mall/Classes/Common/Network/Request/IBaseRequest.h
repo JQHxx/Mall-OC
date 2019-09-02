@@ -12,7 +12,7 @@
 typedef NS_ENUM(NSInteger,RequestType) {
     RequestTypeGET = 0,
     RequestTypePOST = 1,
-    RequestTypeUPLOAD = 2,
+    RequestTypeFORM = 2,
 };
 
 @class ICacheConfig;

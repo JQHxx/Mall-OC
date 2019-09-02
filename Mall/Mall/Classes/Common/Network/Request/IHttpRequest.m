@@ -8,7 +8,6 @@
 
 #import "IHttpRequest.h"
 #import "IBaseRequest.h"
-#import "AFNetworking.h"
 #import "IHttpCache.h"
 #import "ICacheKey.h"
 #import "IDataBase.h"
@@ -24,7 +23,6 @@ const NSString *RequestTypesMap[] = {
 
 @interface IHttpRequest()
 
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
 
@@ -78,13 +76,12 @@ static IHttpRequest *_instance = nil;
                                failure: (FailureBlock) failureBlock {
     
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
-    NSLog(@"请求链接：%@ 请求参数：%@", requestURL, request.params);
-    NSMutableDictionary *tempParams =  request.params == nil ? [NSMutableDictionary dictionary] : [request.params mutableCopy];
-    if (request.cacheConfig.userId) {
-        tempParams[@"userId"] = request.cacheConfig.userId;
-    }
-    NSString *cacheKey = [ICacheKey getKey:requestURL params:tempParams];
-    // 从本地读取缓存
+    NSLog(@"请求链接 ==> %@ 请求参数：%@", requestURL, request.params);
+    NSString *cacheKey = [ICacheKey getKey:requestURL params:[self getTempParams:request]];
+    
+     [self setupConfig:request];
+    
+    // get cache from local
     if (request.cacheConfig.isRead) {
         NSDictionary *dict = [IDataManager dataToDict:[IHttpCache read:cacheKey request: request]];
         if (successBlock && dict) {
@@ -93,96 +90,61 @@ static IHttpRequest *_instance = nil;
     }
     switch (request.requestType) {
         case RequestTypeGET:
-            return [self getRequest:request progress: progressBlock success:successBlock failure:failureBlock];
+            return [self getRequest:request progress: progressBlock success:^(id responseObject, BOOL isCache) {
+                // save data to local
+                [self handleSuccessResult:responseObject cacheKey:cacheKey request:request];
+                if (successBlock) {
+                    successBlock(responseObject, isCache);
+                }
+            } failure:^(NSError *error) {
+                if (failureBlock) {
+                    failureBlock(error);
+                }
+            }];
         case RequestTypePOST:
-            return [self postRequest:request progress: progressBlock success:successBlock failure:failureBlock];
-        case RequestTypeUPLOAD:
-            return [self uploadRequest:request progress: progressBlock success:successBlock failure:failureBlock];
+            return [self postRequest:request progress: progressBlock success:^(id responseObject, BOOL isCache) {
+                // save data to local
+                [self handleSuccessResult:responseObject cacheKey:cacheKey request:request];
+                if (successBlock) {
+                    successBlock(responseObject, isCache);
+                }
+            } failure:^(NSError *error) {
+                if (failureBlock) {
+                    failureBlock(error);
+                }
+            }];
+        case RequestTypeFORM:
+            return [self uploadRequest:request progress: progressBlock success:^(id responseObject, BOOL isCache) {
+                // save data to local
+                [self handleSuccessResult:responseObject cacheKey:cacheKey request:request];
+                if (successBlock) {
+                    successBlock(responseObject, isCache);
+                }
+            } failure:^(NSError *error) {
+                if (failureBlock) {
+                    failureBlock(error);
+                }
+            }];
     }
     
 }
 
 
 #pragma mark: - private methdos
+/**
+ * GET
+ */
 - (NSURLSessionDataTask *)getRequest: (IBaseRequest *) request
                             progress: (ProgressBlock) progressBlock
                              success: (SuccessBlock) successBlock
                              failure: (FailureBlock) failureBlock {
-    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
-    NSMutableDictionary *tempParams =  request.params == nil ? [NSMutableDictionary dictionary] : [request.params mutableCopy];
-    if (request.cacheConfig.userId) {
-        tempParams[@"userId"] = request.cacheConfig.userId;
-    }
-    NSString *cacheKey = [ICacheKey getKey:requestURL params:tempParams];
     
-    // request timeout
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    // header
-    if (request.header) {
-        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
-        }];
-    }
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
     return [_manager GET:requestURL parameters:request.params progress:^(NSProgress * _Nonnull downloadProgress) {
         if (progressBlock) {
             progressBlock(downloadProgress);
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@ 响应结果=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
-        if (request.cacheConfig.isSave) {
-            NSData *resultData = [IDataManager getData:responseObject];
-            if (resultData) {
-                [IHttpCache save:cacheKey data: resultData request: request];
-            }
-        }
-        if (successBlock) {
-            successBlock(responseObject, NO);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failureBlock) {
-            failureBlock(error);
-        }
-    }];
-    
-}
-
-- (NSURLSessionDataTask *)postRequest: (IBaseRequest *) request
-                             progress: (ProgressBlock) progressBlock
-                              success: (SuccessBlock) successBlock
-                              failure: (FailureBlock) failureBlock {
-    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
-    NSMutableDictionary *tempParams =  request.params == nil ? [NSMutableDictionary dictionary] : [request.params mutableCopy];
-    if (request.cacheConfig.userId) {
-        tempParams[@"userId"] = request.cacheConfig.userId;
-    }
-    NSString *cacheKey = [ICacheKey getKey:requestURL params:tempParams];
-    
-    // request timeout
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    
-    // header
-    if (request.header) {
-        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
-        }];
-    }
-    
-    return [_manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
-        if (progressBlock) {
-            progressBlock(uploadProgress);
-        }
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@ 响应结果=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
-        if (request.cacheConfig.isSave) {
-            NSData *resultData = [IDataManager getData:responseObject];
-            if (resultData) {
-                [IHttpCache save:cacheKey data: resultData request: request];
-            }
-        }
         if (successBlock) {
             successBlock(responseObject, NO);
         }
@@ -195,44 +157,19 @@ static IHttpRequest *_instance = nil;
 }
 
 /**
- * UPLOAD request
+ * POST
  */
-- (NSURLSessionDataTask *) uploadRequest: (IBaseRequest *)request
-                                progress: (ProgressBlock) progressBlock
-                                 success: (SuccessBlock)successBlock
-                                 failure: (FailureBlock)failureBlock {
+- (NSURLSessionDataTask *)postRequest: (IBaseRequest *) request
+                             progress: (ProgressBlock) progressBlock
+                              success: (SuccessBlock) successBlock
+                              failure: (FailureBlock) failureBlock {
     
     NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
-    NSMutableDictionary *tempParams =  request.params == nil ? [NSMutableDictionary dictionary] : [request.params mutableCopy];
-    if (request.cacheConfig.userId) {
-        tempParams[@"userId"] = request.cacheConfig.userId;
-    }
-    NSString *cacheKey = [ICacheKey getKey:requestURL params:tempParams];
-    
-    // request timeout
-    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    _manager.requestSerializer.timeoutInterval = request.timeout;
-    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    
-    // header
-    if (request.header) {
-        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
-            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
-        }];
-    }
-    
-    return [_manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
+    return [_manager POST:requestURL parameters:request.params progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {
             progressBlock(uploadProgress);
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@ 成功响应=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
-        if (request.cacheConfig.isSave) {
-            NSData *resultData = [IDataManager getData:responseObject];
-            if (resultData) {
-                [IHttpCache save:cacheKey data: resultData request: request];
-            }
-        }
         if (successBlock) {
             successBlock(responseObject, NO);
         }
@@ -244,5 +181,64 @@ static IHttpRequest *_instance = nil;
     
 }
 
+/**
+ * From POST
+ */
+- (NSURLSessionDataTask *) uploadRequest: (IBaseRequest *)request
+                                progress: (ProgressBlock) progressBlock
+                                 success: (SuccessBlock)successBlock
+                                 failure: (FailureBlock)failureBlock {
+    
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
+    return [_manager POST:requestURL parameters:request.params constructingBodyWithBlock:request.filesData progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progressBlock) {
+            progressBlock(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successBlock) {
+            successBlock(responseObject, NO);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
+    
+}
 
+/**
+ * config request timeout and header
+ */
+- (void) setupConfig: (IBaseRequest *) request {
+    // request timeout
+    [_manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    _manager.requestSerializer.timeoutInterval = request.timeout;
+    [_manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    
+    // header
+    if (request.header) {
+        [request.header enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSString *  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self->_manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+        }];
+    }
+}
+
+- (NSDictionary *) getTempParams: (IBaseRequest *) request {
+    NSMutableDictionary *tempParams =  request.params == nil ? [NSMutableDictionary dictionary] : [request.params mutableCopy];
+    if (request.cacheConfig.userId) {
+        tempParams[@"USERID"] = request.cacheConfig.userId;
+    }
+    return tempParams;
+}
+
+- (void) handleSuccessResult: (id) responseObject cacheKey: (NSString *) cacheKey request: (IBaseRequest *) request {
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.baseURL, request.methodName];
+    NSLog(@"%@ Success=>%@", requestURL, [NSString stringWithFormat:@"%@", responseObject]);
+    if (request.cacheConfig.isSave) {
+        NSData *resultData = [IDataManager getData:responseObject];
+        if (resultData) {
+            [IHttpCache save:cacheKey data: resultData request: request];
+        }
+    }
+}
 @end

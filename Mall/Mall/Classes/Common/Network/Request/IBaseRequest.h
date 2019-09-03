@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger,RequestType) {
 @property (nonatomic, copy) NSString *baseURL;
 // requet method anem
 @property (nonatomic, copy) NSString *methodName;
+// https cer name
+@property (nonatomic, copy) NSString *cerName;
 // default POST request
 @property (nonatomic, assign) RequestType requestType;
 // request params

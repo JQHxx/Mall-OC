@@ -61,11 +61,6 @@ self.automaticallyAdjustsScrollViewInsets = NO;\
 _Pragma("clang diagnostic pop") \
 
 
-#pragma clang diagnostic ignored "-Wunused-variable" 未使用的变量
-#pragma clang diagnostic ignored "-W#warnings" 通过 #warning主动添加的警告
-#pragma clang diagnostic ignored "-Wformat" 字符串格式化警告
-#pragma clang diagnostic ignored "-Wdeprecated-declarations" 方法弃用告警
-#pragma clang diagnostic ignored "-Wincompatible-pointer-types" 不兼容指针类型
-#pragma clang diagnostic ignored "-Warc-retain-cycles" retain cycle
+// 去除警告 https://www.jianshu.com/p/cbe9f21cee81
 
 

@@ -34,6 +34,9 @@ target 'Mall' do
   # h5秒开方案 腾讯X5内核
   pod 'VasSonic', '~> 3.1.1'
 
+  # mmap 键值保存的方式
+  pod 'MMKV', '~> 1.0.22'
+  
   target 'MallTests' do
     inherit! :search_paths
     # Pods for testing

@@ -24,6 +24,7 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.1.0)
   - MJRefresh (3.1.17)
+  - MMKV (1.0.22)
   - NullSafe (2.0)
   - PureLayout (3.1.4)
   - SDCycleScrollView (1.80):
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.1.0)
   - MJExtension (~> 3.1.0)
   - MJRefresh (~> 3.1.16)
+  - MMKV (~> 1.0.22)
   - NullSafe (~> 2.0)
   - PureLayout (~> 3.1.4)
   - SDCycleScrollView (~> 1.80)
@@ -62,6 +64,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - MJRefresh
+    - MMKV
     - NullSafe
     - PureLayout
     - SDCycleScrollView
@@ -79,6 +82,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
+  MMKV: 99b05c376c0eb412b468ba1d3e6813502edeaa24
   NullSafe: 948feba938f03abede5ed3758694a9fe5b3a65ce
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
   VasSonic: 1b0e5d45602627e8f39ac120a892050a10d42bab
 
-PODFILE CHECKSUM: 89023e429af49a24e60a95a26b1e523225adf0c7
+PODFILE CHECKSUM: 090f278331b7fcacbfd82ca02313a760bc48e463
 
 COCOAPODS: 1.7.5

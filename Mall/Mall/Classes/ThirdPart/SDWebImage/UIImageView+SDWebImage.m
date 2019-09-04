@@ -28,6 +28,9 @@
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:imageName] options:(SDWebImageLowPriority | SDWebImageRetryFailed) progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         
         NSLog(@"progress = %@" , @(receivedSize / expectedSize * 1.0f));
+        if (progress) {
+            progress(receivedSize / expectedSize * 1.0f);
+        }
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
@@ -35,10 +38,14 @@
             NSLog(@"下载成功");
             self.image = image;
             //成功回调:把图片给我下载完成回调过来:
-            success(image);
+            if (success) {
+                success(image);
+            }
         }else{
             NSLog(@"下载失败");
-            failed(error);
+            if(failed) {
+                failed(error);
+            }
         }
         
     }];

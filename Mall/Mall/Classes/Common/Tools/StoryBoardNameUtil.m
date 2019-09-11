@@ -9,12 +9,14 @@
 #import "StoryBoardNameUtil.h"
 
 const NSString *StoryBoardNamesMap[] = {
-    [StoryBoardNameMain] = @"Main",
+    [Main] = @"Main",
+    [Mine] = @"Mine",
+    [Message] = @"Message",
 };
 
 @implementation StoryBoardNameUtil
 
-const NSString* StoryBoarName(StoryBoardName name) {
+const NSString* StoryBoard(StoryBoardName name) {
     return StoryBoardNamesMap[name];
 }
 

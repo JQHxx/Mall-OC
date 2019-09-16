@@ -59,3 +59,5 @@ post_install do |installer|
     end
   end
 end
+
+# CardView: http://www.cocoachina.com/articles/35486

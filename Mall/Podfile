@@ -61,3 +61,4 @@ post_install do |installer|
 end
 
 # CardView: http://www.cocoachina.com/articles/35486
+# Logo和启动图尺寸：https://www.jianshu.com/p/12f1c21b6613 图标工厂：https://icon.wuruihong.com

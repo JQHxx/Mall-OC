@@ -8,7 +8,7 @@
 
 #import "StoryBoardNameUtil.h"
 
-NSString * const StoryBoardNamesMap[] = {
+NSString *const StoryBoardNamesMap[] = {
     [Function] = @"Function",
     [Mine] = @"Mine",
     [Message] = @"Message",
@@ -16,7 +16,7 @@ NSString * const StoryBoardNamesMap[] = {
 
 @implementation StoryBoardNameUtil
 
-  NSString * const StoryBoard(StoryBoardName name) {
+NSString *const StoryBoard(StoryBoardName name) {
     return StoryBoardNamesMap[name];
 }
 

@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, StoryBoardName) {
 /**
  * 获取StoryBoard name
  */
-extern  NSString * const StoryBoard(StoryBoardName name);
+extern  NSString *const StoryBoard(StoryBoardName name);
 
 @end
 

@@ -56,7 +56,8 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
     [firstViewController cyl_setHideNavigationBarSeparator:YES];
     // [firstViewController cyl_setNavigationBarHidden:YES];
     
-    FunctionViewController *secondViewController = [[FunctionViewController alloc] init];
+    UIStoryboard *functionStoryboard = [UIStoryboard storyboardWithName:StoryBoard(Function) bundle:nil];
+    FunctionViewController *secondViewController = [functionStoryboard instantiateViewControllerWithIdentifier:@"FunctionViewController"];
     UIViewController *secondNavigationController = [[MainNavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     [secondViewController cyl_setHideNavigationBarSeparator:YES];

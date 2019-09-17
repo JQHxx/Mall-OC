@@ -8,15 +8,15 @@
 
 #import "StoryBoardNameUtil.h"
 
-const NSString *StoryBoardNamesMap[] = {
-    [Main] = @"Main",
+NSString *StoryBoardNamesMap[] = {
+    [Function] = @"Function",
     [Mine] = @"Mine",
     [Message] = @"Message",
 };
 
 @implementation StoryBoardNameUtil
 
-const NSString* StoryBoard(StoryBoardName name) {
+NSString* StoryBoard(StoryBoardName name) {
     return StoryBoardNamesMap[name];
 }
 

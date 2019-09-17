@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, StoryBoardName) {
-    Main,
+    Function,
     Mine,
     Message,
 };
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, StoryBoardName) {
 /**
  * 获取StoryBoard name
  */
-extern const NSString* StoryBoard(StoryBoardName name);
+extern NSString* StoryBoard(StoryBoardName name);
 
 @end
 

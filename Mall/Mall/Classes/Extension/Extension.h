@@ -8,6 +8,7 @@
 
 #pragma mark: - Foundation
 #import "NSString+Helper.h"
+#import "NSTimer+AutoIncalidate.h"
 
 #pragma mark: - UIKit
 #import "UIDevice+Core.h"

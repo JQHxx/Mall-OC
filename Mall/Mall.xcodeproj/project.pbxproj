@@ -18,6 +18,7 @@
 		5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC52318D34900F77E6F /* BaseWebBrowserViewController.m */; };
 		5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */; };
 		5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */; };
+		5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */; };
 		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
 		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
 		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
@@ -90,6 +91,8 @@
 		5E1CCCC92318D34900F77E6F /* BaseWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebBrowserViewController.h; sourceTree = "<group>"; };
 		5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewModuleAPI.m; sourceTree = "<group>"; };
 		5E1CCCCB2318D34900F77E6F /* WKDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDelegateViewController.h; sourceTree = "<group>"; };
+		5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AutoIncalidate.h"; sourceTree = "<group>"; };
+		5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AutoIncalidate.m"; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
 		5E84365023160820006C8ED7 /* IHttpCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpCache.m; sourceTree = "<group>"; };
 		5E8436522316094A006C8ED7 /* ICacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheConfig.h; sourceTree = "<group>"; };
@@ -474,6 +477,8 @@
 			children = (
 				5ED1F74223152D630095C5A9 /* NSString+Helper.h */,
 				5ED1F74323152D630095C5A9 /* NSString+Helper.m */,
+				5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */,
+				5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -750,6 +755,7 @@
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
+				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,

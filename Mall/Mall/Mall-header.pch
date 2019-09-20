@@ -28,6 +28,10 @@
 #import "PureLayout.h"
 #import "MBProgressHUD.h"
 
+#pragma mark: - 埋点
+#import "UIViewController+Logger.h"
+#import "UIButton+Logger.h"
+
 #pragma mark: - 其他
 #ifdef DEBUG
 // 如果要禁止

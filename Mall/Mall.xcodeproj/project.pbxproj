@@ -19,6 +19,9 @@
 		5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */; };
 		5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */; };
 		5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */; };
+		5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9F92334B911005B2F7B /* UIButton+Logger.m */; };
+		5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */; };
+		5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* WYEHook.m */; };
 		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
 		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
 		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
@@ -93,6 +96,12 @@
 		5E1CCCCB2318D34900F77E6F /* WKDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDelegateViewController.h; sourceTree = "<group>"; };
 		5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AutoIncalidate.h"; sourceTree = "<group>"; };
 		5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AutoIncalidate.m"; sourceTree = "<group>"; };
+		5E37D9F62334B910005B2F7B /* WYEHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYEHook.h; sourceTree = "<group>"; };
+		5E37D9F72334B910005B2F7B /* UIButton+Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Logger.h"; sourceTree = "<group>"; };
+		5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Logger.h"; sourceTree = "<group>"; };
+		5E37D9F92334B911005B2F7B /* UIButton+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Logger.m"; sourceTree = "<group>"; };
+		5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logger.m"; sourceTree = "<group>"; };
+		5E37D9FB2334B911005B2F7B /* WYEHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEHook.m; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
 		5E84365023160820006C8ED7 /* IHttpCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpCache.m; sourceTree = "<group>"; };
 		5E8436522316094A006C8ED7 /* ICacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheConfig.h; sourceTree = "<group>"; };
@@ -224,6 +233,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5E37D9F52334B902005B2F7B /* BuriedPoint */,
 				5ED3007E231788F200C8A48C /* Sonic */,
 				5ED1F72E23150AD90095C5A9 /* SDWebImage */,
 			);
@@ -333,6 +343,19 @@
 				5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */,
 			);
 			path = WebBrowser;
+			sourceTree = "<group>";
+		};
+		5E37D9F52334B902005B2F7B /* BuriedPoint */ = {
+			isa = PBXGroup;
+			children = (
+				5E37D9F72334B910005B2F7B /* UIButton+Logger.h */,
+				5E37D9F92334B911005B2F7B /* UIButton+Logger.m */,
+				5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */,
+				5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */,
+				5E37D9F62334B910005B2F7B /* WYEHook.h */,
+				5E37D9FB2334B911005B2F7B /* WYEHook.m */,
+			);
+			path = BuriedPoint;
 			sourceTree = "<group>";
 		};
 		5E843658231610D7006C8ED7 /* Cache */ = {
@@ -754,9 +777,11 @@
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
+				5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
+				5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
@@ -775,6 +800,7 @@
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
+				5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

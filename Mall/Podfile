@@ -37,6 +37,9 @@ target 'Mall' do
   # mmap 键值保存的方式
   pod 'MMKV', '~> 1.0.22'
   
+  # 主要是c语言方法的钩子
+  pod 'fishhook'
+  
   target 'MallTests' do
     inherit! :search_paths
     # Pods for testing

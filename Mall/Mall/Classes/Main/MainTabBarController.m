@@ -88,27 +88,27 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
                                                  CYLTabBarItemTitle : @"首页",
                                                  CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],  /* NSString and UIImage are supported*/
                                                  CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",  /* NSString and UIImage are supported*/
-                                                 CYLTabBarItemTitlePositionAdjustment: [NSValue valueWithUIOffset:UIOffsetMake(firstXOffset, -3.5)],
+                                                 CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(firstXOffset, -3.5)],
                                                  };
     CGFloat secondXOffset = (-25+2)/2;
     NSDictionary *secondTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"鱼塘",
                                                   CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],
                                                   CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",
-                                                  CYLTabBarItemTitlePositionAdjustment: [NSValue valueWithUIOffset:UIOffsetMake(secondXOffset, -3.5)],
+                                                  CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(secondXOffset, -3.5)],
                                                   };
     
     NSDictionary *thirdTabBarItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"消息",
                                                  CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],
                                                  CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",
-                                                 CYLTabBarItemTitlePositionAdjustment: [NSValue valueWithUIOffset:UIOffsetMake(-secondXOffset, -3.5)],
+                                                 CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(-secondXOffset, -3.5)],
                                                  };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage :[UIImage imageNamed:@"tabbar_customerservice_n"],
+                                                  CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],
                                                   CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",
-                                                  CYLTabBarItemTitlePositionAdjustment: [NSValue valueWithUIOffset:UIOffsetMake(-firstXOffset, -3.5)],
+                                                  CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(-firstXOffset, -3.5)],
                                                   };
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,

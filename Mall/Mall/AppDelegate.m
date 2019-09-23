@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
 #import "Sonic.h"
+#import "UncaughtExceptionHandler.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {
+        
+        //1、进行数据上传
+        
+        //2、上传成功后，清除本地崩溃日志.
+        
+        [UncaughtExceptionHandler exceptionDocumentsClear];
+        //NSLog(exceptionStr);
+    }];
+    
+    // [self performSelector:@selector(string) withObject:nil afterDelay:0];
     
     //NSURLProtocol
     [NSURLProtocol registerClass:[SonicURLProtocol class]];

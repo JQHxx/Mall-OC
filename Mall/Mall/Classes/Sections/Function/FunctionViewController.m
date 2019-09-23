@@ -36,6 +36,12 @@
     
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self performSelector:@selector(string) withObject:nil afterDelay:0];
+    
+}
+
 
 - (void) setupUI {
     

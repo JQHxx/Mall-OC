@@ -22,6 +22,7 @@
 		5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9F92334B911005B2F7B /* UIButton+Logger.m */; };
 		5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */; };
 		5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* WYEHook.m */; };
+		5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */; };
 		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
 		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
 		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
@@ -102,6 +103,8 @@
 		5E37D9F92334B911005B2F7B /* UIButton+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Logger.m"; sourceTree = "<group>"; };
 		5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logger.m"; sourceTree = "<group>"; };
 		5E37D9FB2334B911005B2F7B /* WYEHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEHook.m; sourceTree = "<group>"; };
+		5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		5E5D94422338A14D008C52C2 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
 		5E84365023160820006C8ED7 /* IHttpCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHttpCache.m; sourceTree = "<group>"; };
 		5E8436522316094A006C8ED7 /* ICacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICacheConfig.h; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E5D94402338A13B008C52C2 /* Exception */,
 				5ED1F73C23152C240095C5A9 /* Tools */,
 				5E06676D231388C400EE3331 /* Network */,
 			);
@@ -356,6 +360,15 @@
 				5E37D9FB2334B911005B2F7B /* WYEHook.m */,
 			);
 			path = BuriedPoint;
+			sourceTree = "<group>";
+		};
+		5E5D94402338A13B008C52C2 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D94422338A14D008C52C2 /* UncaughtExceptionHandler.h */,
+				5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 		5E843658231610D7006C8ED7 /* Cache */ = {
@@ -789,6 +802,7 @@
 				5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */,
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
+				5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */,
 				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
 				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,

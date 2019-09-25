@@ -2,16 +2,16 @@
 //  searchManager.m
 //  trie树
 //
-//  Created by 郝帅 on 2019/5/18.
-//  Copyright © 2019年 蒲公英. All rights reserved.
+//  Created by HJQ on 2019/5/18.
+//  Copyright © 2019年 HJQ. All rights reserved.
 //
 
 #import "SearchManager.h"
-#import "Node.h"
+#import "TrieNode.h"
 
 @interface SearchManager ()
 
-@property (nonatomic, strong) Node *root;
+@property (nonatomic, strong) TrieNode *root;
 
 @end
 
@@ -20,7 +20,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.root = [[Node alloc] init];
+        self.root = [[TrieNode alloc] init];
     }
     
     return self;
@@ -33,7 +33,7 @@
     }
     word = [word lowercaseString];
     
-    Node *node = self.root;
+    TrieNode *node = self.root;
     
     int index = 0;
     NSString *str = @"";
@@ -52,7 +52,7 @@
 
 - (void)optimization
 {
-    Node *node = self.root;
+    TrieNode *node = self.root;
     
     NSArray *arrKey = node.children.allKeys;
     for (int i = 0; i < arrKey.count; i++) {
@@ -60,17 +60,17 @@
     }
 }
 
-- (BOOL)optimization:(Node *)node
+- (BOOL)optimization:(TrieNode *)node
 {
     NSArray *arrKey = node.children.allKeys;
     if (arrKey.count == 0) {
         return YES;
     }
     for (int i = 0; i < arrKey.count; i++) {
-        Node *n = node.children[arrKey[i]];
+        TrieNode *n = node.children[arrKey[i]];
         if ([self optimization:n]) {
             if (n.children.count == 0 && arrKey.count == 1 && !node.isFinish) {
-                Node *n2 = [node.children.allValues lastObject];
+                TrieNode *n2 = [node.children.allValues lastObject];
                 node.character = [NSString stringWithFormat:@"%@%@", node.character, n2.character];
                 node.children = nil;
                 return YES;
@@ -88,7 +88,7 @@
     }
     word = [word lowercaseString];
     
-    Node *node = self.root;
+    TrieNode *node = self.root;
     
     int index = 0;
     NSString *str = @"";
@@ -111,7 +111,7 @@
     return @[];
 }
 
-- (void)addAllData:(Node *)node arr:(NSMutableArray *)arr
+- (void)addAllData:(TrieNode *)node arr:(NSMutableArray *)arr
 {
     if (node.isFinish) {
         [arr addObject:[NSString stringWithFormat:@"%@%@", node.string, node.character]];
@@ -120,7 +120,7 @@
     NSArray *arrKey = node.children.allKeys;
     
     for (int i = 0; i < arrKey.count; i++) {
-        Node *n = node.children[arrKey[i]];
+        TrieNode *n = node.children[arrKey[i]];
         
         if (n.children.count > 0) {
             [self addAllData:n arr:arr];

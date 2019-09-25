@@ -85,21 +85,21 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
 - (NSArray *)tabBarItemsAttributesForTabBar {
     CGFloat firstXOffset = -12/2;
     NSDictionary *firstTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"首页",
+                                                 CYLTabBarItemTitle : @"消息",
                                                  CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],  /* NSString and UIImage are supported*/
                                                  CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",  /* NSString and UIImage are supported*/
                                                  CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(firstXOffset, -3.5)],
                                                  };
     CGFloat secondXOffset = (-25+2)/2;
     NSDictionary *secondTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"鱼塘",
+                                                  CYLTabBarItemTitle : @"功能",
                                                   CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],
                                                   CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",
                                                   CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(secondXOffset, -3.5)],
                                                   };
     
     NSDictionary *thirdTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"消息",
+                                                 CYLTabBarItemTitle : @"客服",
                                                  CYLTabBarItemImage : [UIImage imageNamed:@"tabbar_customerservice_n"],
                                                  CYLTabBarItemSelectedImage : @"tabbar_customerservice_n",
                                                  CYLTabBarItemTitlePositionAdjustment : [NSValue valueWithUIOffset : UIOffsetMake(-secondXOffset, -3.5)],

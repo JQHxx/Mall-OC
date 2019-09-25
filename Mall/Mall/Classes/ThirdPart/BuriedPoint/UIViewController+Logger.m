@@ -43,10 +43,13 @@
 }
 
 - (void)insertToViewWillAppear {
+    
     // 在 ViewWillAppear 时进行日志的埋点
     NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
+
 }
 - (void)insertToViewWillDisappear {
+    
     // 在 ViewWillDisappear 时进行日志的埋点
     // 在 ViewWillAppear 时进行日志的埋点
     NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));

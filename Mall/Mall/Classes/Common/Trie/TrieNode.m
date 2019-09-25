@@ -2,17 +2,17 @@
 //  Node.m
 //  trie树
 //
-//  Created by 郝帅 on 2019/5/18.
-//  Copyright © 2019年 蒲公英. All rights reserved.
+//  Created by HJQ帅 on 2019/5/18.
+//  Copyright © 2019年 HJQ. All rights reserved.
 //
 
-#import "Node.h"
+#import "TrieNode.h"
 
-@implementation Node
+@implementation TrieNode
 
-+ (Node *)initWithValue:(NSString *)str parent:(Node *)node
++ (TrieNode *)initWithValue:(NSString *)str parent:(TrieNode *)node
 {
-    Node *n = [[Node alloc] init];
+    TrieNode *n = [[TrieNode alloc] init];
     n.character = str;
     n.string = [NSString stringWithFormat:@"%@%@", node.string, node.character];
     return n;
@@ -32,7 +32,7 @@
 - (void)add:(NSString *)str
 {
     if (!self.children[str]) {
-        self.children[str] = [Node initWithValue:str parent:self];
+        self.children[str] = [TrieNode initWithValue:str parent:self];
     }
 }
 

@@ -63,6 +63,7 @@ post_install do |installer|
   end
 end
 
+# 仿系统通知样式通知栏：https://github.com/pikacode/EBBannerView
 # 自定义弹窗：https://github.com/JonyFang/FFPopup.git
 # 在线网站：http://www.cocoachina.com/articles/53437?filter=rec
 # CardView: http://www.cocoachina.com/articles/35486

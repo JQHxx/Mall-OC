@@ -12,3 +12,4 @@
 
 #pragma mark: - UIKit
 #import "UIDevice+Core.h"
+#import "UIView+Animation.h"

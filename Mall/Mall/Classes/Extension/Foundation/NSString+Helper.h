@@ -23,6 +23,24 @@
  *  @return 如果字符串为nil或者长度为0返回YES
  */
 - (BOOL)isEmptyString;
+    
+/**
+ 判断接口返回的数据 是否存在null
+ */
+- (Boolean) isEmptyOrNull;
+    
+/**
+ 截取字符串
+ 
+ begin: 开始位置
+ end: 结束位置
+ */
+- (NSString *) substringFromIndex:(int)begin endIndex:(int)end;
+    
+/**
+ 去除" "字符串
+ */
+- (NSString *)trim;
 
 @end
 

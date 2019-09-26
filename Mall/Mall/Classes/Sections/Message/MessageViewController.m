@@ -7,6 +7,7 @@
 //
 
 #import "MessageViewController.h"
+#import "TopBannerNotificationsUtils.h"
 
 @interface MessageViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.title = @"消息";
+}
+    
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [TopBannerNotificationsUtils alertWithMessage:@"退出登录"];
 }
 
 

@@ -43,6 +43,8 @@
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
 		5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED300802317898D00C8A48C /* SonicWebViewController.m */; };
+		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
+		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EEB70A723289EC100920345 /* Function.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70A623289EC100920345 /* Function.storyboard */; };
 		5EEB70AB23289F2F00920345 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AA23289F2F00920345 /* Mine.storyboard */; };
 		5EEB70AD23289F4A00920345 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AC23289F4A00920345 /* Message.storyboard */; };
@@ -151,6 +153,10 @@
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
 		5ED3007F2317898D00C8A48C /* SonicWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SonicWebViewController.h; sourceTree = "<group>"; };
 		5ED300802317898D00C8A48C /* SonicWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SonicWebViewController.m; sourceTree = "<group>"; };
+		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
+		5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBannerNotificationsUtils.m; sourceTree = "<group>"; };
+		5EE45466233C480200035806 /* ControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerUtils.h; sourceTree = "<group>"; };
+		5EE45467233C480200035806 /* ControllerUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllerUtils.m; sourceTree = "<group>"; };
 		5EEB70A623289EC100920345 /* Function.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Function.storyboard; sourceTree = "<group>"; };
 		5EEB70AA23289F2F00920345 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		5EEB70AC23289F4A00920345 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EE45462233C47B000035806 /* TopBanner */,
 				5EB223F8233B223700481D5C /* Trie */,
 				5E5D94402338A13B008C52C2 /* Exception */,
 				5ED1F73C23152C240095C5A9 /* Tools */,
@@ -546,6 +553,17 @@
 			path = Sonic;
 			sourceTree = "<group>";
 		};
+		5EE45462233C47B000035806 /* TopBanner */ = {
+			isa = PBXGroup;
+			children = (
+				5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */,
+				5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */,
+				5EE45466233C480200035806 /* ControllerUtils.h */,
+				5EE45467233C480200035806 /* ControllerUtils.m */,
+			);
+			path = TopBanner;
+			sourceTree = "<group>";
+		};
 		5EEB70A223289E8700920345 /* Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -802,6 +820,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
@@ -832,6 +851,7 @@
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
+				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */,

@@ -27,6 +27,7 @@
 #import "MJExtension.h"
 #import "PureLayout.h"
 #import "MBProgressHUD.h"
+#import <CocoaLumberjack.h>
 
 #pragma mark: - 埋点
 #import "UIViewController+Logger.h"
@@ -45,6 +46,7 @@
 #define NSLog(...) {}
 
 #endif
+
 
 
 //
@@ -68,4 +70,9 @@ _Pragma("clang diagnostic pop") \
 
 // 去除警告 https://www.jianshu.com/p/cbe9f21cee81
 
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelDebug;
+#else
+static const int ddLogLevel = DDLogLevelInfo;
+#endif
 

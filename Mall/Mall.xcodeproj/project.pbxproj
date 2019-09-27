@@ -30,6 +30,7 @@
 		5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84366023161A0D006C8ED7 /* IDataManager.m */; };
 		5EB223FD233B225300481D5C /* searchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223F9233B225200481D5C /* searchManager.m */; };
 		5EB223FE233B225300481D5C /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223FC233B225300481D5C /* TrieNode.m */; };
+		5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547D7233DAFF2003D0228 /* CSFileLogger.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -124,6 +125,8 @@
 		5EB223FA233B225300481D5C /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		5EB223FB233B225300481D5C /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
 		5EB223FC233B225300481D5C /* TrieNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieNode.m; sourceTree = "<group>"; };
+		5EB547D6233DAFF2003D0228 /* CSFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSFileLogger.h; sourceTree = "<group>"; };
+		5EB547D7233DAFF2003D0228 /* CSFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSFileLogger.m; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -254,6 +257,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5EB547D5233DAFB7003D0228 /* Logger */,
 				5E37D9F52334B902005B2F7B /* BuriedPoint */,
 				5ED3007E231788F200C8A48C /* Sonic */,
 				5ED1F72E23150AD90095C5A9 /* SDWebImage */,
@@ -439,6 +443,15 @@
 				5EB223F9233B225200481D5C /* searchManager.m */,
 			);
 			path = Trie;
+			sourceTree = "<group>";
+		};
+		5EB547D5233DAFB7003D0228 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				5EB547D6233DAFF2003D0228 /* CSFileLogger.h */,
+				5EB547D7233DAFF2003D0228 /* CSFileLogger.m */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		5EBD3EAF2313786200DC2F8F = {
@@ -857,6 +870,7 @@
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
+				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,

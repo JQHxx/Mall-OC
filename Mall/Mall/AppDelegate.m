@@ -10,6 +10,7 @@
 #import "MainTabBarController.h"
 #import "Sonic.h"
 #import "UncaughtExceptionHandler.h"
+#import "CSFileLogger.h"
 
 @interface AppDelegate ()
 
@@ -48,7 +49,25 @@
     [self.window setRootViewController:rootViewController];
     [self setUpNavigationBarAppearance];
     [self adapterOSVersion];
+    [self setupLogger];
+    
+    DDLogWarn(@"IS %@", @"");
     return YES;
+}
+
+- (void) setupLogger {
+    
+    DDLogLevel globalLogLevel;
+#ifdef DEBUG
+    globalLogLevel = DDLogLevelDebug;
+#else
+    globalLogLevel = DDLogLevelInfo;
+#endif
+    // flag 为文件夹的名称
+    CSFileLogger *customLogger = [[CSFileLogger alloc] initWithFlag:1011];
+    customLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    customLogger.logFileManager.maximumNumberOfLogFiles = 10;
+    [DDLog addLogger:customLogger withLevel:globalLogLevel];
 }
 
 

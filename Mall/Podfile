@@ -40,6 +40,9 @@ target 'Mall' do
   # 主要是c语言方法的钩子
   pod 'fishhook'
   
+  # 日志打印
+  pod 'CocoaLumberjack', '~> 3.5.3'
+  
   target 'MallTests' do
     inherit! :search_paths
     # Pods for testing

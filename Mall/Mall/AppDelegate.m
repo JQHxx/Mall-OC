@@ -11,6 +11,7 @@
 #import "Sonic.h"
 #import "UncaughtExceptionHandler.h"
 #import "CSFileLogger.h"
+#import "DMNetworkTrafficManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [DMNetworkTrafficManager start];
     
     [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {
         

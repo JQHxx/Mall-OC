@@ -43,6 +43,8 @@ target 'Mall' do
   # 日志打印
   pod 'CocoaLumberjack', '~> 3.5.3'
   
+  pod 'GZIP', '~> 1.2'
+  
   target 'MallTests' do
     inherit! :search_paths
     # Pods for testing

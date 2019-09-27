@@ -44,19 +44,26 @@
 
 - (void)insertToViewWillAppear {
     
-    NSArray *filterArray = [NSArray arrayWithObjects:@"MainTabBarController", @"UIEditingOverlayViewController", @"UIInputWindowController", @"MainNavigationController", nil];
-    if(![filterArray containsObject:NSStringFromClass([self class])]) {
+    if(![[self  getFilters]  containsObject:NSStringFromClass([self class])]) {
         // 在 ViewWillAppear 时进行日志的埋点
         NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
     }
 }
+
 - (void)insertToViewWillDisappear {
-    
-    NSArray *filterArray = [NSArray arrayWithObjects:@"MainTabBarController", @"UIEditingOverlayViewController", @"UIInputWindowController", @"MainNavigationController", nil];
-    if(![filterArray containsObject:NSStringFromClass([self class])]) {
+
+    if(![[self  getFilters] containsObject:NSStringFromClass([self class])]) {
         // 在 ViewWillDisappear 时进行日志的埋点
         // 在 ViewWillAppear 时进行日志的埋点
         NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));
     }
+}
+
+/**
+ 获取要过滤内容
+ */
+- (NSArray *) getFilters {
+    NSArray *filterArray = [NSArray arrayWithObjects:@"MainTabBarController", @"UIEditingOverlayViewController", @"UIInputWindowController", @"MainNavigationController", nil];
+    return filterArray;
 }
 @end

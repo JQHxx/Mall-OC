@@ -21,7 +21,11 @@
 }
     
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [TopBannerNotificationsUtils alertWithMessage:@"退出登录"];
+    // [TopBannerNotificationsUtils alertWithMessage:@"退出登录"];
+    
+   NSString *result =  [@"1000000" convertAmount];
+    NSLog(@"%@", result);
+    
 }
 
 

@@ -42,5 +42,8 @@
  */
 - (NSString *)trim;
 
+// 将阿拉伯数字转换为大写
+- (NSString *)convertAmount;
+
 @end
 

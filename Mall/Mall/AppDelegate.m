@@ -51,23 +51,17 @@
     [self adapterOSVersion];
     [self setupLogger];
     
-    DDLogWarn(@"IS %@", @"");
+    DDLogWarn(@"[Warn]IS %@", @"");
     return YES;
 }
 
 - (void) setupLogger {
-    
-    DDLogLevel globalLogLevel;
-#ifdef DEBUG
-    globalLogLevel = DDLogLevelDebug;
-#else
-    globalLogLevel = DDLogLevelInfo;
-#endif
+
     // flag 为文件夹的名称
     CSFileLogger *customLogger = [[CSFileLogger alloc] initWithFlag:1011];
     customLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
     customLogger.logFileManager.maximumNumberOfLogFiles = 10;
-    [DDLog addLogger:customLogger withLevel:globalLogLevel];
+    [DDLog addLogger:customLogger];
 }
 
 

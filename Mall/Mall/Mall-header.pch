@@ -70,9 +70,12 @@ _Pragma("clang diagnostic pop") \
 
 // 去除警告 https://www.jianshu.com/p/cbe9f21cee81
 
+//定义并导入CoCoaLumberJack框架
+#define LOG_LEVEL_DEF ddLogLevel
+//通过DEBUG模式设置全局日志等级，DEBUG时为Verbose，所有日志信息都可以打印，否则Error，只打印
 #ifdef DEBUG
-static const int ddLogLevel = DDLogLevelDebug;
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else
-static const int ddLogLevel = DDLogLevelInfo;
+static const DDLogLevel ddLogLevel = DDLogLevelError;
 #endif
 

@@ -57,10 +57,16 @@
 
 - (void) setupLogger {
 
-    // flag 为文件夹的名称
+    // 这将在你的日志框架中添加两个“logger”。也就是说你的日志语句将被发送到Console.app和Xcode控制 台（就像标准的NSLog）
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+  
+    //系统上保持一周的日志文件。
+    //如果不设置rollingFrequency和maximumNumberOfLogFiles，
+    //则默认每天1个Log文件、存5天、单个文件最大1M、总计最大20M，否则自动清理最前面的记录。
     CSFileLogger *customLogger = [[CSFileLogger alloc] initWithFlag:1011];
     customLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
-    customLogger.logFileManager.maximumNumberOfLogFiles = 10;
+    customLogger.logFileManager.maximumNumberOfLogFiles = 7;
     [DDLog addLogger:customLogger];
 }
 

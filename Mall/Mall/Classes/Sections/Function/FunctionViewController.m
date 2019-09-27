@@ -8,6 +8,8 @@
 
 #import "FunctionViewController.h"
 #import "FunctionRequest.h"
+#import "DMNetworkTrafficManager.h"
+#import "TDNetFlowDataSource.h"
 
 @interface FunctionViewController ()
 
@@ -21,6 +23,7 @@
     self.navigationItem.title = @"首页";
     [self setupUI];
     
+    [DMNetworkTrafficManager start];
     FunctionRequest *request = [[FunctionRequest alloc]init];
     request.cacheConfig = [[ICacheConfig alloc]init];
     [request.cacheConfig setIsRead:YES];
@@ -30,8 +33,15 @@
     } success:^(id result, BOOL isCache) {
         NSLog(@"%@", [NSString stringWithFormat:@"%@", result]);
         NSLog(@"请求成功%@", request);
+        [DMNetworkTrafficManager end];
+        
+        NSLog(@"上行：%lld", [TDNetFlowDataSource shareInstance].uploadFlow);
+        NSLog(@"下行：%lld", [TDNetFlowDataSource shareInstance].downFlow);
+        [[TDNetFlowDataSource shareInstance] clear];
+        
     } failure:^(NSError *error) {
         NSLog(@"请求失败%@", error);
+        [DMNetworkTrafficManager end];
     }];
     
 }

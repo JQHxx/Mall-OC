@@ -12,15 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURLRequest (Core)
 
-- (NSUInteger)dm_getLineLength;
-
-/**
- 通过 httpResponse.allHeaderFields 拿到 Header 字典，再拼接成报文的 key: value 格式，转换成 NSData 计算大小
- */
-- (NSUInteger)dm_getHeadersLength;
-
+- (NSUInteger)dgm_getLineLength;
 - (NSUInteger)dgm_getHeadersLengthWithCookie;
-
+- (NSDictionary<NSString *, NSString *> *)dgm_getCookies;
 - (NSUInteger)dgm_getBodyLength;
 
 

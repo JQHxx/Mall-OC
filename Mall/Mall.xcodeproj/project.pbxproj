@@ -36,6 +36,8 @@
 		5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547E1233DC611003D0228 /* DMURLSessionConfiguration.m */; };
 		5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547E4233DCB0E003D0228 /* NSURLRequest+Core.m */; };
 		5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547E7233DCB67003D0228 /* NSURLResponse+Core.m */; };
+		5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */; };
+		5EB547EE233DE7C7003D0228 /* TDNetworkTrafficLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -142,6 +144,10 @@
 		5EB547E4233DCB0E003D0228 /* NSURLRequest+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Core.m"; sourceTree = "<group>"; };
 		5EB547E6233DCB67003D0228 /* NSURLResponse+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Core.h"; sourceTree = "<group>"; };
 		5EB547E7233DCB67003D0228 /* NSURLResponse+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Core.m"; sourceTree = "<group>"; };
+		5EB547E9233DE7C6003D0228 /* TDNetFlowDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNetFlowDataSource.h; sourceTree = "<group>"; };
+		5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetFlowDataSource.m; sourceTree = "<group>"; };
+		5EB547EB233DE7C7003D0228 /* TDNetworkTrafficLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNetworkTrafficLog.h; sourceTree = "<group>"; };
+		5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetworkTrafficLog.m; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -473,6 +479,10 @@
 		5EB547D9233DC58A003D0228 /* NetworkTraffic */ = {
 			isa = PBXGroup;
 			children = (
+				5EB547E9233DE7C6003D0228 /* TDNetFlowDataSource.h */,
+				5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */,
+				5EB547EB233DE7C7003D0228 /* TDNetworkTrafficLog.h */,
+				5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */,
 				5EB547DA233DC59B003D0228 /* DMURLProtocol.h */,
 				5EB547DB233DC59B003D0228 /* DMURLProtocol.m */,
 				5EB547DD233DC5DE003D0228 /* DMNetworkTrafficManager.h */,
@@ -894,6 +904,7 @@
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
 				5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */,
+				5EB547EE233DE7C7003D0228 /* TDNetworkTrafficLog.m in Sources */,
 				5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */,
 				5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */,
 				5EB547DF233DC5DE003D0228 /* DMNetworkTrafficManager.m in Sources */,
@@ -904,6 +915,7 @@
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
+				5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,

@@ -8,13 +8,12 @@
 
 #import "DMURLProtocol.h"
 #import "NSData+GZIP.h"
-// #import "NSURLRequest+DoggerMonitor.h"
-// #import "DMNetworkTrafficLog.h"
-// #import "DMDataManager.h"
-// #import "DMDataManager+NetworkTraffic.h"
-// #import "NSURLResponse+DoggerMonitor.h"
 #import "DMURLSessionConfiguration.h"
 #import "DMNetworkTrafficManager.h"
+#import "TDNetworkTrafficLog.h"
+#import "NSURLResponse+Core.h"
+#import "NSURLRequest+Core.h"
+#import "TDNetFlowDataSource.h"
 
 static NSString *const DMHTTP = @"LPDHTTP";
 
@@ -92,6 +91,26 @@ static NSString *const DMHTTP = @"LPDHTTP";
 
 - (void)stopLoading {
     [self.connection cancel];
+    
+    //respose数据/下行流量
+    NSUInteger lineLengthRespose = [self.dm_response dm_getLineLength];
+    NSUInteger headerLengthRespose = [self.dm_response dm_getHeadersLength];
+    NSUInteger bodyLengthRespose = 0;
+    if ([self.dm_response isKindOfClass:[NSHTTPURLResponse class]]) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)self.dm_response;
+        NSData *data = self.dm_data;
+        if ([[httpResponse.allHeaderFields objectForKey:@"Content-Encoding"] isEqualToString:@"gzip"]) {
+            data = [self.dm_data gzippedData];
+        }
+        bodyLengthRespose = data.length;
+    }
+    long long totalRespose = lineLengthRespose + headerLengthRespose + bodyLengthRespose;
+    //上行流量
+    NSUInteger lineLengthRequest = [self.connection.currentRequest dgm_getLineLength];
+    NSUInteger headerLengthRequest = [self.connection.currentRequest dgm_getHeadersLengthWithCookie];
+    NSUInteger bodyLengthRequest = [self.connection.currentRequest dgm_getBodyLength];
+    long long totalRequest = lineLengthRequest + headerLengthRequest + bodyLengthRequest;
+    [[TDNetFlowDataSource shareInstance]setNetworkTrafficData:totalRequest withDownFlow:totalRespose];
     
     /*
     DMNetworkTrafficLog *model = [[DMNetworkTrafficLog alloc] init];

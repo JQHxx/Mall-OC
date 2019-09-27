@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-
-typedef CFHTTPMessageRef (*DMURLResponseGetHTTPResponse)(CFURLRef response);
-
 @interface NSURLResponse (Core)
 
 - (NSString *)statusLineFromCF;
+- (NSUInteger)dm_getLineLength;
+- (NSUInteger)dm_getHeadersLength;
 
 @end
 

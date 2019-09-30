@@ -89,7 +89,7 @@ static char *viewLoadStartTimeKey = "viewLoadStartTimeKey";
 
 -(void)swiz_viewDidLoad {
     self.viewLoadStartTime =CACurrentMediaTime();
-    NSLog(@" %@swiz_viewDidLoad startTime:%f", self.class, self.viewLoadStartTime );
+    NSLog(@" %@  swiz_viewDidLoad startTime:%f", self.class, self.viewLoadStartTime );
     [self swiz_viewDidLoad];
 }
 

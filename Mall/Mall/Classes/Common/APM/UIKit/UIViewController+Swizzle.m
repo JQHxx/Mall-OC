@@ -70,7 +70,7 @@ static char *viewLoadStartTimeKey = "viewLoadStartTimeKey";
     if (self.viewLoadStartTime) {
         CFAbsoluteTime linkTime = (CACurrentMediaTime() - self.viewLoadStartTime);
         
-        NSLog(@" %f s--------------------ssssss   %@:速度：         %f s",self.viewLoadStartTime, self.class, linkTime);
+        NSLog(@" %f vl------------ %@: 耗时：\n%fs", self.viewLoadStartTime, self.class, linkTime);
         self.viewLoadStartTime = 0;
     }
 }
@@ -89,7 +89,7 @@ static char *viewLoadStartTimeKey = "viewLoadStartTimeKey";
 
 -(void)swiz_viewDidLoad {
     self.viewLoadStartTime =CACurrentMediaTime();
-    NSLog(@" %@swiz_viewDidLoad startTime:%f",self.class, self.viewLoadStartTime );
+    NSLog(@" %@swiz_viewDidLoad startTime:%f", self.class, self.viewLoadStartTime );
     [self swiz_viewDidLoad];
 }
 

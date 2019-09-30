@@ -72,6 +72,7 @@ end
 # h5秒开优化：https://juejin.im/post/5d8da122f265da5b5a7209fa
 # iOS13适配：https://juejin.im/post/5d85c3fde51d453b7779d604
 # 向上滑动头部锁定： https://github.com/pujiaxin33/JXPagingView
+# 扫描二维码：https://github.com/wsl2ls/ScanQRcode
 # 仿系统通知样式通知栏：https://github.com/pikacode/EBBannerView
 # 自定义弹窗：https://github.com/JonyFang/FFPopup.git
 # 在线网站：http://www.cocoachina.com/articles/53437?filter=rec

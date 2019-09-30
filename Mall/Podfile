@@ -68,6 +68,7 @@ post_install do |installer|
   end
 end
 
+# iOS13适配：https://juejin.im/post/5d85c3fde51d453b7779d604
 # 向上滑动头部锁定： https://github.com/pujiaxin33/JXPagingView
 # 仿系统通知样式通知栏：https://github.com/pikacode/EBBannerView
 # 自定义弹窗：https://github.com/JonyFang/FFPopup.git

@@ -332,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				5E84365E231619F2006C8ED7 /* Util */,
-				5E84365A231612DF006C8ED7 /* DB */,
+				5E84365A231612DF006C8ED7 /* DataBase */,
 				5E843659231610F4006C8ED7 /* Request */,
 				5E843658231610D7006C8ED7 /* Cache */,
 				5E066780231398E000EE3331 /* API.h */,
@@ -448,13 +448,13 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
-		5E84365A231612DF006C8ED7 /* DB */ = {
+		5E84365A231612DF006C8ED7 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
 				5E84365B231612FE006C8ED7 /* IDataBase.h */,
 				5E84365C231612FE006C8ED7 /* IDataBase.m */,
 			);
-			path = DB;
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		5E84365E231619F2006C8ED7 /* Util */ = {

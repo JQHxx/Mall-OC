@@ -58,6 +58,8 @@
 		5EEB70AB23289F2F00920345 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AA23289F2F00920345 /* Mine.storyboard */; };
 		5EEB70AD23289F4A00920345 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AC23289F4A00920345 /* Message.storyboard */; };
 		5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2630E2326444E0008A605 /* StoryBoardNameUtil.m */; };
+		5EFBFCF2234195CB00CA3729 /* ChectMobileIsBreakPrison.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBFCF1234195CB00CA3729 /* ChectMobileIsBreakPrison.m */; };
+		5EFBFCF5234195D900CA3729 /* ChectAppComplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBFCF3234195D900CA3729 /* ChectAppComplete.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -189,6 +191,10 @@
 		5EEB70AC23289F4A00920345 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		5EF2630D2326444E0008A605 /* StoryBoardNameUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryBoardNameUtil.h; sourceTree = "<group>"; };
 		5EF2630E2326444E0008A605 /* StoryBoardNameUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryBoardNameUtil.m; sourceTree = "<group>"; };
+		5EFBFCF0234195CB00CA3729 /* ChectMobileIsBreakPrison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChectMobileIsBreakPrison.h; sourceTree = "<group>"; };
+		5EFBFCF1234195CB00CA3729 /* ChectMobileIsBreakPrison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChectMobileIsBreakPrison.m; sourceTree = "<group>"; };
+		5EFBFCF3234195D900CA3729 /* ChectAppComplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChectAppComplete.m; sourceTree = "<group>"; };
+		5EFBFCF4234195D900CA3729 /* ChectAppComplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChectAppComplete.h; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EFBFCEF234195AC00CA3729 /* Security */,
 				5EB547D9233DC58A003D0228 /* NetworkTraffic */,
 				5EE45462233C47B000035806 /* TopBanner */,
 				5EB223F8233B223700481D5C /* Trie */,
@@ -649,6 +656,17 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		5EFBFCEF234195AC00CA3729 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				5EFBFCF4234195D900CA3729 /* ChectAppComplete.h */,
+				5EFBFCF3234195D900CA3729 /* ChectAppComplete.m */,
+				5EFBFCF0234195CB00CA3729 /* ChectMobileIsBreakPrison.h */,
+				5EFBFCF1234195CB00CA3729 /* ChectMobileIsBreakPrison.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,11 +907,13 @@
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
+				5EFBFCF2234195CB00CA3729 /* ChectMobileIsBreakPrison.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
+				5EFBFCF5234195D900CA3729 /* ChectAppComplete.m in Sources */,
 				5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,

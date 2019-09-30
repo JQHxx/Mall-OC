@@ -26,6 +26,7 @@
    NSString *result =  [@"1000000" convertAmount];
     NSLog(@"%@", result);
     
+    
 }
 
 

@@ -12,6 +12,8 @@
 #import "UncaughtExceptionHandler.h"
 #import "CSFileLogger.h"
 #import "DMNetworkTrafficManager.h"
+#import "WSLSuspendingView.h"
+#import "WSLFPS.h"
 
 @interface AppDelegate ()
 
@@ -55,6 +57,15 @@
     [self setupLogger];
     
     DDLogWarn(@"[Warn]IS %@", @"");
+    
+    WSLSuspendingView * suspendingView = [WSLSuspendingView sharedSuspendingView];
+    WSLFPS * fps = [WSLFPS sharedFPSIndicator];
+    [fps startMonitoring];
+    fps.FPSBlock = ^(float fps) {
+        suspendingView.fpsLabel.text = [NSString stringWithFormat:@"FPS = %.2f",fps];
+        NSLog(@"FPS = %@",suspendingView.fpsLabel.text);
+    };
+    
     return YES;
 }
 

@@ -20,6 +20,9 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 
 + (instancetype) shareRequest;
 
+// 是否有网络
+- (BOOL) isHasNetWork;
+
 /**
  * @brief request
  * @param progressBlock progress callback

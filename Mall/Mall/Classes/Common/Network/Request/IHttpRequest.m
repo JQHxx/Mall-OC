@@ -67,6 +67,10 @@ static IHttpRequest *_instance = nil;
     return _manager;
 }
 
+- (BOOL) isHasNetWork {
+    return [AFNetworkReachabilityManager sharedManager].isReachable;
+}
+
 /**
  * HTTPS 证书验证
  */

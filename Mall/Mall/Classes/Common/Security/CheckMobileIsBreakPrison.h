@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // 安全防护：越狱检测
-@interface ChectMobileIsBreakPrison : NSObject
+@interface CheckMobileIsBreakPrison : NSObject
 
 + (BOOL)checkMobileIsBreakPrison;
 

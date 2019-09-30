@@ -6,9 +6,9 @@
 //  Copyright © 2019 裴三三. All rights reserved.
 //
 
-#import "ChectAppComplete.h"
+#import "CheckAppComplete.h"
 
-@implementation ChectAppComplete
+@implementation CheckAppComplete
 + (BOOL)isSecondIPA{
     
     NSBundle *bundle = [NSBundle mainBundle];

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // 安全防护： 是否二次打包
-@interface ChectAppComplete : NSObject
+@interface CheckAppComplete : NSObject
 
 
 + (BOOL)isSecondIPA;

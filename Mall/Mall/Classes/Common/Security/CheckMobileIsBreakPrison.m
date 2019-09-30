@@ -6,13 +6,13 @@
 //  Copyright © 2019 裴三三. All rights reserved.
 //
 
-#import "ChectMobileIsBreakPrison.h"
+#import "CheckMobileIsBreakPrison.h"
 #import <UIKit/UIKit.h>
-@implementation ChectMobileIsBreakPrison
+@implementation CheckMobileIsBreakPrison
 
 + (BOOL)checkMobileIsBreakPrison{
     
-    ChectMobileIsBreakPrison *check = [ChectMobileIsBreakPrison new];
+    CheckMobileIsBreakPrison *check = [CheckMobileIsBreakPrison new];
     if ([check isJailBreak] || [check isJailBreak1] || [check isJailBreak2] ) {
         return YES;
     }else{

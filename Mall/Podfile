@@ -68,6 +68,7 @@ post_install do |installer|
   end
 end
 
+# 保存长截图：https://github.com/TonyReet/TYSnapshotScroll
 # 瀑布流：https://github.com/wslcmk/waterFlow.git
 # h5秒开优化：https://juejin.im/post/5d8da122f265da5b5a7209fa
 # iOS13适配：https://juejin.im/post/5d85c3fde51d453b7779d604

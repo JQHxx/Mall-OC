@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface BFLayoutConstraint : NSLayoutConstraint
 
-@property (nonatomic,strong) NSNumber *navHeight;
-
 @end
 
 NS_ASSUME_NONNULL_END

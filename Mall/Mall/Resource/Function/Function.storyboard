@@ -17,7 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="7uF-s1-WUn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qun-vy-uYh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.64313725489999995" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0P5-Hv-Vdg" customClass="BFLayoutConstraint"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qun-vy-uYh" firstAttribute="top" secondItem="On3-S7-Gtj" secondAttribute="top" id="Gsm-wL-TQ5"/>
+                            <constraint firstItem="qun-vy-uYh" firstAttribute="leading" secondItem="On3-S7-Gtj" secondAttribute="leading" id="fGD-Rs-Ery"/>
+                            <constraint firstItem="On3-S7-Gtj" firstAttribute="trailing" secondItem="qun-vy-uYh" secondAttribute="trailing" id="k4h-d5-2Pg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="On3-S7-Gtj"/>
                     </view>
                 </viewController>

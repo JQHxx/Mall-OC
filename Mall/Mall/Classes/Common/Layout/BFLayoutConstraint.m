@@ -10,8 +10,9 @@
 
 @implementation BFLayoutConstraint
 
-- (void)setNavHeight:(NSNumber *)navHeight {
-    self.constant = UIApplication.sharedApplication.statusBarFrame.size.width + 44.0;
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.constant = UIApplication.sharedApplication.statusBarFrame.size.height + 44.0;
 }
 
 @end

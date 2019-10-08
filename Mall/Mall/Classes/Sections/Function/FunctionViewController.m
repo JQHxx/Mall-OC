@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"首页";
-    [self setupUI];
+    // [self setupUI];
     
     [DMNetworkTrafficManager start];
     FunctionRequest *request = [[FunctionRequest alloc]init];
@@ -48,7 +48,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self performSelector:@selector(string) withObject:nil afterDelay:0];
+    // [self performSelector:@selector(string) withObject:nil afterDelay:0];
     
 }
 

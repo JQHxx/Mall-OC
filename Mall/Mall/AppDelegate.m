@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
-#import "Sonic.h"
 #import "UncaughtExceptionHandler.h"
 #import "CSFileLogger.h"
 #import "DMNetworkTrafficManager.h"
@@ -39,11 +38,7 @@
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];
     
     //NSURLProtocol
-    [NSURLProtocol registerClass:[SonicURLProtocol class]];
-        
-    //start web thread
-    UIWebView *webPool = [[UIWebView alloc]initWithFrame:CGRectZero];
-    [webPool loadHTMLString:@"" baseURL:nil];
+    // [NSURLProtocol registerClass:[SonicURLProtocol class]];
     
     
     // 设置主窗口,并设置根控制器

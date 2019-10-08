@@ -40,7 +40,6 @@ PODS:
   - TOCropViewController (2.5.1)
   - TYPagerController (2.1.2)
   - TZImagePickerController (3.2.1)
-  - VasSonic (3.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -61,7 +60,6 @@ DEPENDENCIES:
   - TOCropViewController (~> 2.5.1)
   - TYPagerController (~> 2.1.2)
   - TZImagePickerController (~> 3.2.1)
-  - VasSonic (~> 3.1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -83,7 +81,6 @@ SPEC REPOS:
     - TOCropViewController
     - TYPagerController
     - TZImagePickerController
-    - VasSonic
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -104,8 +101,7 @@ SPEC CHECKSUMS:
   TOCropViewController: 00dc36c4e4a0f4a45efa91adbf22df8a4fae01d3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
-  VasSonic: 1b0e5d45602627e8f39ac120a892050a10d42bab
 
-PODFILE CHECKSUM: 64284c81073167adfa6c44f122477995f28f3752
+PODFILE CHECKSUM: 86b16cc45814d120b1ea627ca33ce6a29fdec623
 
 COCOAPODS: 1.7.5

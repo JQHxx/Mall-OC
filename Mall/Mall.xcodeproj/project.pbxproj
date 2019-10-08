@@ -51,7 +51,6 @@
 		5ED1F73F23152C340095C5A9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73E23152C340095C5A9 /* Common.m */; };
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
-		5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED300802317898D00C8A48C /* SonicWebViewController.m */; };
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4546A233CADAD00035806 /* UIView+Animation.m */; };
@@ -188,8 +187,6 @@
 		5ED1F74623152F8B0095C5A9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		5ED1F747231530FB0095C5A9 /* UIDevice+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Core.h"; sourceTree = "<group>"; };
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
-		5ED3007F2317898D00C8A48C /* SonicWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SonicWebViewController.h; sourceTree = "<group>"; };
-		5ED300802317898D00C8A48C /* SonicWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SonicWebViewController.m; sourceTree = "<group>"; };
 		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
 		5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBannerNotificationsUtils.m; sourceTree = "<group>"; };
 		5EE45466233C480200035806 /* ControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerUtils.h; sourceTree = "<group>"; };
@@ -316,7 +313,6 @@
 				5EFBFCFF2341ACD100CA3729 /* MJExtension */,
 				5EB547D5233DAFB7003D0228 /* Logger */,
 				5E37D9F52334B902005B2F7B /* BuriedPoint */,
-				5ED3007E231788F200C8A48C /* Sonic */,
 				5ED1F72E23150AD90095C5A9 /* SDWebImage */,
 			);
 			path = ThirdPart;
@@ -647,15 +643,6 @@
 				5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		5ED3007E231788F200C8A48C /* Sonic */ = {
-			isa = PBXGroup;
-			children = (
-				5ED3007F2317898D00C8A48C /* SonicWebViewController.h */,
-				5ED300802317898D00C8A48C /* SonicWebViewController.m */,
-			);
-			path = Sonic;
 			sourceTree = "<group>";
 		};
 		5EE45462233C47B000035806 /* TopBanner */ = {
@@ -1037,7 +1024,6 @@
 				5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */,
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
-				5ED300812317898D00C8A48C /* SonicWebViewController.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,
 				5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */,

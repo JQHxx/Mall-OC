@@ -7,7 +7,6 @@
 //
 
 #import "MineViewController.h"
-#import "SonicWebViewController.h"
 #import "BaseWebBrowserViewController.h"
 
 @interface MineViewController ()

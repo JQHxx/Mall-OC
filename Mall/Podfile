@@ -32,7 +32,7 @@ target 'Mall' do
   pod 'FDStackView', '~> 1.0.1'
   
   # h5秒开方案 腾讯X5内核
-  pod 'VasSonic', '~> 3.1.1'
+  # pod 'VasSonic', '~> 3.1.1'
 
   # mmap 键值保存的方式
   pod 'MMKV', '~> 1.0.22'

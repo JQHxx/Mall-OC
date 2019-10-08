@@ -31,8 +31,8 @@
         
         //2、上传成功后，清除本地崩溃日志.
         
-        [UncaughtExceptionHandler exceptionDocumentsClear];
-        //NSLog(exceptionStr);
+        // [UncaughtExceptionHandler exceptionDocumentsClear];
+        NSLog(@"%@", exceptionStr);
     }];
     
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];

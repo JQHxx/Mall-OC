@@ -14,7 +14,7 @@
 @implementation UIViewController (CYLTabBarControllerExtention)
 
 #pragma mark -
-#pragma mark - public Methods
+#pragma mark - Public Methods
 
 - (UIViewController *)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index {
     return [self cyl_popSelectTabBarChildViewControllerAtIndex:index animated:NO];
@@ -238,7 +238,7 @@
 }
 
 #pragma mark -
-#pragma mark - Private Methods
+#pragma mark - Private methods
 
 - (NSArray<__kindof UIViewController *> *)cyl_getOtherSameClassTypeViewControllersInCurrentNavigationControllerStack:(UIViewController *)viewController {
     NSArray *currentNavigationControllerStack = [self.navigationController childViewControllers];
@@ -390,7 +390,7 @@
     }
 }
 
-#pragma mark -- public methods
+#pragma mark -- Public Methods
 
 /**
  *  show badge with red dot style and CYLBadgeAnimationTypeNone by default.

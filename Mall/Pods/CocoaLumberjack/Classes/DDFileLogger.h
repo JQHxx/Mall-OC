@@ -94,7 +94,7 @@ extern unsigned long long const kDDDefaultLogFilesDiskQuota;
  **/
 @property (readwrite, assign, atomic) unsigned long long logFilesDiskQuota;
 
-// Public methods
+// Public Methods
 
 /**
  *  Returns the logs directory (path)

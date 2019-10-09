@@ -30,7 +30,7 @@
     [self cyl_setBadgeValue:badgeValue];
 }
 
-#pragma mark -- public methods
+#pragma mark -- Public Methods
 
 /**
  *  show badge with red dot style and CYLBadgeAnimationTypeNone by default.

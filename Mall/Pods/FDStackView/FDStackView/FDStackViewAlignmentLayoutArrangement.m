@@ -332,7 +332,7 @@
     return self.spanningLayoutGuide;
 }
 
-#pragma mark - Private Methods
+#pragma mark - Private methods
 
 - (void)createSpanningLayoutGuide {
     [_spanningLayoutGuide removeFromSuperview];

@@ -25,7 +25,7 @@
 
 @implementation BaseWebBrowserViewController
 
-#pragma mark: - Life cycle
+#pragma mark - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = YES;
@@ -47,14 +47,14 @@
     NSLog(@"WebVCdealloc");
 }
 
-#pragma mark: - public Methods
+#pragma mark - Public Methods
 - (void)loadWeb:(NSString *)content loadType:(WKWebViewLoadType)loadType title: (NSString *)title {
     _urlStr = content;
     _loadType = loadType;
     self.navigationItem.title = title;
 }
 
-#pragma mark: - private methods
+#pragma mark - Private methods
 - (void)setupUI {
     [self.view addSubview:self.wkwebView];
     [self.view addSubview:self.progressView];
@@ -77,7 +77,7 @@
     }
 }
 
-#pragma mark: - WKNavigationDelegate
+#pragma mark - WKNavigationDelegate
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     //开始加载网页时展示出progressView
@@ -88,12 +88,12 @@
     [self.view bringSubviewToFront:self.progressView];
 }
 
-#pragma mark: - WKDelegateVCDelegate
+#pragma mark - WKDelegateVCDelegate
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
 }
 
-#pragma mark: - event response
+#pragma mark - event response
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         self.progressView.progress = self.wkwebView.estimatedProgress;
@@ -116,7 +116,7 @@
     }
 }
 
-#pragma mark: - setter and getter
+#pragma mark - setter and getter
 - (UIProgressView *)progressView {
     if (! _progressView) {
         //进度条初始化

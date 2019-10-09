@@ -260,7 +260,7 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
 }
 
 #pragma mark -
-#pragma mark - Private Methods
+#pragma mark - Private methods
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
     return NO;

@@ -20,7 +20,7 @@ static WKWebViewModuleAPI *_instance = nil;
     return _instance;
 }
 
-#pragma mark: - setter and geter
+#pragma mark - setter and geter
 - (UIViewController *)wkWebViewVC {
     return [[BaseWebBrowserViewController alloc]init];
 }

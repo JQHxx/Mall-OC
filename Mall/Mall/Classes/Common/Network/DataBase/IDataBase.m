@@ -44,7 +44,7 @@ static IDataBase *_intance = nil;
     return self;
 }
 
-#pragma mark: - Private methods
+#pragma mark - Private methods
 - (void) openDB {
     // 目录
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -62,7 +62,7 @@ static IDataBase *_intance = nil;
     }];
 }
 
-#pragma mark: - 数据的保存和读取
+#pragma mark - 数据的保存和读取
 - (NSData *) queryData: (NSString *) url {
     NSString *sql = @"SELECT * FROM tb_network WHERE url=?;";
     __block NSData *tempData ;

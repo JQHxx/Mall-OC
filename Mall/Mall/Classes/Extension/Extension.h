@@ -6,10 +6,10 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#pragma mark: - Foundation
+#pragma mark - Foundation
 #import "NSString+Helper.h"
 #import "NSTimer+AutoIncalidate.h"
 
-#pragma mark: - UIKit
+#pragma mark - UIKit
 #import "UIDevice+Core.h"
 #import "UIView+Animation.h"

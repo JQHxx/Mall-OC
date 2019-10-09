@@ -107,7 +107,7 @@
 }
 
 
-#pragma mark: - Private methods
+#pragma mark - Private methods
 /**
  *  设置navigationBar样式
  */

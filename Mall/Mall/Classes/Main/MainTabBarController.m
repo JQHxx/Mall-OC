@@ -48,7 +48,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
     [self customizeInterface];
 }
 
-#pragma mark: - Private methods
+#pragma mark - Private methods
 - (NSArray *)viewControllersForTabBar {
     MessageViewController *firstViewController = [[MessageViewController alloc] init];
     UIViewController *firstNavigationController = [[MainNavigationController alloc]

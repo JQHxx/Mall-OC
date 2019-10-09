@@ -8,15 +8,15 @@
 
 // 接口地址
 
-#pragma mark: - Common
+#pragma mark - Common
 #define API_BASE_SERVER @"http://120.76.240.104:8017";
 
-#pragma mark: - Message
+#pragma mark - Message
 #define API_MESSAGE_LIST @"/messageList"
 
-#pragma mark: - Function
+#pragma mark - Function
 #define API_HOME @"/api/index/index"
 
-#pragma mark: - Server
+#pragma mark - Server
 
-#pragma mark: - Mine
+#pragma mark - Mine

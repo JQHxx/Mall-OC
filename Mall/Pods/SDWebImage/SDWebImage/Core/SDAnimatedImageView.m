@@ -513,7 +513,7 @@ static NSUInteger SDDeviceFreeMemory() {
 }
 
 
-#pragma mark - Private Methods
+#pragma mark - Private methods
 #pragma mark Animation
 
 // Don't repeatedly check our window & superview in `-displayDidRefresh:` for performance reasons.

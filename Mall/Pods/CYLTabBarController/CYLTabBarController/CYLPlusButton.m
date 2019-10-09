@@ -17,7 +17,7 @@ UIViewController *CYLPlusChildViewController = nil;
 @implementation CYLPlusButton
 
 #pragma mark -
-#pragma mark - public Methods
+#pragma mark - Public Methods
 
 + (void)registerPlusButton {
     if (![self conformsToProtocol:@protocol(CYLPlusButtonSubclassing)]) {
@@ -72,7 +72,7 @@ UIViewController *CYLPlusChildViewController = nil;
 }
 
 #pragma mark -
-#pragma mark - Private Methods
+#pragma mark - Private methods
 
 + (void)addSelectViewControllerTarget:(UIButton<CYLPlusButtonSubclassing> *)plusButton {
     id target = self;

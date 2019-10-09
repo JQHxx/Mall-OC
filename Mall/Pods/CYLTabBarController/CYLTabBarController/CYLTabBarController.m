@@ -184,7 +184,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 }
 
 #pragma mark -
-#pragma mark - public Methods
+#pragma mark - Public Methods
 
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers tabBarItemsAttributes:(NSArray<NSDictionary *> *)tabBarItemsAttributes {
     return [self initWithViewControllers:viewControllers
@@ -303,7 +303,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 }
 
 #pragma mark -
-#pragma mark - Private Methods
+#pragma mark - Private methods
 
 /**
  *  利用 KVC 把系统的 tabBar 类型改为自定义类型。

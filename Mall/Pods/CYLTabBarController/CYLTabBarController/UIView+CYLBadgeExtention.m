@@ -20,7 +20,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
 
 @implementation UIView (CYLBadgeExtention)
 
-#pragma mark -- public methods
+#pragma mark -- Public Methods
 /**
  *  show badge with red dot style and CYLBadgeAnimationTypeNone by default.
  */
@@ -43,7 +43,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
     [self cyl_showBadgeValue:value animationType:CYLBadgeAnimationTypeNone];
 }
 
-#pragma mark -- private methods
+#pragma mark -- Private methods
 - (void)cyl_showBadgeWithValue:(NSString *)value {
     if (!value) {
         return;
@@ -94,7 +94,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
     return (self.cyl_badge && self.cyl_badge.hidden == YES);
 }
 
-#pragma mark -- private methods
+#pragma mark -- Private methods
 - (void)cyl_showRedDotBadge {
     [self cyl_badgeInit];
 
@@ -210,7 +210,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
     self.cyl_badge.center = CGPointMake(CGRectGetWidth(self.frame) + 2 + self.cyl_badgeCenterOffset.x, self.cyl_badgeCenterOffset.y);
 }
 
-#pragma mark --  other private methods
+#pragma mark --  other Private methods
 - (void)cyl_adjustLabelWidth:(UILabel *)label {
     [label setNumberOfLines:0];
     NSString *s = label.text;

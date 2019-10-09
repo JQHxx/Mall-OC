@@ -54,7 +54,7 @@ static IHttpRequest *_instance = nil;
     return _instance;
 }
 
-#pragma mark: - Setter & Getter
+#pragma mark - Setter & Getter
 - (AFHTTPSessionManager *)manager {
     if (_manager == nil) {
         _manager = [AFHTTPSessionManager manager];
@@ -163,7 +163,7 @@ static IHttpRequest *_instance = nil;
 }
 
 
-#pragma mark: - private methdos
+#pragma mark - private methdos
 /**
  * GET
  */

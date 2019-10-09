@@ -11,6 +11,6 @@
 
 @interface BaseWebBrowserViewController : UIViewController
 
-- (void)loadWebWithUrlStr:(NSString *)urlStr loadType:(WKWebViewLoadType)loadType title: (NSString *)title;
+- (void)loadWeb:(NSString *)content loadType:(WKWebViewLoadType)loadType title: (NSString *)title;
 
 @end

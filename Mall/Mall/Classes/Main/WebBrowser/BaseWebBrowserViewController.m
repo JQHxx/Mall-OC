@@ -48,8 +48,8 @@
 }
 
 #pragma mark: - public Methods
-- (void)loadWebWithUrlStr:(NSString *)urlStr loadType:(WKWebViewLoadType)loadType title: (NSString *)title {
-    _urlStr = urlStr;
+- (void)loadWeb:(NSString *)content loadType:(WKWebViewLoadType)loadType title: (NSString *)title {
+    _urlStr = content;
     _loadType = loadType;
     self.navigationItem.title = title;
 }
@@ -77,7 +77,7 @@
     }
 }
 
-#pragma mark - WKNavigationDelegate
+#pragma mark: - WKNavigationDelegate
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     //开始加载网页时展示出progressView
@@ -93,7 +93,7 @@
       didReceiveScriptMessage:(WKScriptMessage *)message {
 }
 
-#pragma mark - event response
+#pragma mark: - event response
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         self.progressView.progress = self.wkwebView.estimatedProgress;

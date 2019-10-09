@@ -42,6 +42,7 @@
 		5EB57E15234D8C0B0075AF9C /* UITableView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */; };
 		5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */; };
 		5EB57E1B234D906F0075AF9C /* HookObjcLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E1A234D906F0075AF9C /* HookObjcLog.m */; };
+		5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E1D234D92820075AF9C /* UIControl+Logger.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -168,6 +169,8 @@
 		5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Logger.m"; sourceTree = "<group>"; };
 		5EB57E19234D906F0075AF9C /* HookObjcLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookObjcLog.h; sourceTree = "<group>"; };
 		5EB57E1A234D906F0075AF9C /* HookObjcLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookObjcLog.m; sourceTree = "<group>"; };
+		5EB57E1C234D92820075AF9C /* UIControl+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Logger.h"; sourceTree = "<group>"; };
+		5EB57E1D234D92820075AF9C /* UIControl+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Logger.m"; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -447,6 +450,8 @@
 				5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */,
 				5EB57E19234D906F0075AF9C /* HookObjcLog.h */,
 				5EB57E1A234D906F0075AF9C /* HookObjcLog.m */,
+				5EB57E1C234D92820075AF9C /* UIControl+Logger.h */,
+				5EB57E1D234D92820075AF9C /* UIControl+Logger.m */,
 			);
 			path = BuriedPoint;
 			sourceTree = "<group>";
@@ -1013,6 +1018,7 @@
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
+				5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
 				5E0667792313960900EE3331 /* MainNavigationController.m in Sources */,

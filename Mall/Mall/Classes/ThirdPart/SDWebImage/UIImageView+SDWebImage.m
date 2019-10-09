@@ -25,6 +25,7 @@
                failed:(DownloadImageFailedBlock)failed
              progress:(DownloadImageProgressBlock)progress
 {
+    __weak __typeof(self)wself = self;
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:imageName] options:(SDWebImageLowPriority | SDWebImageRetryFailed) progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         
         NSLog(@"progress = %@" , @(receivedSize / expectedSize * 1.0f));
@@ -36,7 +37,12 @@
         
         if (!error){
             NSLog(@"下载成功");
-            self.image = image;
+            // self.image = image;
+            CATransition *animation = [CATransition animation];
+                [animation setDuration:0.65f];
+                [animation setType:kCATransitionFade];
+                animation.removedOnCompletion = YES;
+            [wself.layer addAnimation:animation forKey:@"transition"];
             //成功回调:把图片给我下载完成回调过来:
             if (success) {
                 success(image);
@@ -49,5 +55,6 @@
         }
         
     }];
+    [self.layer removeAnimationForKey:@"transition"];
 }
 @end

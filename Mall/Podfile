@@ -88,4 +88,3 @@ end
 # 输入框自定义键盘：https://github.com/cgmsuccess/CustomKeyBoard
 # 扩大自带手势范围和解决UIScrollView手势冲突的问题：https://gitee.com/aiwoba/BFBaseFrameworkKit/blob/swift4_0/Swift_baseFramework/Swift_baseFramework/BaseFrameworkKit/Main/BFPanBaseNavigationViewController.swift
 # 拖拽重排：https://github.com/liangdahong/BMLongPressDragCellCollectionView 、https://github.com/lizelu/CESelectThemes
-# Alert弹窗： https://github.com/sberrevoets/SDCAlertView

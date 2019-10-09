@@ -15,6 +15,6 @@
 
 @property (nonatomic, strong, readonly) UIViewController *wkWebViewVC;
 
-- (UIViewController *)getWKWebViewVCWithUrlStr:(NSString *)urlStr loadType:(WKWebViewLoadType)loadType title:(NSString *)title;
+- (UIViewController *)getWKWebViewVC:(NSString *)content loadType:(WKWebViewLoadType)loadType title:(NSString *)title;
 
 @end

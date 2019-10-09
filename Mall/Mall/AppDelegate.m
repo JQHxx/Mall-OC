@@ -58,7 +58,7 @@
     [fps startMonitoring];
     fps.FPSBlock = ^(float fps) {
         suspendingView.fpsLabel.text = [NSString stringWithFormat:@"FPS = %.2f",fps];
-        NSLog(@"FPS = %@",suspendingView.fpsLabel.text);
+        NSLog(@"%@",suspendingView.fpsLabel.text);
     };
     
     return YES;

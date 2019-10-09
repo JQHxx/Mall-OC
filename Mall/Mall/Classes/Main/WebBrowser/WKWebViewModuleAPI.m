@@ -25,9 +25,9 @@ static WKWebViewModuleAPI *_instance = nil;
     return [[BaseWebBrowserViewController alloc]init];
 }
 
-- (UIViewController *)getWKWebViewVCWithUrlStr:(NSString *)urlStr loadType:(WKWebViewLoadType)loadType title:(NSString *)title {
+- (UIViewController *)getWKWebViewVC:(NSString *)content loadType:(WKWebViewLoadType)loadType title:(NSString *)title {
     BaseWebBrowserViewController *vc = [[BaseWebBrowserViewController alloc]init];
-    [vc loadWebWithUrlStr:urlStr loadType:loadType title:title];
+    [vc loadWeb:content loadType:loadType title:title];
     return vc;
 }
 

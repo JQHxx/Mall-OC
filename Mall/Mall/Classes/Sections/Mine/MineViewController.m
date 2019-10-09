@@ -26,7 +26,7 @@
 //    [self.navigationController pushViewController:webVC animated:YES];
     
     BaseWebBrowserViewController *webVC = [[BaseWebBrowserViewController alloc]init];
-    [webVC loadWebWithUrlStr:@"https://www.baidu.com" loadType: WKWebViewLoadTypeRemote title:@"百度首页"];
+    [webVC loadWeb:@"https://www.baidu.com" loadType: WKWebViewLoadTypeRemote title:@"百度首页"];
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

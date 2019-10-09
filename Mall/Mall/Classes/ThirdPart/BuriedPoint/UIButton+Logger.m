@@ -8,6 +8,8 @@
 
 #import "UIButton+Logger.h"
 #import "WYEHook.h"
+#import "HookObjcLog.h"
+
 @implementation UIButton (Logger)
 + (void)load {
     static dispatch_once_t onceToken;
@@ -29,6 +31,7 @@
         NSString *actionString = NSStringFromSelector(action);
         NSString *targetName = NSStringFromClass([target class]);
         NSLog(@"hook到button事件啦： %@",[NSString stringWithFormat:@"%@ %@",targetName,actionString]);
+        [[HookObjcLog shareInstance] recordLogActionHookClass:[target class] action:action identifier:@"UIButton"];
     }
 }
 

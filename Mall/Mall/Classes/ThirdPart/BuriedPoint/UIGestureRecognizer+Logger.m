@@ -8,6 +8,7 @@
 
 #import "UIGestureRecognizer+Logger.h"
 #import "WYEHook.h"
+#import "HookObjcLog.h"
 
 @implementation UIGestureRecognizer (Logger)
 
@@ -15,7 +16,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         ///获取
-        
         SEL originalSEL = @selector(initWithTarget:action:);
         SEL changeSEL = @selector(hook_initWithTarget:action:);
         [WYEHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
@@ -36,6 +36,8 @@
 - (void)hook_gestureAction:(id)sender{
     [self hook_gestureAction:sender];
     NSLog(@"%@", [sender class]);
+    [[HookObjcLog shareInstance] recordLogActionHookClass:self.view.classForCoder action:@selector(hook_gestureAction:) identifier:@"手势"];
+
 }
 
 @end

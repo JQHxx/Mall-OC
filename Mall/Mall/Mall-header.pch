@@ -32,6 +32,7 @@
 #import <CocoaLumberjack.h>
 
 #pragma mark: - 埋点
+// 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
 #import "UIViewController+Logger.h"
 #import "UIButton+Logger.h"
 #import "UITableView+Logger.h"

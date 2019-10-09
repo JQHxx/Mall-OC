@@ -89,3 +89,4 @@ end
 # 扩大自带手势范围和解决UIScrollView手势冲突的问题：https://gitee.com/aiwoba/BFBaseFrameworkKit/blob/swift4_0/Swift_baseFramework/Swift_baseFramework/BaseFrameworkKit/Main/BFPanBaseNavigationViewController.swift
 # 拖拽重排：https://github.com/liangdahong/BMLongPressDragCellCollectionView 、https://github.com/lizelu/CESelectThemes
 # iOS13适配：https://www.jianshu.com/p/d2a0fa7bcbef
+# LLDB调试：https://www.jianshu.com/p/c91f843a64fc

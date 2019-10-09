@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *picUrl; //图片
 
 @property(nonatomic, assign) BOOL isLoad;
+
+@property(nonatomic, assign) CGFloat cellHeight;
 
 @end
 

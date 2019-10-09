@@ -59,10 +59,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     MZImageModel * model = self.datas[indexPath.row];
-    CGSize size = [UIImage downloadImageSizeWithURL:model.picUrl];
-    NSLog(@"%@", NSStringFromCGSize(size));
-    // 
-    return 120;
+    if (model.cellHeight == 0) {
+        CGSize size = [UIImage downloadImageSizeWithURL:model.picUrl];
+        NSLog(@"%@", NSStringFromCGSize(size));
+        CGFloat height = UIScreen.mainScreen.bounds.size.width * size.height / size.width;
+        model.cellHeight = height;
+    }
+    return model.cellHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

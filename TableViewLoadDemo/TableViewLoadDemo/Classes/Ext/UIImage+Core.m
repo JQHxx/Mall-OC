@@ -28,8 +28,10 @@
     if([[SDImageCache sharedImageCache] diskImageDataExistsWithKey:absoluteString]){
         UIImage* image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:absoluteString];
         if(!image){
+            // diskImageDataBySearchingAllPathsForKey:
             NSData* data = [[SDImageCache sharedImageCache] performSelector:@selector(diskImageDataBySearchingAllPathsForKey:) withObject:URL.absoluteString];
             image = [UIImage imageWithData:data];
+            
         }
         if(!image)
         {

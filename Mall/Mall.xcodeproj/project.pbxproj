@@ -39,6 +39,8 @@
 		5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547E7233DCB67003D0228 /* NSURLResponse+Core.m */; };
 		5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */; };
 		5EB547EE233DE7C7003D0228 /* TDNetworkTrafficLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */; };
+		5EB57E15234D8C0B0075AF9C /* UITableView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */; };
+		5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -159,6 +161,10 @@
 		5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetFlowDataSource.m; sourceTree = "<group>"; };
 		5EB547EB233DE7C7003D0228 /* TDNetworkTrafficLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNetworkTrafficLog.h; sourceTree = "<group>"; };
 		5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetworkTrafficLog.m; sourceTree = "<group>"; };
+		5EB57E13234D8C0B0075AF9C /* UITableView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Logger.h"; sourceTree = "<group>"; };
+		5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Logger.m"; sourceTree = "<group>"; };
+		5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Logger.h"; sourceTree = "<group>"; };
+		5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Logger.m"; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -432,6 +438,10 @@
 				5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */,
 				5E37D9F62334B910005B2F7B /* WYEHook.h */,
 				5E37D9FB2334B911005B2F7B /* WYEHook.m */,
+				5EB57E13234D8C0B0075AF9C /* UITableView+Logger.h */,
+				5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */,
+				5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Logger.h */,
+				5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */,
 			);
 			path = BuriedPoint;
 			sourceTree = "<group>";
@@ -985,6 +995,7 @@
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EFBFCF2234195CB00CA3729 /* CheckMobileIsBreakPrison.m in Sources */,
+				5EB57E15234D8C0B0075AF9C /* UITableView+Logger.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
@@ -1023,6 +1034,7 @@
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */,
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,
+				5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,

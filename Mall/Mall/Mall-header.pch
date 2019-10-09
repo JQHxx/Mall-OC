@@ -34,6 +34,8 @@
 #pragma mark: - 埋点
 #import "UIViewController+Logger.h"
 #import "UIButton+Logger.h"
+#import "UITableView+Logger.h"
+#import "UIGestureRecognizer+Logger.h"
 
 #pragma mark: - 其他
 #ifdef DEBUG

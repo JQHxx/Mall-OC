@@ -29,8 +29,11 @@
         UIImage* image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:absoluteString];
         if(!image){
             // diskImageDataBySearchingAllPathsForKey:
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
             NSData* data = [[SDImageCache sharedImageCache] performSelector:@selector(diskImageDataBySearchingAllPathsForKey:) withObject:URL.absoluteString];
             image = [UIImage imageWithData:data];
+#pragma clang diagnostic pop
             
         }
         if(!image)
@@ -50,7 +53,10 @@
         size = [self downloadJPGImageSizeWithRequest:request];
     }
     if(CGSizeEqualToSize(CGSizeZero, size)){
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         NSData* data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:URL] returningResponse:nil error:nil];
+#pragma clang diagnostic pop
         UIImage* image = [UIImage imageWithData:data];
         if(image){
             [[SDImageCache sharedImageCache]  storeImage:image imageData:data forKey:URL.absoluteString toDisk:YES completion:^{
@@ -69,7 +75,10 @@
 +(CGSize)downloadPNGImageSizeWithRequest:(NSMutableURLRequest*)request
 {
     [request setValue:@"bytes=16-23" forHTTPHeaderField:@"Range"];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+#pragma clang diagnostic pop
     if(data.length == 8)
     {
         int w1 = 0, w2 = 0, w3 = 0, w4 = 0;
@@ -93,7 +102,10 @@
 +(CGSize)downloadGIFImageSizeWithRequest:(NSMutableURLRequest*)request
 {
     [request setValue:@"bytes=6-9" forHTTPHeaderField:@"Range"];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+#pragma clang diagnostic pop
     if(data.length == 4)
     {
         short w1 = 0, w2 = 0;
@@ -112,7 +124,10 @@
 //JPG格式
 +(CGSize)downloadJPGImageSizeWithRequest:(NSMutableURLRequest*)request{
     [request setValue:@"bytes=0-209" forHTTPHeaderField:@"Range"];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+#pragma clang diagnostic pop
     
     if ([data length] <= 0x58) {
         return CGSizeZero;

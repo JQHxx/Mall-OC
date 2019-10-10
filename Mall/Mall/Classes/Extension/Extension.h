@@ -13,3 +13,4 @@
 #pragma mark - UIKit
 #import "UIDevice+Core.h"
 #import "UIView+Animation.h"
+#import "UIView+Frame.h"

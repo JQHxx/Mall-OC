@@ -49,6 +49,7 @@
 		5EBD3ECB2313786500DC2F8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3ECA2313786500DC2F8F /* main.m */; };
 		5EBD3ED52313786500DC2F8F /* MallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3ED42313786500DC2F8F /* MallTests.m */; };
 		5EBD3EE02313786500DC2F8F /* MallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EDF2313786500DC2F8F /* MallUITests.m */; };
+		5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */; };
 		5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F72C2314E1240095C5A9 /* MainTabBarController.m */; };
 		5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73023150AF80095C5A9 /* UIImageView+SDWebImage.m */; };
 		5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73523151FEE0095C5A9 /* FunctionRequest.m */; };
@@ -184,6 +185,8 @@
 		5EBD3EDB2313786500DC2F8F /* MallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EDF2313786500DC2F8F /* MallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallUITests.m; sourceTree = "<group>"; };
 		5EBD3EE12313786500DC2F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC37AB2234ED6AE004A8ABF /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		5ED1F72B2314E1240095C5A9 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		5ED1F72C2314E1240095C5A9 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		5ED1F72F23150AF80095C5A9 /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
@@ -650,6 +653,8 @@
 				5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */,
 				5EE45469233CADAD00035806 /* UIView+Animation.h */,
 				5EE4546A233CADAD00035806 /* UIView+Animation.m */,
+				5EC37AB2234ED6AE004A8ABF /* UIView+Frame.h */,
+				5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1018,6 +1023,7 @@
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
+				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,

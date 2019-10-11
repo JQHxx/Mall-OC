@@ -92,3 +92,5 @@ end
 # LLDB调试：https://www.jianshu.com/p/c91f843a64fc
 # 侧滑菜单: https://github.com/choiceyou/FWSideMenu
 # 无网络占位：https://github.com/dev-liyang/LYEmptyView
+# 图片下载封装：https://github.com/ripeyd/ZYImageCache
+# pickView: https://github.com/91renb/BRPickerView

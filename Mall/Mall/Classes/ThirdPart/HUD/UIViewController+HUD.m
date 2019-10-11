@@ -27,7 +27,7 @@
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.contentColor = [UIColor whiteColor];
     HUD.bezelView.color = [UIColor blackColor];
-    HUD.mode=MBProgressHUDModeText;
+    HUD.mode = MBProgressHUDModeText;
     HUD.label.text = error;
     HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
@@ -63,7 +63,7 @@
     HUD.bezelView.color = [UIColor blackColor];
     HUD.contentColor = [UIColor whiteColor];
     HUD.label.text = message;
-    HUD.removeFromSuperViewOnHide=YES;
+    HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];
 }

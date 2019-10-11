@@ -10,7 +10,6 @@
 #import "FunctionRequest.h"
 #import "DMNetworkTrafficManager.h"
 #import "TDNetFlowDataSource.h"
-#import "ShowHUD.h"
 
 @interface FunctionViewController ()
 
@@ -50,45 +49,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];
-
-    /*
-    [ShowHUD showTextOnly:@"YouXianMing"
-                  configParameter:^(ShowHUD *config) {
-                      config.animationStyle  = ZoomOut;  // 设置动画方式
-                      config.margin          = 0.f;     // 边缘留白
-                      config.opacity         = 1.f;     // 设定透明度
-                      config.cornerRadius    = 15.f;     // 设定圆角
-                      config.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:1.0];  // 设置背景色
-                      config.labelColor      = [[UIColor orangeColor] colorWithAlphaComponent:1.0];// 设置文本颜色
-                  } duration:1.5 inView:self.view];
-     */
-    
-
-    /*
-    [ShowHUD showCustomView:^UIView *{
-        
-        UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyleWhite)];
-        //设置小菊花的frame
-        // indicator.frame = CGRectMake(100, 100, 100, 100);
-        //设置小菊花颜色
-        // indicator.color = [UIColor redColor];
-        //设置背景颜色
-        //indicator.backgroundColor = [UIColor cyanColor];
-        //刚进入这个界面会显示控件，并且停止旋转也会显示，只是没有在转动而已，没有设置或者设置为YES的时候，刚进入页面不会显示
-        // indicator.hidesWhenStopped = NO;
-        [indicator startAnimating];
-        return indicator;
-        
-    } configParameter:^(ShowHUD *config) {
-         config.animationStyle  = ZoomOut;  // 设置动画方式
-         config.margin          = 0.f;     // 边缘留白
-         config.opacity         = 1.f;     // 设定透明度
-         config.cornerRadius    = 15.f;     // 设定圆角
-         config.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:1.0];  // 设置背景色
-         config.labelColor      = [[UIColor orangeColor] colorWithAlphaComponent:1.0];// 设置文本颜色
-    } inView:self.view];
-     */
-    
     
 }
 

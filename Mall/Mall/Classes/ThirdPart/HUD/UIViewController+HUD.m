@@ -35,7 +35,7 @@
     [HUD hideAnimated:YES afterDelay:1.5];
 }
 
-- (void)showMessage:(NSString *)message {
+- (void)showToast:(NSString *)message {
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.contentColor = [UIColor whiteColor];
     HUD.bezelView.color = [UIColor blackColor];
@@ -57,12 +57,12 @@
     [HUD showAnimated:YES];
 }
 
-- (void)showLoading {
+- (void)showLoading:(NSString *)message {
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.backgroundView.color = [UIColor colorWithWhite:1.f alpha:.2f];
     HUD.bezelView.color = [UIColor blackColor];
     HUD.contentColor = [UIColor whiteColor];
-    HUD.label.text = @"正在加载...";
+    HUD.label.text = message;
     HUD.removeFromSuperViewOnHide=YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];

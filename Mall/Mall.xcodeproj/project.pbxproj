@@ -23,6 +23,7 @@
 		5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */; };
 		5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* WYEHook.m */; };
 		5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */; };
+		5E7CB90B2350688000EAAB06 /* ShowHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CB90A2350688000EAAB06 /* ShowHUD.m */; };
 		5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82B407234C62E20051E3CB /* BFLayoutConstraint.m */; };
 		5E84365123160820006C8ED7 /* IHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365023160820006C8ED7 /* IHttpCache.m */; };
 		5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8436532316094A006C8ED7 /* ICacheConfig.m */; };
@@ -132,6 +133,8 @@
 		5E37D9FB2334B911005B2F7B /* WYEHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEHook.m; sourceTree = "<group>"; };
 		5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		5E5D94422338A14D008C52C2 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		5E7CB9092350688000EAAB06 /* ShowHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowHUD.h; sourceTree = "<group>"; };
+		5E7CB90A2350688000EAAB06 /* ShowHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowHUD.m; sourceTree = "<group>"; };
 		5E82B406234C62E20051E3CB /* BFLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFLayoutConstraint.h; sourceTree = "<group>"; };
 		5E82B407234C62E20051E3CB /* BFLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFLayoutConstraint.m; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
@@ -325,6 +328,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5E7CB9082350686000EAAB06 /* HUD */,
 				5EFBFCFF2341ACD100CA3729 /* MJExtension */,
 				5EB547D5233DAFB7003D0228 /* Logger */,
 				5E37D9F52334B902005B2F7B /* BuriedPoint */,
@@ -466,6 +470,15 @@
 				5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */,
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		5E7CB9082350686000EAAB06 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CB9092350688000EAAB06 /* ShowHUD.h */,
+				5E7CB90A2350688000EAAB06 /* ShowHUD.m */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		5E82B405234C62B10051E3CB /* Layout */ = {
@@ -1003,6 +1016,7 @@
 				5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
+				5E7CB90B2350688000EAAB06 /* ShowHUD.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,

@@ -10,7 +10,7 @@
 #define Macro_h
 
 //状态栏高度
-#define StatusBarHeight   [[UIApplication sharedApplication] statusBarFrame].size.height
+#define STATUSBAR_HEIGHT  [[UIApplication sharedApplication] statusBarFrame].size.height
 
 // 设备屏幕的大小
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)

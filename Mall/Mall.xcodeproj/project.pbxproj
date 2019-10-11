@@ -135,6 +135,7 @@
 		5E5D94422338A14D008C52C2 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		5E7CB90C235072E800EAAB06 /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		5E7CB90D235072E800EAAB06 /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		5E7CB90F2350770300EAAB06 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		5E82B406234C62E20051E3CB /* BFLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFLayoutConstraint.h; sourceTree = "<group>"; };
 		5E82B407234C62E20051E3CB /* BFLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFLayoutConstraint.m; sourceTree = "<group>"; };
 		5E84364F23160820006C8ED7 /* IHttpCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHttpCache.h; sourceTree = "<group>"; };
@@ -608,6 +609,7 @@
 				5EBD3ECA2313786500DC2F8F /* main.m */,
 				5E0667752313926100EE3331 /* Mall-header.pch */,
 				5ED1F74623152F8B0095C5A9 /* Macro.h */,
+				5E7CB90F2350770300EAAB06 /* Header.h */,
 			);
 			path = Mall;
 			sourceTree = "<group>";

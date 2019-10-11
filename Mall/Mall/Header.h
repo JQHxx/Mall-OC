@@ -1,0 +1,86 @@
+//
+//  Header.h
+//  Mall
+//
+//  Created by midland on 2019/10/11.
+//  Copyright © 2019 JQHxx. All rights reserved.
+//
+
+// 只会在OC的代码中被引用
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#endif
+
+#pragma mark - 通用
+#import "Macro.h"
+#import "Network.h"
+#import "Config.h"
+#import "Common.h"
+#import "StoryBoardNameUtil.h"
+#import "BFLayoutConstraint.h"
+
+#pragma mark - Extension
+#import "Extension.h"
+#import "UIViewController+Swizzle.h"
+
+#pragma mark - 第三方
+#import "UIImageView+SDWebImage.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "PureLayout.h"
+#import "MBProgressHUD.h"
+#import <CocoaLumberjack.h>
+#import "UIViewController+HUD.h"
+
+#pragma mark - 埋点
+// 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
+#import "UIViewController+Logger.h"
+#import "UIButton+Logger.h"
+#import "UITableView+Logger.h"
+#import "UIGestureRecognizer+Logger.h"
+
+#pragma mark - 其他
+#ifdef DEBUG
+// 如果要禁止
+// #define NULLSAFE_ENABLED 0
+#endif
+
+#ifndef __OPTIMIZE__
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+
+#endif
+
+
+
+//
+#ifdef DEBUG
+#define MYLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define MYLog(format, ...)
+#endif
+
+// 适配iOS 11 scrollView
+#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+if (@available(iOS 11.0,*))  {\
+scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;\
+} else {\
+self.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+
+
+// 去除警告 https://www.jianshu.com/p/cbe9f21cee81
+
+//定义并导入CoCoaLumberJack框架
+#define LOG_LEVEL_DEF ddLogLevel
+//通过DEBUG模式设置全局日志等级，DEBUG时为Verbose，所有日志信息都可以打印，否则Error，只打印
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelError;
+#endif

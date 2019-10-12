@@ -16,6 +16,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) UIVisualEffectView *effectView;
+
 @end
 
 @implementation AppDelegate
@@ -87,13 +89,19 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     // 仿支付宝信息安全
+     //添加屏幕毛玻璃
+     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+     self.effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+     self.effectView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+     self.effectView.alpha = 0.93;
+     [self.window addSubview:self.effectView];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    //移除屏幕毛玻璃
+    [self.effectView removeFromSuperview];
 }
 
 

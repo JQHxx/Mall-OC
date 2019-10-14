@@ -68,6 +68,9 @@ post_install do |installer|
   end
 end
 
+# linkMap: 检查每个类占用大小 https://github.com/huanxsd/LinkMap   https://techblog.toutiao.com/2016/12/27/iphone/
+# iOS瘦身之删除FrameWork中无用mach-O文件 https://www.infoq.cn/article/ios-thinning-delete-unnecessary-mach-o/
+# 滴滴出行包体积优化：https://ming1016.github.io/2017/06/12/gmtc-ios-slimming-practice/
 # feed流优化：https://github.com/liangdahong/UITableView-BMDynamicLayout
 # 保存长截图：https://github.com/TonyReet/TYSnapshotScroll
 # 瀑布流：https://github.com/wslcmk/waterFlow.git
@@ -96,3 +99,4 @@ end
 # pickView: https://github.com/91renb/BRPickerView
 # 分类文件集合：https://github.com/shaojiankui/JKCategories
 # 个人中心：https://github.com/ArchLL/HGPersonalCenter
+# MJRefresh 定制方案: https://www.jianshu.com/p/df1f1f265c33

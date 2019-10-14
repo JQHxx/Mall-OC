@@ -31,6 +31,7 @@
 #import "MBProgressHUD.h"
 #import <CocoaLumberjack.h>
 #import "UIViewController+HUD.h"
+#import "BLStopwatch.h"
 
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog

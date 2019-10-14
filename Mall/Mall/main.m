@@ -28,6 +28,8 @@ void disable_gdb() {
 
 int main(int argc, char * argv[]) {
     
+    [[BLStopwatch sharedStopwatch] start];
+    
     #ifndef DUBUG
         // disable_gdb();
     #endif

@@ -23,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];
     [DMNetworkTrafficManager start];
     
     [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {
@@ -60,6 +61,9 @@
         suspendingView.fpsLabel.text = [NSString stringWithFormat:@"FPS = %.2f",fps];
         NSLog(@"%@",suspendingView.fpsLabel.text);
     };
+    
+    [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL1"];
+    // [[BLStopwatch sharedStopwatch] stopAndPresentResultsThenReset];
     
     return YES;
 }

@@ -57,6 +57,7 @@
 		5ED1F73F23152C340095C5A9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73E23152C340095C5A9 /* Common.m */; };
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
+		5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51EA235407F400204F67 /* BLStopwatch.m */; };
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4546A233CADAD00035806 /* UIView+Animation.m */; };
@@ -206,6 +207,8 @@
 		5ED1F74623152F8B0095C5A9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		5ED1F747231530FB0095C5A9 /* UIDevice+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Core.h"; sourceTree = "<group>"; };
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
+		5EDE51EA235407F400204F67 /* BLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStopwatch.m; sourceTree = "<group>"; };
+		5EDE51EB235407F400204F67 /* BLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStopwatch.h; sourceTree = "<group>"; };
 		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
 		5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBannerNotificationsUtils.m; sourceTree = "<group>"; };
 		5EE45466233C480200035806 /* ControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerUtils.h; sourceTree = "<group>"; };
@@ -329,6 +332,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5EDE51E9235407D000204F67 /* StopWatch */,
 				5E7CB9082350686000EAAB06 /* HUD */,
 				5EFBFCFF2341ACD100CA3729 /* MJExtension */,
 				5EB547D5233DAFB7003D0228 /* Logger */,
@@ -685,6 +689,15 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		5EDE51E9235407D000204F67 /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				5EDE51EB235407F400204F67 /* BLStopwatch.h */,
+				5EDE51EA235407F400204F67 /* BLStopwatch.m */,
+			);
+			path = StopWatch;
+			sourceTree = "<group>";
+		};
 		5EE45462233C47B000035806 /* TopBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -1017,6 +1030,7 @@
 				5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */,
 				5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
+				5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */,
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,

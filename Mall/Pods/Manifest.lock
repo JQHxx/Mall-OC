@@ -20,6 +20,7 @@ PODS:
   - CYLTabBarController (1.24.2):
     - CYLTabBarController/Core (= 1.24.2)
   - CYLTabBarController/Core (1.24.2)
+  - FBRetainCycleDetector (0.1.4)
   - FDStackView (1.0.1)
   - fishhook (0.2)
   - FMDB (2.7.5):
@@ -29,6 +30,8 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.1.0)
   - MJRefresh (3.1.17)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
   - MMKV (1.0.22)
   - NullSafe (2.0)
   - PureLayout (3.1.4)
@@ -52,6 +55,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.1.0)
   - MJExtension (~> 3.1.0)
   - MJRefresh (~> 3.1.16)
+  - MLeaksFinder
   - MMKV (~> 1.0.22)
   - NullSafe (~> 2.0)
   - PureLayout (~> 3.1.4)
@@ -62,10 +66,11 @@ DEPENDENCIES:
   - TZImagePickerController (~> 3.2.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CocoaLumberjack
     - CYLTabBarController
+    - FBRetainCycleDetector
     - FDStackView
     - fishhook
     - FMDB
@@ -73,6 +78,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - MJRefresh
+    - MLeaksFinder
     - MMKV
     - NullSafe
     - PureLayout
@@ -86,6 +92,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FDStackView: fc0697e5be2022c8af36ce66e9e2061006058ba8
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -93,6 +100,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   MMKV: 99b05c376c0eb412b468ba1d3e6813502edeaa24
   NullSafe: 948feba938f03abede5ed3758694a9fe5b3a65ce
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
@@ -102,6 +110,6 @@ SPEC CHECKSUMS:
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
 
-PODFILE CHECKSUM: 86b16cc45814d120b1ea627ca33ce6a29fdec623
+PODFILE CHECKSUM: fc6efbabaa52ce19efc53965ab88cd0346847e70
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.3

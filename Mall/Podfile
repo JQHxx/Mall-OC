@@ -45,6 +45,9 @@ target 'Mall' do
   
   pod 'GZIP', '~> 1.2'
   
+  # 内存泄漏检测
+  pod 'MLeaksFinder'
+  
   target 'MallTests' do
     inherit! :search_paths
     # Pods for testing

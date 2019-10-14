@@ -62,6 +62,7 @@
 		5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */; };
 		5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FB23542DFB00204F67 /* UIView+Logger.m */; };
 		5EDE51FF2354304800204F67 /* UICollectionView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */; };
+		5EDE52032354503800204F67 /* JSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE52022354503800204F67 /* JSONUtil.m */; };
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4546A233CADAD00035806 /* UIView+Animation.m */; };
@@ -221,6 +222,8 @@
 		5EDE51FB23542DFB00204F67 /* UIView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Logger.m"; sourceTree = "<group>"; };
 		5EDE51FD2354304800204F67 /* UICollectionView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Logger.h"; sourceTree = "<group>"; };
 		5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Logger.m"; sourceTree = "<group>"; };
+		5EDE52012354503800204F67 /* JSONUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONUtil.h; sourceTree = "<group>"; };
+		5EDE52022354503800204F67 /* JSONUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONUtil.m; sourceTree = "<group>"; };
 		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
 		5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBannerNotificationsUtils.m; sourceTree = "<group>"; };
 		5EE45466233C480200035806 /* ControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerUtils.h; sourceTree = "<group>"; };
@@ -327,6 +330,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EDE52002354501F00204F67 /* JSON */,
 				5E82B405234C62B10051E3CB /* Layout */,
 				5EFBFCFE2341ACB100CA3729 /* IOS13 */,
 				5EFBFCF92341A57F00CA3729 /* APM */,
@@ -726,6 +730,15 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		5EDE52002354501F00204F67 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5EDE52012354503800204F67 /* JSONUtil.h */,
+				5EDE52022354503800204F67 /* JSONUtil.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		5EE45462233C47B000035806 /* TopBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -1101,6 +1114,7 @@
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
 				5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */,
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
+				5EDE52032354503800204F67 /* JSONUtil.m in Sources */,
 				5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */,
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,

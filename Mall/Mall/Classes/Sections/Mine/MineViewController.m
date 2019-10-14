@@ -22,12 +22,28 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-//    SonicWebViewController *webVC = [[SonicWebViewController alloc]initWithUrl:@"https://www.baidu.com" useSonicMode:YES unStrictMode:YES];
-//    [self.navigationController pushViewController:webVC animated:YES];
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:@"objc"];
+    [array addObject:@"swift"];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"key"] = @"value";
+    // dict[@"itmes"] = array;
+    NSString *json = [JSONUtil queryStringFrom:dict];
+    NSLog(@"json: %@", json);
+    json = [JSONUtil clearParams:json];
+    NSLog(@"json: %@", json);
     
+    
+    NSString *json1 = [JSONUtil dictToJSON:dict];
+    NSLog(@"json1: %@", json1);
+    json1 = [JSONUtil clearParams:json1];
+    NSLog(@"json2: %@", json1);
+    
+    /*
     BaseWebBrowserViewController *webVC = [[BaseWebBrowserViewController alloc]init];
     [webVC loadWeb:@"https://www.baidu.com" loadType: WKWebViewLoadTypeRemote title:@"百度首页"];
     [self.navigationController pushViewController:webVC animated:YES];
+     */
 }
 
 

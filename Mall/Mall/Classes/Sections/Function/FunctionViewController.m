@@ -22,7 +22,7 @@
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"VDL0"];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"首页";
-    // [self setupUI];
+    [self setupUI];
     
     [DMNetworkTrafficManager start];
     FunctionRequest *request = [[FunctionRequest alloc]init];
@@ -59,6 +59,9 @@
     
 }
 
+- (void)tapGes {
+    
+}
 
 - (void) setupUI {
     
@@ -66,12 +69,14 @@
     redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:redView];
     
-    /*
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGes)];
+    [redView addGestureRecognizer:tapGes];
+    
     [redView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeRight];
-     */
+
     
     /*
     [redView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(15, 15, 15, 15)];

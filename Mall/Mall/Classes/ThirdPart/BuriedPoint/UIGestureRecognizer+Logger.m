@@ -11,6 +11,7 @@
 #import "HookObjcLog.h"
 
 @implementation UIGestureRecognizer (Logger)
+@dynamic methodName;
 
 +(void)load{
     static dispatch_once_t onceToken;
@@ -24,20 +25,27 @@
 
 - (instancetype)hook_initWithTarget:(nullable id)target action:(nullable SEL)action{
     UIGestureRecognizer *gestureRecognizer = [self hook_initWithTarget:target action:action];
-    SEL changeSEL = @selector(hook_gestureAction:);
-    IMP hookIMP = class_getMethodImplementation(self.class, changeSEL);
-    const char *type = method_getTypeEncoding(class_getInstanceMethod([target class], action));
-    class_addMethod([target class], changeSEL, hookIMP, type);
-    
-    [WYEHook hookClass:[target class] fromSelector:action toSelector:changeSEL];
+    self.methodName = NSStringFromSelector(action);
     return gestureRecognizer;
 }
 
-- (void)hook_gestureAction:(id)sender{
+/*
+- (void)hook_gestureAction:(id)sender {
     [self hook_gestureAction:sender];
     NSLog(@"%@", [sender class]);
     [[HookObjcLog shareInstance] recordLogActionHookClass:self.view.classForCoder action:@selector(hook_gestureAction:) identifier:@"手势"];
 
 }
+ */
+
+static const void *MethodName = &MethodName;
+- (void)setMethodName:(NSString *)methodName {
+    objc_setAssociatedObject(self, MethodName, methodName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)methodName {
+    return objc_getAssociatedObject(self, MethodName);
+}
+
 
 @end

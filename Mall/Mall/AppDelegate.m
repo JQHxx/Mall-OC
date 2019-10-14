@@ -56,6 +56,7 @@
     
     DDLogWarn(@"[Warn]IS %@", @"");
     
+    /*
     WSLSuspendingView * suspendingView = [WSLSuspendingView sharedSuspendingView];
     WSLFPS * fps = [WSLFPS sharedFPSIndicator];
     [fps startMonitoring];
@@ -63,6 +64,7 @@
         suspendingView.fpsLabel.text = [NSString stringWithFormat:@"FPS = %.2f",fps];
         NSLog(@"%@",suspendingView.fpsLabel.text);
     };
+     */
     
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL1"];
     // [[BLStopwatch sharedStopwatch] stopAndPresentResultsThenReset];

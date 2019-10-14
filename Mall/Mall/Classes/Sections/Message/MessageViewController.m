@@ -9,7 +9,9 @@
 #import "MessageViewController.h"
 #import "TopBannerNotificationsUtils.h"
 
-@interface MessageViewController ()
+@interface MessageViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -17,43 +19,61 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.navigationItem.title = @"消息";
-}
-    
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    // [TopBannerNotificationsUtils alertWithMessage:@"退出登录"];
-    [self feedbackGenerator];
-    /*
-   NSString *result =  [@"1000000" convertAmount];
-    NSLog(@"%@", result);
-     */
-
+    self.navigationItem.title = @"消息";
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self setupUI];
 }
 
-/**
- @brief MJRefresh增加震动反馈
- // 增加KVO监听
- [_tableView.mj_header addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
- [_tableView.mj_footer addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
- 
- - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-     
-     if ([object isEqual:self.tableView.mj_header] && self.tableView.mj_header.state == MJRefreshStatePulling) {
-         [self feedbackGenerator];
-     }
-     else if ([object isEqual:self.tableView.mj_footer] && self.tableView.mj_footer.state == MJRefreshStatePulling) {
-         [self feedbackGenerator];
-     }
- }
- 
- */
+- (void) setupUI {
+     self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    [self.view addSubview:self.tableView];
+   
+    [self.tableView headerRefresh:^{
 
-- (void)feedbackGenerator {
-    if (@available(iOS 10.0, *)) {
-        UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
-        [generator prepare];
-        [generator impactOccurred];
+    }];
+    [self.tableView footerRefresh:^{
+
+    }];
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    return cell;
+}
+
+#pragma mark - Setter & Getter
+- (UITableView *)tableView {
+    if (!_tableView) {
+        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+        tableView.tableFooterView = [UIView new];
+        _tableView = tableView;
+    }
+    return _tableView;
 }
 
 

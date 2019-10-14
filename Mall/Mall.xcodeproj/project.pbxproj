@@ -19,7 +19,6 @@
 		5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */; };
 		5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */; };
 		5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */; };
-		5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9F92334B911005B2F7B /* UIButton+Logger.m */; };
 		5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */; };
 		5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* WYEHook.m */; };
 		5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */; };
@@ -58,6 +57,11 @@
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
 		5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51EA235407F400204F67 /* BLStopwatch.m */; };
+		5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F22354180400204F67 /* BFRefreshNormalHeader.m */; };
+		5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */; };
+		5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */; };
+		5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FB23542DFB00204F67 /* UIView+Logger.m */; };
+		5EDE51FF2354304800204F67 /* UICollectionView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */; };
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4546A233CADAD00035806 /* UIView+Animation.m */; };
@@ -127,9 +131,7 @@
 		5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AutoIncalidate.h"; sourceTree = "<group>"; };
 		5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AutoIncalidate.m"; sourceTree = "<group>"; };
 		5E37D9F62334B910005B2F7B /* WYEHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYEHook.h; sourceTree = "<group>"; };
-		5E37D9F72334B910005B2F7B /* UIButton+Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Logger.h"; sourceTree = "<group>"; };
 		5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Logger.h"; sourceTree = "<group>"; };
-		5E37D9F92334B911005B2F7B /* UIButton+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Logger.m"; sourceTree = "<group>"; };
 		5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logger.m"; sourceTree = "<group>"; };
 		5E37D9FB2334B911005B2F7B /* WYEHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEHook.m; sourceTree = "<group>"; };
 		5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
@@ -209,6 +211,16 @@
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
 		5EDE51EA235407F400204F67 /* BLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStopwatch.m; sourceTree = "<group>"; };
 		5EDE51EB235407F400204F67 /* BLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStopwatch.h; sourceTree = "<group>"; };
+		5EDE51F12354180400204F67 /* BFRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFRefreshNormalHeader.h; sourceTree = "<group>"; };
+		5EDE51F22354180400204F67 /* BFRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFRefreshNormalHeader.m; sourceTree = "<group>"; };
+		5EDE51F42354185100204F67 /* BFRefreshBackNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		5EDE51F72354188D00204F67 /* UIScrollView+MJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJ.h"; sourceTree = "<group>"; };
+		5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJ.m"; sourceTree = "<group>"; };
+		5EDE51FA23542DFB00204F67 /* UIView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Logger.h"; sourceTree = "<group>"; };
+		5EDE51FB23542DFB00204F67 /* UIView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Logger.m"; sourceTree = "<group>"; };
+		5EDE51FD2354304800204F67 /* UICollectionView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Logger.h"; sourceTree = "<group>"; };
+		5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Logger.m"; sourceTree = "<group>"; };
 		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
 		5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopBannerNotificationsUtils.m; sourceTree = "<group>"; };
 		5EE45466233C480200035806 /* ControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerUtils.h; sourceTree = "<group>"; };
@@ -332,6 +344,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5EDE51F02354173B00204F67 /* MJRefresh */,
 				5EDE51E9235407D000204F67 /* StopWatch */,
 				5E7CB9082350686000EAAB06 /* HUD */,
 				5EFBFCFF2341ACD100CA3729 /* MJExtension */,
@@ -450,8 +463,6 @@
 		5E37D9F52334B902005B2F7B /* BuriedPoint */ = {
 			isa = PBXGroup;
 			children = (
-				5E37D9F72334B910005B2F7B /* UIButton+Logger.h */,
-				5E37D9F92334B911005B2F7B /* UIButton+Logger.m */,
 				5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */,
 				5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */,
 				5E37D9F62334B910005B2F7B /* WYEHook.h */,
@@ -464,6 +475,10 @@
 				5EB57E1A234D906F0075AF9C /* HookObjcLog.m */,
 				5EB57E1C234D92820075AF9C /* UIControl+Logger.h */,
 				5EB57E1D234D92820075AF9C /* UIControl+Logger.m */,
+				5EDE51FA23542DFB00204F67 /* UIView+Logger.h */,
+				5EDE51FB23542DFB00204F67 /* UIView+Logger.m */,
+				5EDE51FD2354304800204F67 /* UICollectionView+Logger.h */,
+				5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */,
 			);
 			path = BuriedPoint;
 			sourceTree = "<group>";
@@ -696,6 +711,19 @@
 				5EDE51EA235407F400204F67 /* BLStopwatch.m */,
 			);
 			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		5EDE51F02354173B00204F67 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5EDE51F12354180400204F67 /* BFRefreshNormalHeader.h */,
+				5EDE51F22354180400204F67 /* BFRefreshNormalHeader.m */,
+				5EDE51F42354185100204F67 /* BFRefreshBackNormalFooter.h */,
+				5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */,
+				5EDE51F72354188D00204F67 /* UIScrollView+MJ.h */,
+				5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */,
+			);
+			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		5EE45462233C47B000035806 /* TopBanner */ = {
@@ -1034,6 +1062,7 @@
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
+				5EDE51FF2354304800204F67 /* UICollectionView+Logger.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
@@ -1047,7 +1076,6 @@
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5EFBFCF5234195D900CA3729 /* CheckAppComplete.m in Sources */,
-				5E37D9FC2334B911005B2F7B /* UIButton+Logger.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
@@ -1071,9 +1099,12 @@
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
 				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
+				5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */,
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
+				5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */,
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
+				5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */,
 				5EFBFCFD2341A5B600CA3729 /* UIViewController+Swizzle.m in Sources */,
 				5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
@@ -1084,6 +1115,7 @@
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,
 				5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
+				5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,
 				5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */,

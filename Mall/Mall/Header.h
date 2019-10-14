@@ -32,13 +32,17 @@
 #import <CocoaLumberjack.h>
 #import "UIViewController+HUD.h"
 #import "BLStopwatch.h"
+#import "UIScrollView+MJ.h"
 
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
+// https://github.com/wanqingrongruo/HookCollection
 #import "UIViewController+Logger.h"
-#import "UIButton+Logger.h"
 #import "UITableView+Logger.h"
+#import "UICollectionView+Logger.h"
 #import "UIGestureRecognizer+Logger.h"
+#import "UIControl+Logger.h"
+#import "UIView+Logger.h"
 
 #pragma mark - 其他
 #ifdef DEBUG

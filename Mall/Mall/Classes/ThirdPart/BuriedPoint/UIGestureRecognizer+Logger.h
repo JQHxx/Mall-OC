@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIGestureRecognizer (Logger)
 
+@property(nonatomic, strong) NSString *methodName;
+
 @end
 
 NS_ASSUME_NONNULL_END

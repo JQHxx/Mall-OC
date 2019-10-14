@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {

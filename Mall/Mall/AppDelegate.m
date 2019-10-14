@@ -30,11 +30,10 @@
     
     [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {
         
-        //1、进行数据上传
+        // 1、进行数据上传
         
-        //2、上传成功后，清除本地崩溃日志.
-        
-        // [UncaughtExceptionHandler exceptionDocumentsClear];
+        // 2、上传成功后，清除本地崩溃日志.
+        [UncaughtExceptionHandler exceptionDocumentsClear];
         NSLog(@"%@", exceptionStr);
     }];
     
@@ -150,9 +149,15 @@
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
+/**
+ 适配iOS11以上的系统
+ */
 - (void) adapterOSVersion {
-    if (@available(iOS 11.0,*))  {
+    if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        [UITableView appearance].estimatedRowHeight = 0;
+        [UITableView appearance].estimatedSectionHeaderHeight = 0;
+        [UITableView appearance].estimatedSectionFooterHeight = 0;
     }
 }
 

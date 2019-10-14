@@ -69,11 +69,21 @@
 #endif
 
 // 适配iOS 11 scrollView
-#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+#define  adjustsScrollViewInsets_NO(scrollView)\
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
 if (@available(iOS 11.0,*))  {\
 scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;\
+} else {\
+self.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+
+#define  adjustsTableViewInsets_NO(scrollView)\
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+if (@available(iOS 11.0,*))  {\
+scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;\
 } else {\
 self.automaticallyAdjustsScrollViewInsets = NO;\
 }\

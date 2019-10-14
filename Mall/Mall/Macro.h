@@ -11,6 +11,8 @@
 
 //状态栏高度
 #define STATUSBAR_HEIGHT  [[UIApplication sharedApplication] statusBarFrame].size.height
+#define NAVBAR_HEIGHT 44.0
+#define BOTTOM_BAR_HEIGHT 34.0
 
 // 设备屏幕的大小
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)

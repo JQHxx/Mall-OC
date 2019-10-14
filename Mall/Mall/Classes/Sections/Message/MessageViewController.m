@@ -20,7 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    adjustsTableViewInsets_NO(self.tableView)
+    // UIScrollViewContentInsetAdjustmentAlways
+    // self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     [self setupUI];
 }
 
@@ -43,6 +46,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MessageViewController *firstViewController = [[MessageViewController alloc] init];
+    [self.navigationController pushViewController:firstViewController animated:YES];
 }
 
 #pragma mark - UITableViewDataSource

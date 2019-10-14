@@ -138,11 +138,14 @@ typedef NS_ENUM(NSInteger, BLStopwatchState) {
 
 - (void)stopAndPresentResultsThenReset {
     [[BLStopwatch sharedStopwatch] stop];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [[[UIAlertView alloc] initWithTitle:@"BLStopwatch 结果"
                                 message:[[BLStopwatch sharedStopwatch] prettyPrintedSplits]
                                delegate:nil
                       cancelButtonTitle:@"确定"
                       otherButtonTitles:nil] show];
+#pragma clang diagnostic pop
     [[BLStopwatch sharedStopwatch] reset];
 }
 

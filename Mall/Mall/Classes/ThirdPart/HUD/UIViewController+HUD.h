@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)showError:(NSString *)error;
 -(void)showToast:(NSString *)message;
 -(void)showWaiting;
-- (void)showLoading:(NSString *)message;
+-(void)showLoading:(NSString *)message;
 -(void)showLoadingWithMessage:(NSString *)message;
 -(void)hideHUD;
 

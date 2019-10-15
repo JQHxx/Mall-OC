@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIGestureRecognizer (Logger)
+@interface UIGestureRecognizer (Hook)
 
 @property(nonatomic, strong) NSString *methodName;
 

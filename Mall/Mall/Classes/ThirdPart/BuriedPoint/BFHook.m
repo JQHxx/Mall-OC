@@ -6,9 +6,9 @@
 //  Copyright © 2019年 wuyine. All rights reserved.
 //
 
-#import "WYEHook.h"
+#import "BFHook.h"
 #import <objc/runtime.h>
-@implementation WYEHook
+@implementation BFHook
 + (void)hookClass:(Class)classObject fromSelector:(SEL)fromSelector toSelector:(SEL)toSelector {
     Class class = classObject;
     // 得到被替换类的实例方法

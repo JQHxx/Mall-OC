@@ -6,11 +6,11 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UIGestureRecognizer+Logger.h"
-#import "WYEHook.h"
+#import "UIGestureRecognizer+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
 
-@implementation UIGestureRecognizer (Logger)
+@implementation UIGestureRecognizer (Hook)
 @dynamic methodName;
 
 +(void)load{
@@ -19,7 +19,7 @@
         ///获取
         SEL originalSEL = @selector(initWithTarget:action:);
         SEL changeSEL = @selector(hook_initWithTarget:action:);
-        [WYEHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
+        [BFHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
     });
 }
 

@@ -39,12 +39,12 @@
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
 // https://github.com/wanqingrongruo/HookCollection
-#import "UIViewController+Logger.h"
-#import "UITableView+Logger.h"
-#import "UICollectionView+Logger.h"
-#import "UIGestureRecognizer+Logger.h"
-#import "UIControl+Logger.h"
-#import "UIView+Logger.h"
+#import "UIViewController+Hook.h"
+#import "UITableView+Hook.h"
+#import "UICollectionView+Hook.h"
+#import "UIGestureRecognizer+Hook.h"
+#import "UIControl+Hook.h"
+#import "UIView+Hook.h"
 
 #pragma mark - 暗黑模式
 #import "DarkModel.h"

@@ -6,11 +6,11 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UITableView+Logger.h"
-#import "WYEHook.h"
+#import "UITableView+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
 
-@implementation UITableView (Logger)
+@implementation UITableView (Hook)
 
 +(void)load{
     
@@ -19,7 +19,7 @@
         
         SEL originalSEL = @selector(setDelegate:);
         SEL changeSEL = @selector(hook_setDelegate:);
-        [WYEHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
+        [BFHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
     });
     
 }

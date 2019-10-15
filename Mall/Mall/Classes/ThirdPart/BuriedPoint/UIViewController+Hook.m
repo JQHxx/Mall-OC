@@ -6,11 +6,11 @@
 //  Copyright © 2019年 wuyine. All rights reserved.
 //
 
-#import "UIViewController+Logger.h"
-#import "WYEHook.h"
+#import "UIViewController+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
 
-@implementation UIViewController (Logger)
+@implementation UIViewController (Hook)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -18,12 +18,12 @@
         // 通过 @selector 获得被替换和替换方法的 SEL，作为 SMHook:hookClass:fromeSelector:toSelector 的参数传入
         SEL fromSelectorAppear = @selector(viewWillAppear:);
         SEL toSelectorAppear = @selector(hook_viewWillAppear:);
-        [WYEHook hookClass:self fromSelector:fromSelectorAppear toSelector:toSelectorAppear];
+        [BFHook hookClass:self fromSelector:fromSelectorAppear toSelector:toSelectorAppear];
         
         SEL fromSelectorDisappear = @selector(viewWillDisappear:);
         SEL toSelectorDisappear = @selector(hook_viewWillDisappear:);
         
-        [WYEHook hookClass:self fromSelector:fromSelectorDisappear toSelector:toSelectorDisappear];
+        [BFHook hookClass:self fromSelector:fromSelectorDisappear toSelector:toSelectorDisappear];
     });
 }
 
@@ -49,7 +49,7 @@
     if(![[self  getFilters]  containsObject:NSStringFromClass([self class])]) {
         // 在 ViewWillAppear 时进行日志的埋点
         [[HookObjcLog shareInstance] recordHookClass:self.class identifier:@"进入"];
-        // NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
+        NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
     }
 }
 
@@ -59,7 +59,7 @@
         // 在 ViewWillDisappear 时进行日志的埋点
         // 在 ViewWillAppear 时进行日志的埋点
         [[HookObjcLog shareInstance] recordHookClass:self.class identifier:@"离开"];
-        // NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));
+        NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));
     }
 }
 

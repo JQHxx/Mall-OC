@@ -1,8 +1,8 @@
 //
-//  UIControl+Logger.h
+//  UICollectionView+Logger.h
 //  Mall
 //
-//  Created by midland on 2019/10/9.
+//  Created by midland on 2019/10/14.
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIControl (Logger)
+@interface UICollectionView (Hook)
 
 @end
 

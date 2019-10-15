@@ -1,5 +1,5 @@
 //
-//  UITableView+Logger.h
+//  UIControl+Logger.h
 //  Mall
 //
 //  Created by midland on 2019/10/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITableView (Logger)
+@interface UIControl (Hook)
 
 @end
 

@@ -25,9 +25,8 @@
     
     // 1. 创建Sign in with Apple Button
     if (@available(iOS 13.0, *)) {
-        ASAuthorizationAppleIDButton *button = [[ASAuthorizationAppleIDButton alloc]init];
+        ASAuthorizationAppleIDButton *button = [[ASAuthorizationAppleIDButton alloc]initWithAuthorizationButtonType:ASAuthorizationAppleIDButtonTypeSignIn authorizationButtonStyle:ASAuthorizationAppleIDButtonStyleWhiteOutline];
         button.frame = CGRectMake(30, self.view.bounds.size.height - 180, self.view.bounds.size.width - 60, 50);
-
         [button addTarget:self action:@selector(handleAuthorization) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         // `handleAuthorization`的实现参阅：2. 跟用户提出授权请求.
@@ -167,6 +166,11 @@
         // NSString *familyName = appleIDCredential.fullName.familyName;
         // NSString *givenName = appleIDCredential.fullName.givenName;
         // NSString *email = appleIDCredential.email;
+        //refresh token
+        // NSString * authorizationCode = [[NSString alloc]initWithData:appleIDCredential.authorizationCode encoding:NSUTF8StringEncoding];
+        // access token
+        // NSString * identityToken = [[NSString alloc]initWithData:appleIDCredential.identityToken encoding:NSUTF8StringEncoding];
+        // ASUserDetectionStatus realUserStatus = appleIDCredential.realUserStatus;
         // keychain 保存user
         //  需要使用钥匙串的方式保存用户的唯一信息
         [YostarKeychain save:KEYCHAIN_IDENTIFIER(@"userIdentifier") data:user];

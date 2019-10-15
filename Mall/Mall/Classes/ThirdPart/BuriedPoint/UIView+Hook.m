@@ -6,19 +6,19 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UIView+Logger.h"
-#import "WYEHook.h"
+#import "UIView+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
-#import "UIGestureRecognizer+Logger.h"
+#import "UIGestureRecognizer+Hook.h"
 
-@implementation UIView (Logger)
+@implementation UIView (Hook)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL originalSel = @selector(addGestureRecognizer:);
         SEL swizzledSEL = @selector(hook_addGestureRecognizer:);
-        [WYEHook hookClass:self fromSelector:originalSel toSelector:swizzledSEL];
+        [BFHook hookClass:self fromSelector:originalSel toSelector:swizzledSEL];
     });
 }
 

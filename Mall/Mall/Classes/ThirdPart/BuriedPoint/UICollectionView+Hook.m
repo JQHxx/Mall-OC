@@ -6,11 +6,11 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UICollectionView+Logger.h"
-#import "WYEHook.h"
+#import "UICollectionView+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
 
-@implementation UICollectionView (Logger)
+@implementation UICollectionView (Hook)
 
 +(void)load{
     
@@ -19,7 +19,7 @@
         
         SEL originalSEL = @selector(setDelegate:);
         SEL changeSEL = @selector(hook_setDelegate:);
-        [WYEHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
+        [BFHook hookClass:self fromSelector:originalSEL toSelector:changeSEL];
     });
     
 }
@@ -38,7 +38,7 @@
 
 - (void)hook_collectionView:(UICollectionView *)collectionView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // NSLog(@"%@ %@", self.class, [NSString stringWithFormat:@"%ld,%ld",indexPath.row,indexPath.section]);
-    [[HookObjcLog shareInstance] recordHookClass:self.class identifier:[NSString stringWithFormat:@"%ld,%ld",indexPath.row,indexPath.section]];
+    [[HookObjcLog shareInstance] recordHookClass:self.class identifier:[NSString stringWithFormat:@"%ld,%ld",(long)indexPath.row,indexPath.section]];
     [self hook_collectionView:collectionView didSelectRowAtIndexPath:indexPath];
 }
 

@@ -6,11 +6,11 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UIControl+Logger.h"
-#import "WYEHook.h"
+#import "UIControl+Hook.h"
+#import "BFHook.h"
 #import "HookObjcLog.h"
 
-@implementation UIControl (Logger)
+@implementation UIControl (Hook)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -18,7 +18,7 @@
         // 通过 @selector 获得被替换和替换方法的 SEL，作为 SMHook:hookClass:fromeSelector:toSelector 的参数传入
         SEL fromSelector = @selector(sendAction:to:forEvent:);
         SEL toSelector = @selector(hook_sendAction:to:forEvent:);
-        [WYEHook hookClass:self fromSelector:fromSelector toSelector:toSelector];
+        [BFHook hookClass:self fromSelector:fromSelector toSelector:toSelector];
     });
 }
 

@@ -19,8 +19,8 @@
 		5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCC62318D34900F77E6F /* WKDelegateViewController.m */; };
 		5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CCCCA2318D34900F77E6F /* WKWebViewModuleAPI.m */; };
 		5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */; };
-		5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */; };
-		5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* WYEHook.m */; };
+		5E37D9FD2334B911005B2F7B /* UIViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FA2334B911005B2F7B /* UIViewController+Hook.m */; };
+		5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37D9FB2334B911005B2F7B /* BFHook.m */; };
 		5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */; };
 		5E7CB90E235072E800EAAB06 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CB90D235072E800EAAB06 /* UIViewController+HUD.m */; };
 		5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82B407234C62E20051E3CB /* BFLayoutConstraint.m */; };
@@ -42,10 +42,10 @@
 		5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547E7233DCB67003D0228 /* NSURLResponse+Core.m */; };
 		5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */; };
 		5EB547EE233DE7C7003D0228 /* TDNetworkTrafficLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */; };
-		5EB57E15234D8C0B0075AF9C /* UITableView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */; };
-		5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */; };
+		5EB57E15234D8C0B0075AF9C /* UITableView+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E14234D8C0B0075AF9C /* UITableView+Hook.m */; };
+		5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Hook.m */; };
 		5EB57E1B234D906F0075AF9C /* HookObjcLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E1A234D906F0075AF9C /* HookObjcLog.m */; };
-		5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E1D234D92820075AF9C /* UIControl+Logger.m */; };
+		5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB57E1D234D92820075AF9C /* UIControl+Hook.m */; };
 		5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EBC2313786200DC2F8F /* AppDelegate.m */; };
 		5EBD3EC52313786500DC2F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC42313786500DC2F8F /* Assets.xcassets */; };
 		5EBD3EC82313786500DC2F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD3EC62313786500DC2F8F /* LaunchScreen.storyboard */; };
@@ -63,8 +63,8 @@
 		5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F22354180400204F67 /* BFRefreshNormalHeader.m */; };
 		5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */; };
 		5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */; };
-		5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FB23542DFB00204F67 /* UIView+Logger.m */; };
-		5EDE51FF2354304800204F67 /* UICollectionView+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */; };
+		5EDE51FC23542DFB00204F67 /* UIView+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FB23542DFB00204F67 /* UIView+Hook.m */; };
+		5EDE51FF2354304800204F67 /* UICollectionView+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51FE2354304800204F67 /* UICollectionView+Hook.m */; };
 		5EDE52032354503800204F67 /* JSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE52022354503800204F67 /* JSONUtil.m */; };
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
@@ -134,10 +134,10 @@
 		5E1CCCCB2318D34900F77E6F /* WKDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDelegateViewController.h; sourceTree = "<group>"; };
 		5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AutoIncalidate.h"; sourceTree = "<group>"; };
 		5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AutoIncalidate.m"; sourceTree = "<group>"; };
-		5E37D9F62334B910005B2F7B /* WYEHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYEHook.h; sourceTree = "<group>"; };
-		5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Logger.h"; sourceTree = "<group>"; };
-		5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logger.m"; sourceTree = "<group>"; };
-		5E37D9FB2334B911005B2F7B /* WYEHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEHook.m; sourceTree = "<group>"; };
+		5E37D9F62334B910005B2F7B /* BFHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHook.h; sourceTree = "<group>"; };
+		5E37D9F82334B910005B2F7B /* UIViewController+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hook.h"; sourceTree = "<group>"; };
+		5E37D9FA2334B911005B2F7B /* UIViewController+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hook.m"; sourceTree = "<group>"; };
+		5E37D9FB2334B911005B2F7B /* BFHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFHook.m; sourceTree = "<group>"; };
 		5E5D94412338A14D008C52C2 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		5E5D94422338A14D008C52C2 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		5E7CB90C235072E800EAAB06 /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
@@ -182,14 +182,14 @@
 		5EB547EA233DE7C6003D0228 /* TDNetFlowDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetFlowDataSource.m; sourceTree = "<group>"; };
 		5EB547EB233DE7C7003D0228 /* TDNetworkTrafficLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDNetworkTrafficLog.h; sourceTree = "<group>"; };
 		5EB547EC233DE7C7003D0228 /* TDNetworkTrafficLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDNetworkTrafficLog.m; sourceTree = "<group>"; };
-		5EB57E13234D8C0B0075AF9C /* UITableView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Logger.h"; sourceTree = "<group>"; };
-		5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Logger.m"; sourceTree = "<group>"; };
-		5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Logger.h"; sourceTree = "<group>"; };
-		5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Logger.m"; sourceTree = "<group>"; };
+		5EB57E13234D8C0B0075AF9C /* UITableView+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Hook.h"; sourceTree = "<group>"; };
+		5EB57E14234D8C0B0075AF9C /* UITableView+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Hook.m"; sourceTree = "<group>"; };
+		5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Hook.h"; sourceTree = "<group>"; };
+		5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Hook.m"; sourceTree = "<group>"; };
 		5EB57E19234D906F0075AF9C /* HookObjcLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookObjcLog.h; sourceTree = "<group>"; };
 		5EB57E1A234D906F0075AF9C /* HookObjcLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookObjcLog.m; sourceTree = "<group>"; };
-		5EB57E1C234D92820075AF9C /* UIControl+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Logger.h"; sourceTree = "<group>"; };
-		5EB57E1D234D92820075AF9C /* UIControl+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Logger.m"; sourceTree = "<group>"; };
+		5EB57E1C234D92820075AF9C /* UIControl+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Hook.h"; sourceTree = "<group>"; };
+		5EB57E1D234D92820075AF9C /* UIControl+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Hook.m"; sourceTree = "<group>"; };
 		5EBD3EB82313786200DC2F8F /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD3EBB2313786200DC2F8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EBD3EBC2313786200DC2F8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,10 +228,10 @@
 		5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		5EDE51F72354188D00204F67 /* UIScrollView+MJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJ.h"; sourceTree = "<group>"; };
 		5EDE51F82354188D00204F67 /* UIScrollView+MJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJ.m"; sourceTree = "<group>"; };
-		5EDE51FA23542DFB00204F67 /* UIView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Logger.h"; sourceTree = "<group>"; };
-		5EDE51FB23542DFB00204F67 /* UIView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Logger.m"; sourceTree = "<group>"; };
-		5EDE51FD2354304800204F67 /* UICollectionView+Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Logger.h"; sourceTree = "<group>"; };
-		5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Logger.m"; sourceTree = "<group>"; };
+		5EDE51FA23542DFB00204F67 /* UIView+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Hook.h"; sourceTree = "<group>"; };
+		5EDE51FB23542DFB00204F67 /* UIView+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hook.m"; sourceTree = "<group>"; };
+		5EDE51FD2354304800204F67 /* UICollectionView+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Hook.h"; sourceTree = "<group>"; };
+		5EDE51FE2354304800204F67 /* UICollectionView+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Hook.m"; sourceTree = "<group>"; };
 		5EDE52012354503800204F67 /* JSONUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONUtil.h; sourceTree = "<group>"; };
 		5EDE52022354503800204F67 /* JSONUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONUtil.m; sourceTree = "<group>"; };
 		5EE45463233C47C300035806 /* TopBannerNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopBannerNotificationsUtils.h; sourceTree = "<group>"; };
@@ -479,22 +479,22 @@
 		5E37D9F52334B902005B2F7B /* BuriedPoint */ = {
 			isa = PBXGroup;
 			children = (
-				5E37D9F82334B910005B2F7B /* UIViewController+Logger.h */,
-				5E37D9FA2334B911005B2F7B /* UIViewController+Logger.m */,
-				5E37D9F62334B910005B2F7B /* WYEHook.h */,
-				5E37D9FB2334B911005B2F7B /* WYEHook.m */,
-				5EB57E13234D8C0B0075AF9C /* UITableView+Logger.h */,
-				5EB57E14234D8C0B0075AF9C /* UITableView+Logger.m */,
-				5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Logger.h */,
-				5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Logger.m */,
+				5E37D9F82334B910005B2F7B /* UIViewController+Hook.h */,
+				5E37D9FA2334B911005B2F7B /* UIViewController+Hook.m */,
+				5E37D9F62334B910005B2F7B /* BFHook.h */,
+				5E37D9FB2334B911005B2F7B /* BFHook.m */,
+				5EB57E13234D8C0B0075AF9C /* UITableView+Hook.h */,
+				5EB57E14234D8C0B0075AF9C /* UITableView+Hook.m */,
+				5EB57E16234D8C250075AF9C /* UIGestureRecognizer+Hook.h */,
+				5EB57E17234D8C250075AF9C /* UIGestureRecognizer+Hook.m */,
 				5EB57E19234D906F0075AF9C /* HookObjcLog.h */,
 				5EB57E1A234D906F0075AF9C /* HookObjcLog.m */,
-				5EB57E1C234D92820075AF9C /* UIControl+Logger.h */,
-				5EB57E1D234D92820075AF9C /* UIControl+Logger.m */,
-				5EDE51FA23542DFB00204F67 /* UIView+Logger.h */,
-				5EDE51FB23542DFB00204F67 /* UIView+Logger.m */,
-				5EDE51FD2354304800204F67 /* UICollectionView+Logger.h */,
-				5EDE51FE2354304800204F67 /* UICollectionView+Logger.m */,
+				5EB57E1C234D92820075AF9C /* UIControl+Hook.h */,
+				5EB57E1D234D92820075AF9C /* UIControl+Hook.m */,
+				5EDE51FA23542DFB00204F67 /* UIView+Hook.h */,
+				5EDE51FB23542DFB00204F67 /* UIView+Hook.m */,
+				5EDE51FD2354304800204F67 /* UICollectionView+Hook.h */,
+				5EDE51FE2354304800204F67 /* UICollectionView+Hook.m */,
 			);
 			path = BuriedPoint;
 			sourceTree = "<group>";
@@ -1108,15 +1108,15 @@
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
-				5EDE51FF2354304800204F67 /* UICollectionView+Logger.m in Sources */,
+				5EDE51FF2354304800204F67 /* UICollectionView+Hook.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EFBFCF2234195CB00CA3729 /* CheckMobileIsBreakPrison.m in Sources */,
-				5EB57E15234D8C0B0075AF9C /* UITableView+Logger.m in Sources */,
+				5EB57E15234D8C0B0075AF9C /* UITableView+Hook.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
-				5E37D9FE2334B911005B2F7B /* WYEHook.m in Sources */,
+				5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
@@ -1128,7 +1128,7 @@
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
-				5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */,
+				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
@@ -1150,7 +1150,7 @@
 				5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */,
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
 				5EDE52032354503800204F67 /* JSONUtil.m in Sources */,
-				5EDE51FC23542DFB00204F67 /* UIView+Logger.m in Sources */,
+				5EDE51FC23542DFB00204F67 /* UIView+Hook.m in Sources */,
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
 				5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */,
@@ -1163,12 +1163,12 @@
 				5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */,
 				5EB57E1B234D906F0075AF9C /* HookObjcLog.m in Sources */,
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,
-				5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Logger.m in Sources */,
+				5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Hook.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,
-				5E37D9FD2334B911005B2F7B /* UIViewController+Logger.m in Sources */,
+				5E37D9FD2334B911005B2F7B /* UIViewController+Hook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

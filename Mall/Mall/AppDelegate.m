@@ -101,6 +101,7 @@
                     case ASAuthorizationAppleIDProviderCredentialNotFound:
                         // 未发现苹果授权凭证
                         errorMsg = @"未发现苹果授权凭证";
+                        break;
                         // 可以引导用户重新登录
                     case ASAuthorizationAppleIDProviderCredentialTransferred:
                         break;

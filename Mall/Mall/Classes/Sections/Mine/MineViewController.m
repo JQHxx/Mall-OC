@@ -73,6 +73,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+    [self showSuccess:@"点击成功" icon: @"123"];
+    
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:@"objc"];
     [array addObject:@"swift"];

@@ -29,6 +29,8 @@
 		5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365623160A35006C8ED7 /* ICacheKey.m */; };
 		5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84365C231612FE006C8ED7 /* IDataBase.m */; };
 		5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84366023161A0D006C8ED7 /* IDataManager.m */; };
+		5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */; };
+		5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFA23555864001E0160 /* DarkModel.m */; };
 		5EB223FD233B225300481D5C /* searchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223F9233B225200481D5C /* searchManager.m */; };
 		5EB223FE233B225300481D5C /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223FC233B225300481D5C /* TrieNode.m */; };
 		5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547D7233DAFF2003D0228 /* CSFileLogger.m */; };
@@ -152,6 +154,10 @@
 		5E84365C231612FE006C8ED7 /* IDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDataBase.m; sourceTree = "<group>"; };
 		5E84365F23161A0D006C8ED7 /* IDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataManager.h; sourceTree = "<group>"; };
 		5E84366023161A0D006C8ED7 /* IDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDataManager.m; sourceTree = "<group>"; };
+		5E9B8CF623555501001E0160 /* UIColor+DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DarkMode.h"; sourceTree = "<group>"; };
+		5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DarkMode.m"; sourceTree = "<group>"; };
+		5E9B8CF923555864001E0160 /* DarkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkModel.h; sourceTree = "<group>"; };
+		5E9B8CFA23555864001E0160 /* DarkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarkModel.m; sourceTree = "<group>"; };
 		5EB223F9233B225200481D5C /* searchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchManager.m; sourceTree = "<group>"; };
 		5EB223FA233B225300481D5C /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		5EB223FB233B225300481D5C /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B8CF5235553AB001E0160 /* DartModel */,
 				5EDE52002354501F00204F67 /* JSON */,
 				5E82B405234C62B10051E3CB /* Layout */,
 				5EFBFCFE2341ACB100CA3729 /* IOS13 */,
@@ -554,6 +561,17 @@
 				5E84366023161A0D006C8ED7 /* IDataManager.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		5E9B8CF5235553AB001E0160 /* DartModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E9B8CF623555501001E0160 /* UIColor+DarkMode.h */,
+				5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */,
+				5E9B8CF923555864001E0160 /* DarkModel.h */,
+				5E9B8CFA23555864001E0160 /* DarkModel.m */,
+			);
+			path = DartModel;
 			sourceTree = "<group>";
 		};
 		5EB223F8233B223700481D5C /* Trie */ = {
@@ -1088,6 +1106,7 @@
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
+				5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */,
 				5EFBFCF5234195D900CA3729 /* CheckAppComplete.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,
@@ -1124,6 +1143,7 @@
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
+				5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */,
 				5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */,
 				5EB57E1B234D906F0075AF9C /* HookObjcLog.m in Sources */,
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,

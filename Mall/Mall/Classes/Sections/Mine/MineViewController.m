@@ -10,7 +10,9 @@
 #import "BaseWebBrowserViewController.h"
 
 @interface MineViewController ()
-
+{
+    UILabel *label;
+}
 @end
 
 @implementation MineViewController
@@ -18,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.title = @"我的";
+    [self setupUI];
+}
+
+- (void) setupUI {
+    self.view.backgroundColor = [UIColor whiteColor];
+    label = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
+    label.text = @"ViewController 跟随手机进行暗黑适配";
+    label.font = [UIFont systemFontOfSize:20.0];
+    label.numberOfLines = 0;
+    [self.view addSubview:label];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -45,6 +57,21 @@
     [self.navigationController pushViewController:webVC animated:YES];
      */
 }
+
+// 系统模式切换才会改变
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    NSLog(@"traitCollectionDidChange");
+    
+    self.view.backgroundColor = [UIColor adaptColor:[UIColor redColor] darkColor:[UIColor blackColor]];
+    label.textColor = [UIColor adaptColor:[UIColor redColor] darkColor:[UIColor darkGrayColor]];
+
+}
+
+// 单个界面不遵循暗黑模式
+//- (UIUserInterfaceStyle)overrideUserInterfaceStyle {
+//    return [DarkModel isDarkMode] ? UIUserInterfaceStyleDark : UIUserInterfaceStyleLight;
+//}
 
 
 @end

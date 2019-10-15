@@ -45,6 +45,11 @@
 #import "UIControl+Logger.h"
 #import "UIView+Logger.h"
 
+#pragma mark - 暗黑模式
+#import "DarkModel.h"
+#import "UIColor+DarkMode.h"
+
+
 #pragma mark - 其他
 #ifdef DEBUG
 // 如果要禁止

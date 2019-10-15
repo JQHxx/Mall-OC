@@ -26,7 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];
+    [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];
     [DMNetworkTrafficManager start];
     
     [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {

@@ -33,6 +33,7 @@
 		5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFA23555864001E0160 /* DarkModel.m */; };
 		5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */; };
 		5E9B8D032355B9DB001E0160 /* TextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8D022355B9DB001E0160 /* TextUtil.m */; };
+		5E9B8D072355C74F001E0160 /* UIButton+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8D062355C74F001E0160 /* UIButton+Action.m */; };
 		5EB223FD233B225300481D5C /* searchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223F9233B225200481D5C /* searchManager.m */; };
 		5EB223FE233B225300481D5C /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223FC233B225300481D5C /* TrieNode.m */; };
 		5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547D7233DAFF2003D0228 /* CSFileLogger.m */; };
@@ -165,6 +166,8 @@
 		5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YostarKeychain.m; sourceTree = "<group>"; };
 		5E9B8D012355B9DB001E0160 /* TextUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextUtil.h; sourceTree = "<group>"; };
 		5E9B8D022355B9DB001E0160 /* TextUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextUtil.m; sourceTree = "<group>"; };
+		5E9B8D052355C74F001E0160 /* UIButton+Action.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Action.h"; sourceTree = "<group>"; };
+		5E9B8D062355C74F001E0160 /* UIButton+Action.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Action.m"; sourceTree = "<group>"; };
 		5EB223F9233B225200481D5C /* searchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchManager.m; sourceTree = "<group>"; };
 		5EB223FA233B225300481D5C /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		5EB223FB233B225300481D5C /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
@@ -343,6 +346,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B8D042355C734001E0160 /* Action */,
 				5E9B8CFD23556CEA001E0160 /* Keychain */,
 				5E9B8CF5235553AB001E0160 /* DartModel */,
 				5EDE52002354501F00204F67 /* JSON */,
@@ -589,6 +593,15 @@
 				5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		5E9B8D042355C734001E0160 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				5E9B8D052355C74F001E0160 /* UIButton+Action.h */,
+				5E9B8D062355C74F001E0160 /* UIButton+Action.m */,
+			);
+			path = Action;
 			sourceTree = "<group>";
 		};
 		5EB223F8233B223700481D5C /* Trie */ = {
@@ -1115,6 +1128,7 @@
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
 				5EDE51FF2354304800204F67 /* UICollectionView+Hook.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,
+				5E9B8D072355C74F001E0160 /* UIButton+Action.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,

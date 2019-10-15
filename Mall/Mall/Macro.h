@@ -20,5 +20,8 @@
 
 #define KEYCHAIN_IDENTIFIER(a) ([NSString stringWithFormat:@"%@_%@",[[NSBundle mainBundle] bundleIdentifier],a])
 
+#define WeakSelf(type) autoreleasepool{} __weak __typeof__(type) weakSelf = type;
+#define StrongSelf(type) autoreleasepool{} __strong __typeof__(type) strongSelf = type;
+
 #endif /* Macro_h */
 

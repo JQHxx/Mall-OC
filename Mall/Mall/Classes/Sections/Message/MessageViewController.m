@@ -12,6 +12,7 @@
 @interface MessageViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -20,11 +21,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
+     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.button.backgroundColor = [UIColor redColor];
+    self.button.frame = CGRectMake(0, 0, 100, 50);
+    @WeakSelf(self);
+    [self.button handleEvent:UIControlEventTouchUpInside block:^(UIButton * _Nonnull btn) {
+        @StrongSelf(weakSelf);
+        NSLog(@"%@", strongSelf.view);
+        MessageViewController *firstViewController = [[MessageViewController alloc] init];
+        [strongSelf.navigationController pushViewController:firstViewController animated:YES];
+    }];
+    // UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(invoke:)];
+    // [self.button addGestureRecognizer:tapGes];
+    [self.view addSubview:self.button];
     
     adjustsTableViewInsets_NO(self.tableView)
     // UIScrollViewContentInsetAdjustmentAlways
     // self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
-    [self setupUI];
+    // [self setupUI];
+}
+
+- (void)invoke: (UIGestureRecognizer *) tapGes {
+    
+}
+
+- (void)dealloc {
+    
 }
 
 - (void) setupUI {

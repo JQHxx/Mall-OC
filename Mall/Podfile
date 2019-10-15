@@ -71,6 +71,7 @@ post_install do |installer|
   end
 end
 
+# sign in apple: https://www.jianshu.com/p/483b998f2370 https://www.jianshu.com/p/e1284bd8c72a
 # linkMap: 检查每个类占用大小 https://github.com/huanxsd/LinkMap   https://techblog.toutiao.com/2016/12/27/iphone/
 # iOS瘦身之删除FrameWork中无用mach-O文件 https://www.infoq.cn/article/ios-thinning-delete-unnecessary-mach-o/
 # 滴滴出行包体积优化：https://ming1016.github.io/2017/06/12/gmtc-ios-slimming-practice/

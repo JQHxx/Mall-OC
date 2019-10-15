@@ -49,7 +49,7 @@
     if(![[self  getFilters]  containsObject:NSStringFromClass([self class])]) {
         // 在 ViewWillAppear 时进行日志的埋点
         [[HookObjcLog shareInstance] recordHookClass:self.class identifier:@"进入"];
-        NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
+        // NSLog(@"hook到  %@ will appear",NSStringFromClass([self class]));
     }
 }
 
@@ -59,7 +59,7 @@
         // 在 ViewWillDisappear 时进行日志的埋点
         // 在 ViewWillAppear 时进行日志的埋点
         [[HookObjcLog shareInstance] recordHookClass:self.class identifier:@"离开"];
-        NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));
+        // NSLog(@"hook到  %@ will disappear",NSStringFromClass([self class]));
     }
 }
 

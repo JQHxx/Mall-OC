@@ -13,6 +13,7 @@
 #import "DMNetworkTrafficManager.h"
 #import "WSLSuspendingView.h"
 #import "WSLFPS.h"
+#import <AuthenticationServices/AuthenticationServices.h>
 
 @interface AppDelegate ()
 
@@ -67,8 +68,51 @@
     
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL1"];
     // [[BLStopwatch sharedStopwatch] stopAndPresentResultsThenReset];
+    [self observeAuthticationState];
     
     return YES;
+}
+
+//! 苹果登录观察授权状态监听
+- (void)observeAuthticationState {
+    
+    if (@available(iOS 13.0, *)) {
+        // A mechanism for generating requests to authenticate users based on their Apple ID.
+        // 基于用户的Apple ID 生成授权用户请求的机制
+        ASAuthorizationAppleIDProvider *appleIDProvider = [ASAuthorizationAppleIDProvider new];
+        // 注意 存储用户标识信息需要使用钥匙串来存储 这里笔者简单期间 使用NSUserDefaults 做的简单示例
+        NSString *userIdentifier = [YostarKeychain load:KEYCHAIN_IDENTIFIER(@"userIdentifier")];
+        
+        if (userIdentifier) {
+            NSString* __block errorMsg = nil;
+            //Returns the credential state for the given user in a completion handler.
+            // 在回调中返回用户的授权状态
+            [appleIDProvider getCredentialStateForUserID:userIdentifier completion:^(ASAuthorizationAppleIDProviderCredentialState credentialState, NSError * _Nullable error) {
+                switch (credentialState) {
+                        // 苹果证书的授权状态
+                    case ASAuthorizationAppleIDProviderCredentialRevoked:
+                        // 苹果授权凭证失效
+                        errorMsg = @"苹果授权凭证失效";
+                        break;
+                    case ASAuthorizationAppleIDProviderCredentialAuthorized:
+                        // 苹果授权凭证状态良好
+                        errorMsg = @"苹果授权凭证状态良好";
+                        break;
+                    case ASAuthorizationAppleIDProviderCredentialNotFound:
+                        // 未发现苹果授权凭证
+                        errorMsg = @"未发现苹果授权凭证";
+                        // 可以引导用户重新登录
+                    case ASAuthorizationAppleIDProviderCredentialTransferred:
+                        break;
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"SignInWithApple授权状态变化情况");
+                    NSLog(@"%@", errorMsg);
+                });
+            }];
+            
+        }
+    }
 }
 
 - (void) setupLogger {

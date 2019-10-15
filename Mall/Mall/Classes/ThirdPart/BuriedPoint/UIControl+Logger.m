@@ -29,9 +29,9 @@
 - (void)insertToSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     // 日志记录
     if ([[[event allTouches] anyObject] phase] == UITouchPhaseEnded) {
-        NSString *actionString = NSStringFromSelector(action);
-        NSString *targetName = NSStringFromClass([target class]);
-        NSLog(@"hook到button事件啦： %@",[NSString stringWithFormat:@"%@ %@",targetName,actionString]);
+        // NSString *actionString = NSStringFromSelector(action);
+        // NSString *targetName = NSStringFromClass([target class]);
+        // NSLog(@"hook到button事件啦： %@",[NSString stringWithFormat:@"%@ %@",targetName,actionString]);
         [[HookObjcLog shareInstance] recordLogActionHookClass:[target class] action:action identifier:@"UIButton"];
     }
 }

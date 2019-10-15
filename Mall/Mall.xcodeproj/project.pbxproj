@@ -31,6 +31,7 @@
 		5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E84366023161A0D006C8ED7 /* IDataManager.m */; };
 		5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */; };
 		5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFA23555864001E0160 /* DarkModel.m */; };
+		5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */; };
 		5EB223FD233B225300481D5C /* searchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223F9233B225200481D5C /* searchManager.m */; };
 		5EB223FE233B225300481D5C /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223FC233B225300481D5C /* TrieNode.m */; };
 		5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547D7233DAFF2003D0228 /* CSFileLogger.m */; };
@@ -158,6 +159,9 @@
 		5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DarkMode.m"; sourceTree = "<group>"; };
 		5E9B8CF923555864001E0160 /* DarkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkModel.h; sourceTree = "<group>"; };
 		5E9B8CFA23555864001E0160 /* DarkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarkModel.m; sourceTree = "<group>"; };
+		5E9B8CFC2355647F001E0160 /* Mall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mall.entitlements; sourceTree = "<group>"; };
+		5E9B8CFE23556CF6001E0160 /* YostarKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YostarKeychain.h; sourceTree = "<group>"; };
+		5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YostarKeychain.m; sourceTree = "<group>"; };
 		5EB223F9233B225200481D5C /* searchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchManager.m; sourceTree = "<group>"; };
 		5EB223FA233B225300481D5C /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		5EB223FB233B225300481D5C /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B8CFD23556CEA001E0160 /* Keychain */,
 				5E9B8CF5235553AB001E0160 /* DartModel */,
 				5EDE52002354501F00204F67 /* JSON */,
 				5E82B405234C62B10051E3CB /* Layout */,
@@ -574,6 +579,15 @@
 			path = DartModel;
 			sourceTree = "<group>";
 		};
+		5E9B8CFD23556CEA001E0160 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				5E9B8CFE23556CF6001E0160 /* YostarKeychain.h */,
+				5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		5EB223F8233B223700481D5C /* Trie */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +654,7 @@
 		5EBD3EBA2313786200DC2F8F /* Mall */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B8CFC2355647F001E0160 /* Mall.entitlements */,
 				5E0667902313CAB700EE3331 /* Resource */,
 				5E066766231387DF00EE3331 /* Classes */,
 				5EBD3EBB2313786200DC2F8F /* AppDelegate.h */,
@@ -1115,6 +1130,7 @@
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Logger.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
+				5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
 				5E7CB90E235072E800EAAB06 /* UIViewController+HUD.m in Sources */,
 				5E0667792313960900EE3331 /* MainNavigationController.m in Sources */,
@@ -1316,6 +1332,7 @@
 			baseConfigurationReference = 756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mall/Mall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
@@ -1337,6 +1354,7 @@
 			baseConfigurationReference = AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mall/Mall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;

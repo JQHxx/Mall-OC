@@ -19,6 +19,7 @@
 #import "StoryBoardNameUtil.h"
 #import "BFLayoutConstraint.h"
 #import "JSONUtil.h"
+#import "YostarKeychain.h"
 
 #pragma mark - Extension
 #import "Extension.h"
@@ -56,6 +57,7 @@
 // #define NULLSAFE_ENABLED 0
 #endif
 
+/*
 #ifndef __OPTIMIZE__
 
 #define NSLog(...) NSLog(__VA_ARGS__)
@@ -63,14 +65,15 @@
 #define NSLog(...) {}
 
 #endif
+ */
 
 
 
 //
 #ifdef DEBUG
-#define MYLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
-#define MYLog(format, ...)
+#define NSLog(FORMAT, ...) nil
 #endif
 
 // 适配iOS 11 scrollView

@@ -104,6 +104,7 @@
                         break;
                         // 可以引导用户重新登录
                     case ASAuthorizationAppleIDProviderCredentialTransferred:
+                        
                         break;
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{

@@ -32,6 +32,7 @@
 		5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CF723555501001E0160 /* UIColor+DarkMode.m */; };
 		5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFA23555864001E0160 /* DarkModel.m */; };
 		5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */; };
+		5E9B8D032355B9DB001E0160 /* TextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B8D022355B9DB001E0160 /* TextUtil.m */; };
 		5EB223FD233B225300481D5C /* searchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223F9233B225200481D5C /* searchManager.m */; };
 		5EB223FE233B225300481D5C /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB223FC233B225300481D5C /* TrieNode.m */; };
 		5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB547D7233DAFF2003D0228 /* CSFileLogger.m */; };
@@ -162,6 +163,8 @@
 		5E9B8CFC2355647F001E0160 /* Mall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mall.entitlements; sourceTree = "<group>"; };
 		5E9B8CFE23556CF6001E0160 /* YostarKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YostarKeychain.h; sourceTree = "<group>"; };
 		5E9B8CFF23556CF6001E0160 /* YostarKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YostarKeychain.m; sourceTree = "<group>"; };
+		5E9B8D012355B9DB001E0160 /* TextUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextUtil.h; sourceTree = "<group>"; };
+		5E9B8D022355B9DB001E0160 /* TextUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextUtil.m; sourceTree = "<group>"; };
 		5EB223F9233B225200481D5C /* searchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchManager.m; sourceTree = "<group>"; };
 		5EB223FA233B225300481D5C /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		5EB223FB233B225300481D5C /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
@@ -713,6 +716,8 @@
 				5ED1F73E23152C340095C5A9 /* Common.m */,
 				5EF2630D2326444E0008A605 /* StoryBoardNameUtil.h */,
 				5EF2630E2326444E0008A605 /* StoryBoardNameUtil.m */,
+				5E9B8D012355B9DB001E0160 /* TextUtil.h */,
+				5E9B8D022355B9DB001E0160 /* TextUtil.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1122,6 +1127,7 @@
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */,
+				5E9B8D032355B9DB001E0160 /* TextUtil.m in Sources */,
 				5EFBFCF5234195D900CA3729 /* CheckAppComplete.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,

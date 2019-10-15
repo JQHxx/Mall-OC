@@ -17,9 +17,9 @@ PODS:
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
   - CocoaLumberjack/Core (3.5.3)
-  - CYLTabBarController (1.24.2):
-    - CYLTabBarController/Core (= 1.24.2)
-  - CYLTabBarController/Core (1.24.2)
+  - CYLTabBarController (1.28.3):
+    - CYLTabBarController/Core (= 1.28.3)
+  - CYLTabBarController/Core (1.28.3)
   - FBRetainCycleDetector (0.1.4)
   - FDStackView (1.0.1)
   - fishhook (0.2)
@@ -47,7 +47,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - CocoaLumberjack (~> 3.5.3)
-  - CYLTabBarController (~> 1.24.0)
+  - CYLTabBarController (~> 1.28.3)
   - FDStackView (~> 1.0.1)
   - fishhook
   - FMDB (~> 2.7.5)
@@ -91,7 +91,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
+  CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FDStackView: fc0697e5be2022c8af36ce66e9e2061006058ba8
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
@@ -110,6 +110,6 @@ SPEC CHECKSUMS:
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
 
-PODFILE CHECKSUM: fc6efbabaa52ce19efc53965ab88cd0346847e70
+PODFILE CHECKSUM: 2da27781c5cad71fe2f3c8cfbe7eb949f662bc87
 
 COCOAPODS: 1.8.3

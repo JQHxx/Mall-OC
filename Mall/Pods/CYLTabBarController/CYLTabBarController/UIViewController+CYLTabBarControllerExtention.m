@@ -14,7 +14,7 @@
 @implementation UIViewController (CYLTabBarControllerExtention)
 
 #pragma mark -
-#pragma mark - Public Methods
+#pragma mark - public Methods
 
 - (UIViewController *)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index {
     return [self cyl_popSelectTabBarChildViewControllerAtIndex:index animated:NO];
@@ -238,7 +238,7 @@
 }
 
 #pragma mark -
-#pragma mark - Private methods
+#pragma mark - Private Methods
 
 - (NSArray<__kindof UIViewController *> *)cyl_getOtherSameClassTypeViewControllersInCurrentNavigationControllerStack:(UIViewController *)viewController {
     NSArray *currentNavigationControllerStack = [self.navigationController childViewControllers];
@@ -297,82 +297,6 @@
     return atIndex;
 }
 
-+ (UIViewController * __nullable)cyl_topmostViewController {
-    UIViewController *topViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    
-    if (topViewController == nil) {
-        return nil;
-    }
-    
-    while (true) {
-        if (topViewController.presentedViewController != nil) {
-            topViewController = topViewController.presentedViewController;
-        } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
-            UINavigationController *navi = (UINavigationController *)topViewController;
-            topViewController = navi.topViewController;
-        } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
-            UITabBarController *tab = (UITabBarController *)topViewController;
-            topViewController = tab.selectedViewController;
-        } else {
-            break;
-        }
-    }
-    
-    return topViewController;
-}
-
-+ (UINavigationController * __nullable)cyl_currentNavigationController {
-    return [[UIViewController cyl_topmostViewController] navigationController];
-}
-
-+ (void)cyl_dismissAll:(void (^ __nullable)(void))completion {
-    UIViewController *topViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    
-    if (topViewController == nil) {
-        !completion ?: completion();
-        return;
-    }
-    
-    NSMutableArray *list = [NSMutableArray new];
-    
-    while (true) {
-        if (topViewController.presentedViewController != nil) {
-            topViewController = topViewController.presentedViewController;
-            [list addObject:topViewController];
-        } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
-            UINavigationController *navi = (UINavigationController *)topViewController;
-            topViewController = navi.topViewController;
-        } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
-            UITabBarController *tab = (UITabBarController *)topViewController;
-            topViewController = tab.selectedViewController;
-        } else {
-            break;
-        }
-    }
-    
-    if (list.count == 0) {
-        if (completion) {
-            completion();
-        }
-        return;
-    }
-    
-    for (NSInteger i = list.count - 1; i >=0 ; i--) {
-        
-        UIViewController *vc = list[i];
-        if (i == 0) {
-            if ([vc isKindOfClass:[UINavigationController class]]) {
-                [(UINavigationController *)vc popToRootViewControllerAnimated:NO];
-            }
-            [vc dismissViewControllerAnimated:NO completion:completion];
-        } else {
-            if ([vc isKindOfClass:[UINavigationController class]]) {
-                [(UINavigationController *)vc popToRootViewControllerAnimated:NO];
-            }
-            [vc dismissViewControllerAnimated:NO completion:nil];
-        }
-    }
-}
 
 - (void)cyl_handleNavigationBackAction {
     [self cyl_handleNavigationBackActionWithAnimated:YES];
@@ -390,7 +314,7 @@
     }
 }
 
-#pragma mark -- Public Methods
+#pragma mark -- public methods
 
 /**
  *  show badge with red dot style and CYLBadgeAnimationTypeNone by default.
@@ -518,6 +442,14 @@
 
 - (void)cyl_setBadgeRadius:(CGFloat)badgeRadius {
     [kActualView cyl_setBadgeRadius:badgeRadius];
+}
+
+- (CGFloat)cyl_badgeCornerRadius {
+    return [kActualView cyl_badgeCornerRadius];
+}
+
+- (void)cyl_setBadgeCornerRadius:(CGFloat)cyl_badgeCornerRadius {
+    [kActualView cyl_setBadgeCornerRadius:cyl_badgeCornerRadius];
 }
 
 @end

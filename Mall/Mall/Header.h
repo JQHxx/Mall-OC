@@ -36,6 +36,7 @@
 #import "UIViewController+HUD.h"
 #import "BLStopwatch.h"
 #import "UIScrollView+MJ.h"
+#import "YYImage.h"
 
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog

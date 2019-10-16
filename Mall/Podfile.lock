@@ -46,12 +46,15 @@ PODS:
   - TOCropViewController (2.5.1)
   - TYPagerController (2.1.2)
   - TZImagePickerController (3.2.1)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
-  - AFNetworking/NSURLSession (~> 3.0)
-  - AFNetworking/Reachability (~> 3.0)
-  - AFNetworking/Security (~> 3.0)
-  - AFNetworking/Serialization (~> 3.0)
+  - AFNetworking/NSURLSession (~> 3.2.1)
+  - AFNetworking/Reachability (~> 3.2.1)
+  - AFNetworking/Security (~> 3.2.1)
+  - AFNetworking/Serialization (~> 3.2.1)
   - CocoaLumberjack (~> 3.5.3)
   - CYLTabBarController (~> 1.28.3)
   - FBMemoryProfiler
@@ -74,6 +77,7 @@ DEPENDENCIES:
   - TOCropViewController (~> 2.5.1)
   - TYPagerController (~> 2.1.2)
   - TZImagePickerController (~> 3.2.1)
+  - YYImage (~> 1.0.4)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -100,6 +104,7 @@ SPEC REPOS:
     - TOCropViewController
     - TYPagerController
     - TZImagePickerController
+    - YYImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -125,7 +130,8 @@ SPEC CHECKSUMS:
   TOCropViewController: 00dc36c4e4a0f4a45efa91adbf22df8a4fae01d3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: cd3c73d3a28d7d73177712bc945786812697230d
+PODFILE CHECKSUM: 2af1b97aa5eba0ab3acdc9d3897bc0f622c0e6c1
 
 COCOAPODS: 1.8.3

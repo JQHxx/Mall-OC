@@ -91,6 +91,9 @@
 		5EFFE88A2356EB5F00475E9B /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8892356EB5F00475E9B /* NSArray+Safe.m */; };
 		5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8922356F14A00475E9B /* NSString+Crypto.m */; };
 		5EFFE8962356F33500475E9B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8952356F33500475E9B /* RSA.m */; };
+		5EFFE89A2356F68B00475E9B /* TargetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8992356F68B00475E9B /* TargetProxy.m */; };
+		5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */; };
+		5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -290,6 +293,12 @@
 		5EFFE8922356F14A00475E9B /* NSString+Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypto.m"; sourceTree = "<group>"; };
 		5EFFE8942356F33500475E9B /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		5EFFE8952356F33500475E9B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		5EFFE8982356F68B00475E9B /* TargetProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetProxy.h; sourceTree = "<group>"; };
+		5EFFE8992356F68B00475E9B /* TargetProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetProxy.m; sourceTree = "<group>"; };
+		5EFFE89C2356F90400475E9B /* UIButton+CountDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
+		5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		5EFFE89F2356F94700475E9B /* UIButton+Indicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Indicator.h"; sourceTree = "<group>"; };
+		5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Indicator.m"; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -367,6 +376,8 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE89B2356F7FD00475E9B /* CountDown */,
+				5EFFE8972356F66C00475E9B /* Proxy */,
 				5EFFE8822356EA6600475E9B /* Protective */,
 				5EFFE8772356A4CD00475E9B /* OperationGuide */,
 				5E9B8D042355C734001E0160 /* Action */,
@@ -768,6 +779,8 @@
 				5EE4546A233CADAD00035806 /* UIView+Animation.m */,
 				5EC37AB2234ED6AE004A8ABF /* UIView+Frame.h */,
 				5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */,
+				5EFFE89F2356F94700475E9B /* UIButton+Indicator.h */,
+				5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -944,6 +957,24 @@
 				5EFFE8892356EB5F00475E9B /* NSArray+Safe.m */,
 			);
 			path = Protective;
+			sourceTree = "<group>";
+		};
+		5EFFE8972356F66C00475E9B /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE8982356F68B00475E9B /* TargetProxy.h */,
+				5EFFE8992356F68B00475E9B /* TargetProxy.m */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		5EFFE89B2356F7FD00475E9B /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE89C2356F90400475E9B /* UIButton+CountDown.h */,
+				5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */,
+			);
+			path = CountDown;
 			sourceTree = "<group>";
 		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
@@ -1195,6 +1226,7 @@
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EFBFCF2234195CB00CA3729 /* CheckMobileIsBreakPrison.m in Sources */,
 				5EB57E15234D8C0B0075AF9C /* UITableView+Hook.m in Sources */,
+				5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
@@ -1209,6 +1241,8 @@
 				5EFBFCF823419D7100CA3729 /* NSObject+Codesign.m in Sources */,
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
+				5EFFE89A2356F68B00475E9B /* TargetProxy.m in Sources */,
+				5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */,
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,

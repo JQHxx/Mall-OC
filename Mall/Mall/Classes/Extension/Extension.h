@@ -14,3 +14,4 @@
 #import "UIDevice+Core.h"
 #import "UIView+Animation.h"
 #import "UIView+Frame.h"
+#import "UIButton+Indicator.h"

@@ -38,6 +38,7 @@
 #import "UIScrollView+MJ.h"
 #import "YYImage.h"
 #import "PrintBeautifulLog.h"
+#import "IQKeyboardManager.h"
 
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog

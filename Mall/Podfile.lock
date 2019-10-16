@@ -23,6 +23,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - GZIP (1.2.3)
+  - IQKeyboardManager (6.5.0)
   - LBXScan/LBXNative (2.3):
     - LBXScan/Types (~> 2.2)
   - LBXScan/LBXZXing (2.3):
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - fishhook
   - FMDB (~> 2.7.5)
   - GZIP (~> 1.2)
+  - IQKeyboardManager
   - LBXScan/LBXNative (~> 2.3)
   - LBXScan/LBXZXing (~> 2.3)
   - LBXScan/UI (~> 2.3)
@@ -91,6 +93,7 @@ SPEC REPOS:
     - fishhook
     - FMDB
     - GZIP
+    - IQKeyboardManager
     - LBXScan
     - MBProgressHUD
     - MJExtension
@@ -117,6 +120,7 @@ SPEC CHECKSUMS:
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GZIP: af5c90ef903776a7e9afe6ebebd794a84a2929d4
+  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
   LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
@@ -132,6 +136,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 2af1b97aa5eba0ab3acdc9d3897bc0f622c0e6c1
+PODFILE CHECKSUM: da8276e21afcf072fb21c3f8c27cde4673da5730
 
 COCOAPODS: 1.8.3

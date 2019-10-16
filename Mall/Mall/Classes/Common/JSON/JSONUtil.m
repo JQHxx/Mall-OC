@@ -109,4 +109,20 @@
     return string;
 }
 
++ (NSString *) objToJSON:(id)obj {
+    
+    //去掉空格转换成json
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *jsonStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSMutableString *mutStr = [NSMutableString stringWithString:jsonStr];
+    NSRange range = {0,jsonStr.length};
+    //去除空格和换行
+    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
+    NSRange range2 = {0,mutStr.length};
+    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
+    return mutStr;
+    
+}
+
 @end

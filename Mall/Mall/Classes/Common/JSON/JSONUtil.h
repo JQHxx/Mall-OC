@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)arrayToJSON:(NSArray *)array;
 
++ (NSString *) objToJSON:(id)obj;
+
 @end
 
 NS_ASSUME_NONNULL_END

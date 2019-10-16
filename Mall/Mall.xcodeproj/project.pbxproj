@@ -84,6 +84,7 @@
 		5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBFD072341B49400CA3729 /* UIImage+Trait.m */; };
 		5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBFD0C2341ED8C00CA3729 /* WSLFPS.m */; };
 		5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBFD0D2341ED8C00CA3729 /* WSLSuspendingView.m */; };
+		5EFFE87A2356A4FE00475E9B /* OperationGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8792356A4FE00475E9B /* OperationGuideView.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -269,6 +270,8 @@
 		5EFBFD0B2341ED8C00CA3729 /* WSLFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLFPS.h; sourceTree = "<group>"; };
 		5EFBFD0C2341ED8C00CA3729 /* WSLFPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLFPS.m; sourceTree = "<group>"; };
 		5EFBFD0D2341ED8C00CA3729 /* WSLSuspendingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLSuspendingView.m; sourceTree = "<group>"; };
+		5EFFE8782356A4FE00475E9B /* OperationGuideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationGuideView.h; sourceTree = "<group>"; };
+		5EFFE8792356A4FE00475E9B /* OperationGuideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationGuideView.m; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +349,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE8772356A4CD00475E9B /* OperationGuide */,
 				5E9B8D042355C734001E0160 /* Action */,
 				5E9B8CFD23556CEA001E0160 /* Keychain */,
 				5E9B8CF5235553AB001E0160 /* DartModel */,
@@ -887,6 +891,15 @@
 			path = FPS;
 			sourceTree = "<group>";
 		};
+		5EFFE8772356A4CD00475E9B /* OperationGuide */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE8782356A4FE00475E9B /* OperationGuideView.h */,
+				5EFFE8792356A4FE00475E9B /* OperationGuideView.m */,
+			);
+			path = OperationGuide;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1137,6 +1150,7 @@
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
+				5EFFE87A2356A4FE00475E9B /* OperationGuideView.m in Sources */,
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,

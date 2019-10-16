@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import "TopBannerNotificationsUtils.h"
+#import "OperationGuideView.h"
 
 @interface MessageViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -22,6 +23,11 @@
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
      self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    OperationGuideView *guideView = [[OperationGuideView alloc]init];
+    guideView.frame = self.view.bounds;
+    [UIApplication.sharedApplication.delegate.window addSubview:guideView];
+    
     
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.backgroundColor = [UIColor redColor];

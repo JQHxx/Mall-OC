@@ -25,3 +25,10 @@
 
 #endif /* Macro_h */
 
+/*
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//过期的方法
+#pragma clang diagnostic pop
+ */
+

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import <dlfcn.h>
 #import <sys/types.h>
+#import <FBAllocationTracker/FBAllocationTrackerManager.h>
 
 
 typedef int(*ptrace_ptr_t)(int _request,pid_t _pid,caddr_t _addr,int _data); void* dlopen(const char* pathname,int mode );
@@ -29,6 +30,9 @@ void disable_gdb() {
 int main(int argc, char * argv[]) {
     
     [[BLStopwatch sharedStopwatch] start];
+    
+    [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
+    [[FBAllocationTrackerManager sharedManager] enableGenerations];
     
     #ifndef DUBUG
         // disable_gdb();

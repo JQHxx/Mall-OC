@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self createTabbarHighlightAtIndex:0];
-        //[self viewBindEvents];
+        [self viewBindEvents];
     }
     return self;
 }

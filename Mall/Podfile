@@ -47,8 +47,13 @@ target 'Mall' do
   
   pod 'GZIP', '~> 1.2'
   
+  # 扫码
+  pod 'LBXScan', '~> 2.3'
+  
   # 内存泄漏检测
   pod 'MLeaksFinder'
+  # 内存占用检测
+  pod 'FBMemoryProfiler'
   
   target 'MallTests' do
     inherit! :search_paths

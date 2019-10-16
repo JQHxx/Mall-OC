@@ -15,7 +15,14 @@
 #import "WSLFPS.h"
 #import <AuthenticationServices/AuthenticationServices.h>
 
+#import <FBMemoryProfiler/FBMemoryProfiler.h>
+#import "CacheCleanerPlugin.h"
+#import "RetainCycleLoggerPlugin.h"
+
 @interface AppDelegate ()
+{
+  FBMemoryProfiler *_memoryProfiler;
+}
 
 @property (nonatomic, strong) UIVisualEffectView *effectView;
 
@@ -28,6 +35,13 @@
     
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];
     [DMNetworkTrafficManager start];
+    
+    FBMemoryProfiler *memoryProfiler = [FBMemoryProfiler new];
+    [memoryProfiler enable];
+    _memoryProfiler = [[FBMemoryProfiler alloc] initWithPlugins:@[[CacheCleanerPlugin new],
+                                                                  [RetainCycleLoggerPlugin new]]
+                               retainCycleDetectorConfiguration: nil];
+    [_memoryProfiler enable];
     
     [UncaughtExceptionHandler installUncaughtException:^(NSString *exceptionStr) {
         

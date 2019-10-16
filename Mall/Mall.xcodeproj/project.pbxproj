@@ -95,6 +95,7 @@
 		5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */; };
 		5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */; };
 		5EFFE8A523570AE800475E9B /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */; };
+		5EFFE8A923571C9900475E9B /* BFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A823571C9900475E9B /* BFScrollView.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -302,6 +303,8 @@
 		5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Indicator.m"; sourceTree = "<group>"; };
 		5EFFE8A323570AE800475E9B /* PrintBeautifulLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBeautifulLog.h; sourceTree = "<group>"; };
 		5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
+		5EFFE8A723571C9900475E9B /* BFScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFScrollView.h; sourceTree = "<group>"; };
+		5EFFE8A823571C9900475E9B /* BFScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFScrollView.m; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -379,6 +382,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE8A623571C7900475E9B /* Components */,
 				5EFFE89B2356F7FD00475E9B /* CountDown */,
 				5EFFE8972356F66C00475E9B /* Proxy */,
 				5EFFE8822356EA6600475E9B /* Protective */,
@@ -990,6 +994,15 @@
 			path = PrintBeautifulLog;
 			sourceTree = "<group>";
 		};
+		5EFFE8A623571C7900475E9B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE8A723571C9900475E9B /* BFScrollView.h */,
+				5EFFE8A823571C9900475E9B /* BFScrollView.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1265,6 +1278,7 @@
 				5E7CB90E235072E800EAAB06 /* UIViewController+HUD.m in Sources */,
 				5E0667792313960900EE3331 /* MainNavigationController.m in Sources */,
 				5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */,
+				5EFFE8A923571C9900475E9B /* BFScrollView.m in Sources */,
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
 				5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */,
 				5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */,

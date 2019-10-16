@@ -87,6 +87,10 @@
 		5EFFE87A2356A4FE00475E9B /* OperationGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8792356A4FE00475E9B /* OperationGuideView.m */; };
 		5EFFE87E2356C4ED00475E9B /* CacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE87D2356C4ED00475E9B /* CacheCleanerPlugin.m */; };
 		5EFFE8812356C52F00475E9B /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8802356C52F00475E9B /* RetainCycleLoggerPlugin.m */; };
+		5EFFE8872356EAD000475E9B /* NSObject+Selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8862356EAD000475E9B /* NSObject+Selector.m */; };
+		5EFFE88A2356EB5F00475E9B /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8892356EB5F00475E9B /* NSArray+Safe.m */; };
+		5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8922356F14A00475E9B /* NSString+Crypto.m */; };
+		5EFFE8962356F33500475E9B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8952356F33500475E9B /* RSA.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -278,6 +282,14 @@
 		5EFFE87D2356C4ED00475E9B /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
 		5EFFE87F2356C52F00475E9B /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
 		5EFFE8802356C52F00475E9B /* RetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
+		5EFFE8852356EAD000475E9B /* NSObject+Selector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Selector.h"; sourceTree = "<group>"; };
+		5EFFE8862356EAD000475E9B /* NSObject+Selector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Selector.m"; sourceTree = "<group>"; };
+		5EFFE8882356EB5F00475E9B /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		5EFFE8892356EB5F00475E9B /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		5EFFE8912356F14A00475E9B /* NSString+Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypto.h"; sourceTree = "<group>"; };
+		5EFFE8922356F14A00475E9B /* NSString+Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypto.m"; sourceTree = "<group>"; };
+		5EFFE8942356F33500475E9B /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		5EFFE8952356F33500475E9B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,6 +367,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE8822356EA6600475E9B /* Protective */,
 				5EFFE8772356A4CD00475E9B /* OperationGuide */,
 				5E9B8D042355C734001E0160 /* Action */,
 				5E9B8CFD23556CEA001E0160 /* Keychain */,
@@ -766,6 +779,8 @@
 				5ED1F74323152D630095C5A9 /* NSString+Helper.m */,
 				5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */,
 				5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */,
+				5EFFE8912356F14A00475E9B /* NSString+Crypto.h */,
+				5EFFE8922356F14A00475E9B /* NSString+Crypto.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -839,6 +854,8 @@
 		5EFBFCEF234195AC00CA3729 /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE8942356F33500475E9B /* RSA.h */,
+				5EFFE8952356F33500475E9B /* RSA.m */,
 				5EFBFCF4234195D900CA3729 /* CheckAppComplete.h */,
 				5EFBFCF3234195D900CA3729 /* CheckAppComplete.m */,
 				5EFBFCF0234195CB00CA3729 /* CheckMobileIsBreakPrison.h */,
@@ -916,6 +933,17 @@
 				5EFFE8802356C52F00475E9B /* RetainCycleLoggerPlugin.m */,
 			);
 			path = Plugin;
+			sourceTree = "<group>";
+		};
+		5EFFE8822356EA6600475E9B /* Protective */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE8852356EAD000475E9B /* NSObject+Selector.h */,
+				5EFFE8862356EAD000475E9B /* NSObject+Selector.m */,
+				5EFFE8882356EB5F00475E9B /* NSArray+Safe.h */,
+				5EFFE8892356EB5F00475E9B /* NSArray+Safe.m */,
+			);
+			path = Protective;
 			sourceTree = "<group>";
 		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
@@ -1150,6 +1178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EFFE8962356F33500475E9B /* RSA.m in Sources */,
 				5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */,
 				5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
@@ -1183,17 +1212,20 @@
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
+				5EFFE8872356EAD000475E9B /* NSObject+Selector.m in Sources */,
 				5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,
 				5E7CB90E235072E800EAAB06 /* UIViewController+HUD.m in Sources */,
 				5E0667792313960900EE3331 /* MainNavigationController.m in Sources */,
 				5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */,
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
+				5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */,
 				5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
 				5E5D94432338A14D008C52C2 /* UncaughtExceptionHandler.m in Sources */,
 				5EB547EE233DE7C7003D0228 /* TDNetworkTrafficLog.m in Sources */,
 				5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */,
+				5EFFE88A2356EB5F00475E9B /* NSArray+Safe.m in Sources */,
 				5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */,
 				5EB547DF233DC5DE003D0228 /* DMNetworkTrafficManager.m in Sources */,
 				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,

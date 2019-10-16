@@ -51,6 +51,9 @@
 #import "DarkModel.h"
 #import "UIColor+DarkMode.h"
 
+#pragma mark - 崩溃防护（方法转发、数组越界等）
+#import "NSObject+Selector.h"
+#import "NSArray+Safe.h"
 
 #pragma mark - 其他
 #ifdef DEBUG

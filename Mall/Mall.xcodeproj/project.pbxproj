@@ -94,6 +94,7 @@
 		5EFFE89A2356F68B00475E9B /* TargetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8992356F68B00475E9B /* TargetProxy.m */; };
 		5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */; };
 		5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */; };
+		5EFFE8A523570AE800475E9B /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -299,6 +300,8 @@
 		5EFFE89D2356F90400475E9B /* UIButton+CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
 		5EFFE89F2356F94700475E9B /* UIButton+Indicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Indicator.h"; sourceTree = "<group>"; };
 		5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Indicator.m"; sourceTree = "<group>"; };
+		5EFFE8A323570AE800475E9B /* PrintBeautifulLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBeautifulLog.h; sourceTree = "<group>"; };
+		5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +404,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFE8A223570AE800475E9B /* PrintBeautifulLog */,
 				5EFFE87B2356C4D300475E9B /* Plugin */,
 				5EDE51F02354173B00204F67 /* MJRefresh */,
 				5EDE51E9235407D000204F67 /* StopWatch */,
@@ -977,6 +981,15 @@
 			path = CountDown;
 			sourceTree = "<group>";
 		};
+		5EFFE8A223570AE800475E9B /* PrintBeautifulLog */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFE8A323570AE800475E9B /* PrintBeautifulLog.h */,
+				5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */,
+			);
+			path = PrintBeautifulLog;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1266,6 +1279,7 @@
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
 				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
+				5EFFE8A523570AE800475E9B /* PrintBeautifulLog.m in Sources */,
 				5EDE51F92354188D00204F67 /* UIScrollView+MJ.m in Sources */,
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
 				5EDE52032354503800204F67 /* JSONUtil.m in Sources */,

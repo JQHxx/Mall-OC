@@ -37,6 +37,7 @@
 #import "BLStopwatch.h"
 #import "UIScrollView+MJ.h"
 #import "YYImage.h"
+#import "PrintBeautifulLog.h"
 
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
@@ -74,7 +75,6 @@
 
 
 
-//
 #ifdef DEBUG
 #define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else

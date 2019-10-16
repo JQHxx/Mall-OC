@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
 
 typedef NS_ENUM(NSInteger,RequestType) {
     RequestTypeGET = 0,

@@ -9,13 +9,15 @@ target 'Mall' do
   pod 'CYLTabBarController', '~> 1.28.3'
   # OC风格自动布局 参考https://www.jianshu.com/p/f8d1a660ec30
   pod 'PureLayout', '~> 3.1.4'
-  pod 'AFNetworking', '~> 3.0'
+  pod 'AFNetworking/Serialization', '~> 3.2.1'
+  pod 'AFNetworking/Security', '~> 3.2.1'
+  pod 'AFNetworking/Reachability', '~> 3.2.1'
+  pod 'AFNetworking/NSURLSession', '~> 3.2.1'
   # pod 'SVProgressHUD', '~> 2.2.5'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'MJRefresh', '~> 3.1.16'
   pod 'MJExtension', '~> 3.1.0'
   pod 'TYPagerController', '~> 2.1.2'
-  pod 'AFNetworking', '~> 3.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'SDCycleScrollView','~> 1.80'
   # 主要为了解决网络请求返回json 含有NSNull问题
@@ -33,9 +35,6 @@ target 'Mall' do
   # 为了低于iOS 9系统可以使用
   pod 'FDStackView', '~> 1.0.1'
   
-  # h5秒开方案 腾讯X5内核
-  # pod 'VasSonic', '~> 3.1.1'
-
   # mmap 键值保存的方式
   pod 'MMKV', '~> 1.0.22'
   
@@ -48,7 +47,10 @@ target 'Mall' do
   pod 'GZIP', '~> 1.2'
   
   # 扫码
-  pod 'LBXScan', '~> 2.3'
+  pod 'LBXScan/LBXNative','~> 2.3'
+  pod 'LBXScan/LBXZXing','~> 2.3'
+  # pod 'LBXScan/LBXZBar','~> 2.3'
+  pod 'LBXScan/UI','~> 2.3'
   
   # 内存泄漏检测
   pod 'MLeaksFinder'

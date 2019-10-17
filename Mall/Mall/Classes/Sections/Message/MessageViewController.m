@@ -11,7 +11,7 @@
 #import "OperationGuideView.h"
 #import "UIView+Action.h"
 
-@interface MessageViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MessageViewController () <UITableViewDataSource, UITableViewDelegate, BackButtonHandlerProtocol>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *button;
@@ -56,6 +56,10 @@
     // UIScrollViewContentInsetAdjustmentAlways
     // self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     // [self setupUI];
+}
+
+- (BOOL)navigationShouldPopOnBackButton {
+    return YES;
 }
 
 - (void)invoke: (UIGestureRecognizer *) tapGes {

@@ -79,6 +79,7 @@
 		5EE6D70B2358409A00682301 /* UIView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D70A2358409A00682301 /* UIView+Action.m */; };
 		5EE6D70F235847FE00682301 /* FingerDrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D70E235847FE00682301 /* FingerDrawLineView.m */; };
 		5EE6D713235849C200682301 /* AudioServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D712235849C100682301 /* AudioServicesManager.m */; };
+		5EE6D71823584F3000682301 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D71723584F3000682301 /* UIViewController+BackButtonHandler.m */; };
 		5EEB70A723289EC100920345 /* Function.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70A623289EC100920345 /* Function.storyboard */; };
 		5EEB70AB23289F2F00920345 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AA23289F2F00920345 /* Mine.storyboard */; };
 		5EEB70AD23289F4A00920345 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AC23289F4A00920345 /* Message.storyboard */; };
@@ -282,6 +283,8 @@
 		5EE6D70E235847FE00682301 /* FingerDrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerDrawLineView.m; sourceTree = "<group>"; };
 		5EE6D711235849C100682301 /* AudioServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioServicesManager.h; sourceTree = "<group>"; };
 		5EE6D712235849C100682301 /* AudioServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioServicesManager.m; sourceTree = "<group>"; };
+		5EE6D71623584F3000682301 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		5EE6D71723584F3000682301 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		5EEB70A623289EC100920345 /* Function.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Function.storyboard; sourceTree = "<group>"; };
 		5EEB70AA23289F2F00920345 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		5EEB70AC23289F4A00920345 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 			isa = PBXGroup;
 			children = (
 				5E1CCCC42318D34900F77E6F /* WebBrowser */,
+				5EE6D71623584F3000682301 /* UIViewController+BackButtonHandler.h */,
+				5EE6D71723584F3000682301 /* UIViewController+BackButtonHandler.m */,
 				5E0667772313960900EE3331 /* MainNavigationController.h */,
 				5E0667782313960900EE3331 /* MainNavigationController.m */,
 				5ED1F72B2314E1240095C5A9 /* MainTabBarController.h */,
@@ -1376,6 +1381,7 @@
 				5EFBFCFD2341A5B600CA3729 /* UIViewController+Swizzle.m in Sources */,
 				5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
+				5EE6D71823584F3000682301 /* UIViewController+BackButtonHandler.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */,

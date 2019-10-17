@@ -10,8 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (Core)
+@interface UIImage (Remote)
 
+/**
+ 获取在线图片的尺寸
+ */
 +(CGSize)downloadImageSizeWithURL:(id)imageURL;
 
 @end

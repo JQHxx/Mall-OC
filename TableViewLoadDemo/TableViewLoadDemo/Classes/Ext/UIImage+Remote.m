@@ -6,10 +6,10 @@
 //  Copyright © 2019 JQHxx. All rights reserved.
 //
 
-#import "UIImage+Core.h"
+#import "UIImage+Remote.h"
 #import "SDImageCache.h"
 
-@implementation UIImage (Core)
+@implementation UIImage (Remote)
 
 //类方法 传入图片url  返回图片size
 +(CGSize)downloadImageSizeWithURL:(id)imageURL{

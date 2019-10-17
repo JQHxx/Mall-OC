@@ -25,6 +25,7 @@
 #import "Extension.h"
 #import "UIViewController+Swizzle.h"
 #import "UIButton+Action.h"
+#import "UIView+Action.h"
 
 #pragma mark - 第三方
 #import "UIImageView+SDWebImage.h"

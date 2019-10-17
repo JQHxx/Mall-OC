@@ -9,6 +9,7 @@
 #import "MessageViewController.h"
 #import "TopBannerNotificationsUtils.h"
 #import "OperationGuideView.h"
+#import "UIView+Action.h"
 
 @interface MessageViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +34,15 @@
     self.button.backgroundColor = [UIColor redColor];
     self.button.frame = CGRectMake(0, 0, 100, 50);
     @WeakSelf(self);
+    /*
     [self.button handleEvent:UIControlEventTouchUpInside block:^(UIButton * _Nonnull btn) {
+        @StrongSelf(weakSelf);
+        NSLog(@"%@", strongSelf.view);
+        MessageViewController *firstViewController = [[MessageViewController alloc] init];
+        [strongSelf.navigationController pushViewController:firstViewController animated:YES];
+    }];
+     */
+    [self.button bf_addTapActionWithBlock:^(UIGestureRecognizer * _Nullable gestureRecoginzer) {
         @StrongSelf(weakSelf);
         NSLog(@"%@", strongSelf.view);
         MessageViewController *firstViewController = [[MessageViewController alloc] init];

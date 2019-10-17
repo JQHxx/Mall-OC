@@ -78,6 +78,7 @@
 		5EE6D70823583FE200682301 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D70723583FE200682301 /* UIWindow+Hierarchy.m */; };
 		5EE6D70B2358409A00682301 /* UIView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D70A2358409A00682301 /* UIView+Action.m */; };
 		5EE6D70F235847FE00682301 /* FingerDrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D70E235847FE00682301 /* FingerDrawLineView.m */; };
+		5EE6D713235849C200682301 /* AudioServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D712235849C100682301 /* AudioServicesManager.m */; };
 		5EEB70A723289EC100920345 /* Function.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70A623289EC100920345 /* Function.storyboard */; };
 		5EEB70AB23289F2F00920345 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AA23289F2F00920345 /* Mine.storyboard */; };
 		5EEB70AD23289F4A00920345 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AC23289F4A00920345 /* Message.storyboard */; };
@@ -279,6 +280,8 @@
 		5EE6D70A2358409A00682301 /* UIView+Action.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Action.m"; sourceTree = "<group>"; };
 		5EE6D70D235847FD00682301 /* FingerDrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerDrawLineView.h; sourceTree = "<group>"; };
 		5EE6D70E235847FE00682301 /* FingerDrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerDrawLineView.m; sourceTree = "<group>"; };
+		5EE6D711235849C100682301 /* AudioServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioServicesManager.h; sourceTree = "<group>"; };
+		5EE6D712235849C100682301 /* AudioServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioServicesManager.m; sourceTree = "<group>"; };
 		5EEB70A623289EC100920345 /* Function.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Function.storyboard; sourceTree = "<group>"; };
 		5EEB70AA23289F2F00920345 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		5EEB70AC23289F4A00920345 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6D710235849B400682301 /* Audio */,
 				5EE6D70C235847E800682301 /* DrawLine */,
 				5EE6D6F82357F9D700682301 /* Loader */,
 				5EFFE8A623571C7900475E9B /* Components */,
@@ -899,6 +903,15 @@
 			path = DrawLine;
 			sourceTree = "<group>";
 		};
+		5EE6D710235849B400682301 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5EE6D711235849C100682301 /* AudioServicesManager.h */,
+				5EE6D712235849C100682301 /* AudioServicesManager.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		5EEB70A223289E8700920345 /* Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -1372,6 +1385,7 @@
 				5EB57E18234D8C250075AF9C /* UIGestureRecognizer+Hook.m in Sources */,
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */,
+				5EE6D713235849C200682301 /* AudioServicesManager.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,
 				5E37D9FD2334B911005B2F7B /* UIViewController+Hook.m in Sources */,

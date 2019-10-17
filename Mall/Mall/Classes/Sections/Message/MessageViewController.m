@@ -59,7 +59,7 @@
 }
 
 - (BOOL)navigationShouldPopOnBackButton {
-    return YES;
+    return NO;
 }
 
 - (void)invoke: (UIGestureRecognizer *) tapGes {

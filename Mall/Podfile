@@ -36,6 +36,8 @@ target 'Mall' do
   pod 'FMDB', '~> 2.7.5'
   # 为了低于iOS 9系统可以使用
   pod 'FDStackView', '~> 1.0.1'
+  # 无数据占位
+  pod 'LYEmptyView'
   
   # mmap 键值保存的方式
   pod 'MMKV', '~> 1.0.22'

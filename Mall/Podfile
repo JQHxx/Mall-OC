@@ -84,6 +84,7 @@ post_install do |installer|
   end
 end
 
+# 微信最新SDK(SDK 1.8.6)Universal Links: https://www.jianshu.com/p/9b6833f70755
 # App重签名：https://github.com/DanTheMan827/ios-app-signer
 # LLDB调试利器和高级用法：https://www.jianshu.com/p/c91f843a64fc
 # sign in apple: https://www.jianshu.com/p/483b998f2370 https://www.jianshu.com/p/e1284bd8c72a

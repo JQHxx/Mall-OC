@@ -33,7 +33,7 @@
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.backgroundColor = [UIColor redColor];
     self.button.frame = CGRectMake(0, 0, 100, 50);
-    @WeakSelf(self);
+    @WeakObj(self);
     /*
     [self.button handleEvent:UIControlEventTouchUpInside block:^(UIButton * _Nonnull btn) {
         @StrongSelf(weakSelf);
@@ -43,10 +43,10 @@
     }];
      */
     [self.button bf_addTapActionWithBlock:^(UIGestureRecognizer * _Nullable gestureRecoginzer) {
-        @StrongSelf(weakSelf);
-        NSLog(@"%@", strongSelf.view);
+        @StrongObj(self);
+        NSLog(@"%@", self.view);
         MessageViewController *firstViewController = [[MessageViewController alloc] init];
-        [strongSelf.navigationController pushViewController:firstViewController animated:YES];
+        [self.navigationController pushViewController:firstViewController animated:YES];
     }];
     // UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(invoke:)];
     // [self.button addGestureRecognizer:tapGes];
@@ -59,7 +59,7 @@
 }
 
 - (BOOL)navigationShouldPopOnBackButton {
-    return NO;
+    return YES;
 }
 
 - (void)invoke: (UIGestureRecognizer *) tapGes {

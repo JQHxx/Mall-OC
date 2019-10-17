@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (BOOL)isDarkMode;
 
+/**
+ 解决Image拉伸问题
+ */
++ (void)fixResizableImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -71,6 +71,8 @@
 		5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45464233C47C300035806 /* TopBannerNotificationsUtils.m */; };
 		5EE45468233C480200035806 /* ControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE45467233C480200035806 /* ControllerUtils.m */; };
 		5EE4546B233CADAD00035806 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4546A233CADAD00035806 /* UIView+Animation.m */; };
+		5EE6D6FB2357F9EC00682301 /* ONLDynamicLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D6FA2357F9EC00682301 /* ONLDynamicLoader.m */; };
+		5EE6D6FE2357FA6500682301 /* ONLMoudleA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6D6FD2357FA6500682301 /* ONLMoudleA.m */; };
 		5EEB70A723289EC100920345 /* Function.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70A623289EC100920345 /* Function.storyboard */; };
 		5EEB70AB23289F2F00920345 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AA23289F2F00920345 /* Mine.storyboard */; };
 		5EEB70AD23289F4A00920345 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB70AC23289F4A00920345 /* Message.storyboard */; };
@@ -258,6 +260,10 @@
 		5EE45467233C480200035806 /* ControllerUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllerUtils.m; sourceTree = "<group>"; };
 		5EE45469233CADAD00035806 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		5EE4546A233CADAD00035806 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		5EE6D6F92357F9EC00682301 /* ONLDynamicLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ONLDynamicLoader.h; sourceTree = "<group>"; };
+		5EE6D6FA2357F9EC00682301 /* ONLDynamicLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ONLDynamicLoader.m; sourceTree = "<group>"; };
+		5EE6D6FC2357FA6500682301 /* ONLMoudleA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ONLMoudleA.h; sourceTree = "<group>"; };
+		5EE6D6FD2357FA6500682301 /* ONLMoudleA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ONLMoudleA.m; sourceTree = "<group>"; };
 		5EEB70A623289EC100920345 /* Function.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Function.storyboard; sourceTree = "<group>"; };
 		5EEB70AA23289F2F00920345 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		5EEB70AC23289F4A00920345 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -382,6 +388,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6D6F82357F9D700682301 /* Loader */,
 				5EFFE8A623571C7900475E9B /* Components */,
 				5EFFE89B2356F7FD00475E9B /* CountDown */,
 				5EFFE8972356F66C00475E9B /* Proxy */,
@@ -848,6 +855,17 @@
 			path = TopBanner;
 			sourceTree = "<group>";
 		};
+		5EE6D6F82357F9D700682301 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				5EE6D6F92357F9EC00682301 /* ONLDynamicLoader.h */,
+				5EE6D6FA2357F9EC00682301 /* ONLDynamicLoader.m */,
+				5EE6D6FC2357FA6500682301 /* ONLMoudleA.h */,
+				5EE6D6FD2357FA6500682301 /* ONLMoudleA.m */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		5EEB70A223289E8700920345 /* Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -1236,6 +1254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EFFE8962356F33500475E9B /* RSA.m in Sources */,
+				5EE6D6FB2357F9EC00682301 /* ONLDynamicLoader.m in Sources */,
 				5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */,
 				5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
@@ -1269,6 +1288,7 @@
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
 				5EFFE89A2356F68B00475E9B /* TargetProxy.m in Sources */,
 				5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */,
+				5EE6D6FE2357FA6500682301 /* ONLMoudleA.m in Sources */,
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,

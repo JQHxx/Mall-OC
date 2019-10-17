@@ -19,6 +19,8 @@
 #import "CacheCleanerPlugin.h"
 #import "RetainCycleLoggerPlugin.h"
 
+#import "ONLDynamicLoader.h"
+
 @interface AppDelegate ()
 {
   FBMemoryProfiler *_memoryProfiler;
@@ -32,6 +34,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [ONLDynamicLoader executeFunctionsForKey:LEVEL_B];
     
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];
     [DMNetworkTrafficManager start];

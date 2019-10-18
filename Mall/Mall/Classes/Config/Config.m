@@ -9,15 +9,15 @@
 #import "Config.h"
 
 @implementation Config
+@dynamic qqAppId;
+@dynamic qqAppKey;
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
++ (NSString *)qqAppId {
+    return @"12";
 }
 
++ (NSString *)qqAppKey {
+    return @"33";
+}
 
 @end

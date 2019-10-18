@@ -14,7 +14,7 @@
  */
 @interface Config : NSObject
 
-@property(nonatomic, copy) NSString *qqAppId;
-@property(nonatomic, copy) NSString *qqAppKey;
+@property(class, nonatomic, copy, readonly) NSString *qqAppId;
+@property(class, nonatomic, copy, readonly) NSString *qqAppKey;
 
 @end

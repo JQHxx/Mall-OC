@@ -72,7 +72,7 @@
     [self adapterOSVersion];
     [self setupLogger];
     
-    DDLogWarn(@"[Warn]IS %@", @"");
+    DDLogWarn(@"[Warn]IS %@", [Config qqAppKey]);
     
     /*
     WSLSuspendingView * suspendingView = [WSLSuspendingView sharedSuspendingView];

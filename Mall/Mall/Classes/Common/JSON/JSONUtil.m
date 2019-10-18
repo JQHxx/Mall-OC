@@ -113,7 +113,7 @@
     
     //去掉空格转换成json
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:kNilOptions error:&error];
     NSString *jsonStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSMutableString *mutStr = [NSMutableString stringWithString:jsonStr];
     NSRange range = {0,jsonStr.length};

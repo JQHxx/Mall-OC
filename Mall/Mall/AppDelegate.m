@@ -152,7 +152,8 @@
 
 - (void) setupKeyboarManager {
     [[IQKeyboardManager sharedManager] setEnable:YES];
-    [[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:@"确定"];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
+    [[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:@"完成"];
     
     /*
     IQTextView *textView = [[IQTextView alloc]init];

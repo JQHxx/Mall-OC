@@ -55,6 +55,7 @@
 		5EBD3ED52313786500DC2F8F /* MallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3ED42313786500DC2F8F /* MallTests.m */; };
 		5EBD3EE02313786500DC2F8F /* MallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD3EDF2313786500DC2F8F /* MallUITests.m */; };
 		5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */; };
+		5ED185C0235944E500F0CA0B /* MMKVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED185BF235944E500F0CA0B /* MMKVUtil.m */; };
 		5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F72C2314E1240095C5A9 /* MainTabBarController.m */; };
 		5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73023150AF80095C5A9 /* UIImageView+SDWebImage.m */; };
 		5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73523151FEE0095C5A9 /* FunctionRequest.m */; };
@@ -233,6 +234,8 @@
 		5EBD3EE12313786500DC2F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EC37AB2234ED6AE004A8ABF /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5EC37AB3234ED6AE004A8ABF /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5ED185BE235944E500F0CA0B /* MMKVUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMKVUtil.h; sourceTree = "<group>"; };
+		5ED185BF235944E500F0CA0B /* MMKVUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMKVUtil.m; sourceTree = "<group>"; };
 		5ED1F72B2314E1240095C5A9 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		5ED1F72C2314E1240095C5A9 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		5ED1F72F23150AF80095C5A9 /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
@@ -442,6 +445,7 @@
 		5E0667692313886000EE3331 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				5ED185BD235944B400F0CA0B /* MMKV */,
 				5EFFE8A223570AE800475E9B /* PrintBeautifulLog */,
 				5EFFE87B2356C4D300475E9B /* Plugin */,
 				5EDE51F02354173B00204F67 /* MJRefresh */,
@@ -783,6 +787,15 @@
 				5EBD3EE12313786500DC2F8F /* Info.plist */,
 			);
 			path = MallUITests;
+			sourceTree = "<group>";
+		};
+		5ED185BD235944B400F0CA0B /* MMKV */ = {
+			isa = PBXGroup;
+			children = (
+				5ED185BE235944E500F0CA0B /* MMKVUtil.h */,
+				5ED185BF235944E500F0CA0B /* MMKVUtil.m */,
+			);
+			path = MMKV;
 			sourceTree = "<group>";
 		};
 		5ED1F72E23150AD90095C5A9 /* SDWebImage */ = {
@@ -1339,6 +1352,7 @@
 				5EB57E15234D8C0B0075AF9C /* UITableView+Hook.m in Sources */,
 				5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */,
 				5EBD3ECB2313786500DC2F8F /* main.m in Sources */,
+				5ED185C0235944E500F0CA0B /* MMKVUtil.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
 				5EFFE87A2356A4FE00475E9B /* OperationGuideView.m in Sources */,

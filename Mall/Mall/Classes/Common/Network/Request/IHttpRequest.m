@@ -41,21 +41,25 @@ static IHttpRequest *_instance = nil;
 + (instancetype)shareRequest {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[super allocWithZone:nil] init];
+        _instance = [[IHttpRequest alloc] init];
     });
     return _instance;
 }
 
 +(id)allocWithZone:(NSZone *)zone{
-    return [self shareRequest];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
 }
 
 -(id)copyWithZone:(NSZone *)zone{
-    return [[self class] shareRequest];
+    return _instance;
 }
 
 -(id)mutableCopyWithZone:(NSZone *)zone{
-    return [[self class] shareRequest];
+    return _instance;
 }
 
 #pragma mark - Setter & Getter

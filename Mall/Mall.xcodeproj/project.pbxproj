@@ -17,6 +17,7 @@
 		5E017631235D436D001D8554 /* AnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01762F235D436D001D8554 /* AnimationUtil.m */; };
 		5E017634235D65B5001D8554 /* UIApplication+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017633235D65B5001D8554 /* UIApplication+Add.m */; };
 		5E017637235D661D001D8554 /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017636235D661D001D8554 /* FileUtil.m */; };
+		5E01763B235D91DE001D8554 /* MSLocationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01763A235D91DE001D8554 /* MSLocationUtil.m */; };
 		5E06677423138DC600EE3331 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677323138DC600EE3331 /* Config.m */; };
 		5E0667792313960900EE3331 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0667782313960900EE3331 /* MainNavigationController.m */; };
 		5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677B2313986F00EE3331 /* IHttpRequest.m */; };
@@ -162,6 +163,9 @@
 		5E017633235D65B5001D8554 /* UIApplication+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Add.m"; sourceTree = "<group>"; };
 		5E017635235D661D001D8554 /* FileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
 		5E017636235D661D001D8554 /* FileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
+		5E017639235D91DE001D8554 /* MSLocationUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLocationUtil.h; sourceTree = "<group>"; };
+		5E01763A235D91DE001D8554 /* MSLocationUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSLocationUtil.m; sourceTree = "<group>"; };
+		5E01763C235D9237001D8554 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		5E06677223138DC600EE3331 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		5E06677323138DC600EE3331 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		5E0667752313926100EE3331 /* Mall-header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mall-header.pch"; sourceTree = "<group>"; };
@@ -437,6 +441,15 @@
 			path = Monitor;
 			sourceTree = "<group>";
 		};
+		5E017638235D91CC001D8554 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5E017639235D91DE001D8554 /* MSLocationUtil.h */,
+				5E01763A235D91DE001D8554 /* MSLocationUtil.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		5E066766231387DF00EE3331 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +477,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E017638235D91CC001D8554 /* Location */,
 				5EE6D71C23586AF800682301 /* DateFormatter */,
 				5EE6D710235849B400682301 /* Audio */,
 				5EE6D70C235847E800682301 /* DrawLine */,
@@ -815,6 +829,7 @@
 				5E0667752313926100EE3331 /* Mall-header.pch */,
 				5ED1F74623152F8B0095C5A9 /* Macro.h */,
 				5E7CB90F2350770300EAAB06 /* Header.h */,
+				5E01763C235D9237001D8554 /* Singleton.h */,
 			);
 			path = Mall;
 			sourceTree = "<group>";
@@ -1406,6 +1421,7 @@
 				5E9B8D072355C74F001E0160 /* UIButton+Action.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
+				5E01763B235D91DE001D8554 /* MSLocationUtil.m in Sources */,
 				5EFFE87E2356C4ED00475E9B /* CacheCleanerPlugin.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
 				5EFBFCF2234195CB00CA3729 /* CheckMobileIsBreakPrison.m in Sources */,

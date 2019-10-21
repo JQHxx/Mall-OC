@@ -69,7 +69,7 @@ static BOOL recordViewLoadTime = NO;
     
     if ([self needRecordViewLoadTime:classNameStr]) {
         CFTimeInterval end = CACurrentMediaTime();
-        NSLog(@"~~~~~~~~~~~%8.2f   ~~~~  className-> %@", (end - rt_loadingBegin) * 1000, classNameStr);
+        NSLog(@"~~~~~~~~~~~%8.2fms   ~~~~  className-> %@", (end - rt_loadingBegin) * 1000, classNameStr);
     }
 
 }

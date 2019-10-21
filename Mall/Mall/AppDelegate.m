@@ -83,6 +83,7 @@
     
     DDLogWarn(@"[Warn]IS %@", [Config qqAppKey]);
     
+    NSLog(@"%@", [@"18775134256" numberSuitScanfRange:NSMakeRange(1, 5)]);
     /*
     WSLSuspendingView * suspendingView = [WSLSuspendingView sharedSuspendingView];
     WSLFPS * fps = [WSLFPS sharedFPSIndicator];

@@ -48,11 +48,10 @@
 /**
  wct20190716 字符串指定位置替换为*
 
- @param number 待操作字符串
  @param range 密文展示的字符位置 range值第一个参数是第几位开始展示*，第二个参数是展示*的字符个数
  @return 处理后返回值
  */
-+ (NSString *)numberSuitScanf:(NSString*)number range:(NSRange)range;
+- (NSString *)numberSuitScanfRange:(NSRange)range;
 
 @end
 

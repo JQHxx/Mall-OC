@@ -65,22 +65,18 @@
     return result;
 }
 
-+ (NSString *)numberSuitScanf:(NSString*)number range:(NSRange)range
-{
-    if (range.length + range.location <= number.length) {
-        NSString *randomString = nil;
+- (NSString *)numberSuitScanfRange:(NSRange)range {
+    if (range.length + range.location <= self.length) {
+        NSString *randomString = @"";
         
         for (NSInteger i = 0; i < range.length; i++) {
             randomString = [randomString stringByAppendingString:@"*"];
-            if ([self isEqual:[NSNull null]]) {
-                randomString = @"*";
-            }
         }
-        
-        NSString *numberString = [number stringByReplacingCharactersInRange:range withString:randomString];
+        // 区域的字符串替换
+        NSString *numberString = [self stringByReplacingCharactersInRange:range withString:randomString];
         return numberString;
     }
-    return number;
+    return self;
     
 }
 

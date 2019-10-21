@@ -20,20 +20,24 @@
 
 static MMKVUtil *_instance = nil;
 
-+ (instancetype) shareInstance {
++ (instancetype) sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[MMKVUtil alloc]init];
+        _instance = [[super allocWithZone:nil] init];
     });
     return _instance;
 }
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [super allocWithZone:zone];
-    });
-    return _instance;
++(id)allocWithZone:(NSZone *)zone{
+    return [self sharedInstance];
+}
+
+-(id)copyWithZone:(NSZone *)zone{
+    return [[self class] sharedInstance];
+}
+
+-(id)mutableCopyWithZone:(NSZone *)zone{
+    return [[self class] sharedInstance];
 }
 
 - (instancetype)init {

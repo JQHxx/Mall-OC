@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMKVUtil : NSObject
 
-+ (instancetype) shareInstance;
++ (instancetype) sharedInstance;
+/* 或者直接禁掉
++(instancetype) alloc __attribute__((unavailable("replace with 'sharedInstance'")));
++(instancetype) new __attribute__((unavailable("replace with 'sharedInstance'")));
+-(instancetype) copy __attribute__((unavailable("replace with 'sharedInstance'")));
+-(instancetype) mutableCopy __attribute__((unavailable("replace with 'sharedInstance'")));
+ */
 
 // BOOL
 - (BOOL) setBool: (BOOL) value forKey: (NSString *) key;

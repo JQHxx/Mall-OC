@@ -45,6 +45,7 @@
     [self.button bf_addTapActionWithBlock:^(UIGestureRecognizer * _Nullable gestureRecoginzer) {
         @StrongObj(self);
         NSLog(@"%@", self.view);
+        // sleep(2);
         MessageViewController *firstViewController = [[MessageViewController alloc] init];
         [self.navigationController pushViewController:firstViewController animated:YES];
     }];

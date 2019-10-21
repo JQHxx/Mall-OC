@@ -41,7 +41,9 @@
     // 卡顿检测
     NKDelayedMonitor *monitor = [NKDelayedMonitor sharedInstance];
     [monitor startOnlineMonitor];
+    // [monitor startOfflineMonitor];
     [UIViewController recordViewLoadTime:YES];
+
     
     // 延时调用
     [ONLDynamicLoader executeFunctionsForKey:LEVEL_B];

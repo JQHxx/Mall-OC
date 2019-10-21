@@ -26,7 +26,8 @@
     // 1. 创建Sign in with Apple Button
     if (@available(iOS 13.0, *)) {
         ASAuthorizationAppleIDButton *button = [[ASAuthorizationAppleIDButton alloc]initWithAuthorizationButtonType:ASAuthorizationAppleIDButtonTypeSignIn authorizationButtonStyle:ASAuthorizationAppleIDButtonStyleWhiteOutline];
-        button.frame = CGRectMake(30, self.view.bounds.size.height - 180, self.view.bounds.size.width - 60, 50);
+        button.frame = CGRectMake(30, self.view.bounds.size.height - 180, 50, 50);
+        [button setCornerRadius:50];
         [button addTarget:self action:@selector(handleAuthorization) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         // `handleAuthorization`的实现参阅：2. 跟用户提出授权请求.

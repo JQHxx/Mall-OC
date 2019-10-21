@@ -13,6 +13,8 @@
 		5E017629235D3E56001D8554 /* UIViewController+FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017621235D3E55001D8554 /* UIViewController+FPS.m */; };
 		5E01762A235D3E56001D8554 /* NKDelayedMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017622235D3E55001D8554 /* NKDelayedMonitor.m */; };
 		5E01762B235D3E56001D8554 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017625235D3E56001D8554 /* YYWeakProxy.m */; };
+		5E017630235D436D001D8554 /* DrawUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01762D235D436C001D8554 /* DrawUtil.m */; };
+		5E017631235D436D001D8554 /* AnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01762F235D436D001D8554 /* AnimationUtil.m */; };
 		5E06677423138DC600EE3331 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677323138DC600EE3331 /* Config.m */; };
 		5E0667792313960900EE3331 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0667782313960900EE3331 /* MainNavigationController.m */; };
 		5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677B2313986F00EE3331 /* IHttpRequest.m */; };
@@ -150,6 +152,10 @@
 		5E017623235D3E55001D8554 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		5E017624235D3E56001D8554 /* UIViewController+LoadingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingTime.h"; sourceTree = "<group>"; };
 		5E017625235D3E56001D8554 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		5E01762C235D436C001D8554 /* AnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationUtil.h; sourceTree = "<group>"; };
+		5E01762D235D436C001D8554 /* DrawUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawUtil.m; sourceTree = "<group>"; };
+		5E01762E235D436D001D8554 /* DrawUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawUtil.h; sourceTree = "<group>"; };
+		5E01762F235D436D001D8554 /* AnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationUtil.m; sourceTree = "<group>"; };
 		5E06677223138DC600EE3331 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		5E06677323138DC600EE3331 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		5E0667752313926100EE3331 /* Mall-header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mall-header.pch"; sourceTree = "<group>"; };
@@ -856,6 +862,10 @@
 		5ED1F73C23152C240095C5A9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5E01762C235D436C001D8554 /* AnimationUtil.h */,
+				5E01762F235D436D001D8554 /* AnimationUtil.m */,
+				5E01762E235D436D001D8554 /* DrawUtil.h */,
+				5E01762D235D436C001D8554 /* DrawUtil.m */,
 				5ED1F73D23152C340095C5A9 /* Common.h */,
 				5ED1F73E23152C340095C5A9 /* Common.m */,
 				5EF2630D2326444E0008A605 /* StoryBoardNameUtil.h */,
@@ -1395,6 +1405,7 @@
 				5ED185C0235944E500F0CA0B /* MMKVUtil.m in Sources */,
 				5E37D9FE2334B911005B2F7B /* BFHook.m in Sources */,
 				5E1CCCCC2318D34900F77E6F /* BaseWebBrowserViewController.m in Sources */,
+				5E017631235D436D001D8554 /* AnimationUtil.m in Sources */,
 				5EFFE87A2356A4FE00475E9B /* OperationGuideView.m in Sources */,
 				5E37D9EA233463E8005B2F7B /* NSTimer+AutoIncalidate.m in Sources */,
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
@@ -1417,6 +1428,7 @@
 				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
 				5EE6D70523583CE700682301 /* UIView+Radius.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
+				5E017630235D436D001D8554 /* DrawUtil.m in Sources */,
 				5EFFE8872356EAD000475E9B /* NSObject+Selector.m in Sources */,
 				5E9B8D0023556CF6001E0160 /* YostarKeychain.m in Sources */,
 				5E06678323139D5300EE3331 /* ServiceViewController.m in Sources */,

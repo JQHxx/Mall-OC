@@ -65,6 +65,25 @@
     return result;
 }
 
++ (NSString *)numberSuitScanf:(NSString*)number range:(NSRange)range
+{
+    if (range.length + range.location <= number.length) {
+        NSString *randomString = nil;
+        
+        for (NSInteger i = 0; i < range.length; i++) {
+            randomString = [randomString stringByAppendingString:@"*"];
+            if ([self isEqual:[NSNull null]]) {
+                randomString = @"*";
+            }
+        }
+        
+        NSString *numberString = [number stringByReplacingCharactersInRange:range withString:randomString];
+        return numberString;
+    }
+    return number;
+    
+}
+
 /** 是将一串阿拉伯数字(包含小数点)转化为对应的大写汉字。
 实现思路如下：
 1.将这串阿拉伯数字格式化，只取小数点后两位；

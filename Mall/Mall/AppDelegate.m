@@ -101,6 +101,7 @@
     return YES;
 }
 
+
 //! 苹果登录观察授权状态监听
 - (void)observeAuthticationState {
     

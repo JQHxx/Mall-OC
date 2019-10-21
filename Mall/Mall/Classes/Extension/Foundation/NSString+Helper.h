@@ -53,5 +53,8 @@
  */
 - (NSString *)numberSuitScanfRange:(NSRange)range;
 
+// 金额： 如 1000000 => 1,000,000.00
+- (NSString*)positiveFormat;
+
 @end
 

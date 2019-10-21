@@ -29,6 +29,7 @@ target 'Mall' do
   pod 'TZImagePickerController', '~> 3.2.1'
   # 圆形头像裁剪
   pod 'TOCropViewController', '~> 2.5.1'
+  # pod 'RSKImageCropper', '~> 2.2.3'
   # 图片浏览 SDWebImage问题
   # pod 'LBPhotoBrowser', '~> 2.2.2'
   # pod 'YBImageBrowser', '~> 3.0.3'

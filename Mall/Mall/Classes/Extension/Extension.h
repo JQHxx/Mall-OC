@@ -19,3 +19,4 @@
 #import "UIView+Radius.h"
 #import "UIImage+Remote.h"
 #import "UIWindow+Hierarchy.h"
+#import "UIApplication+Add.h"

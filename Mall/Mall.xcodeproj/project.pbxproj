@@ -15,6 +15,8 @@
 		5E01762B235D3E56001D8554 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017625235D3E56001D8554 /* YYWeakProxy.m */; };
 		5E017630235D436D001D8554 /* DrawUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01762D235D436C001D8554 /* DrawUtil.m */; };
 		5E017631235D436D001D8554 /* AnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01762F235D436D001D8554 /* AnimationUtil.m */; };
+		5E017634235D65B5001D8554 /* UIApplication+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017633235D65B5001D8554 /* UIApplication+Add.m */; };
+		5E017637235D661D001D8554 /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E017636235D661D001D8554 /* FileUtil.m */; };
 		5E06677423138DC600EE3331 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677323138DC600EE3331 /* Config.m */; };
 		5E0667792313960900EE3331 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0667782313960900EE3331 /* MainNavigationController.m */; };
 		5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E06677B2313986F00EE3331 /* IHttpRequest.m */; };
@@ -156,6 +158,10 @@
 		5E01762D235D436C001D8554 /* DrawUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawUtil.m; sourceTree = "<group>"; };
 		5E01762E235D436D001D8554 /* DrawUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawUtil.h; sourceTree = "<group>"; };
 		5E01762F235D436D001D8554 /* AnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationUtil.m; sourceTree = "<group>"; };
+		5E017632235D65B5001D8554 /* UIApplication+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Add.h"; sourceTree = "<group>"; };
+		5E017633235D65B5001D8554 /* UIApplication+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Add.m"; sourceTree = "<group>"; };
+		5E017635235D661D001D8554 /* FileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
+		5E017636235D661D001D8554 /* FileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
 		5E06677223138DC600EE3331 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		5E06677323138DC600EE3331 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		5E0667752313926100EE3331 /* Mall-header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mall-header.pch"; sourceTree = "<group>"; };
@@ -872,6 +878,8 @@
 				5EF2630E2326444E0008A605 /* StoryBoardNameUtil.m */,
 				5E9B8D012355B9DB001E0160 /* TextUtil.h */,
 				5E9B8D022355B9DB001E0160 /* TextUtil.m */,
+				5E017635235D661D001D8554 /* FileUtil.h */,
+				5E017636235D661D001D8554 /* FileUtil.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -893,6 +901,8 @@
 				5EE6D70423583CE700682301 /* UIView+Radius.m */,
 				5EE6D70623583FE200682301 /* UIWindow+Hierarchy.h */,
 				5EE6D70723583FE200682301 /* UIWindow+Hierarchy.m */,
+				5E017632235D65B5001D8554 /* UIApplication+Add.h */,
+				5E017633235D65B5001D8554 /* UIApplication+Add.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1450,6 +1460,7 @@
 				5EB547DF233DC5DE003D0228 /* DMNetworkTrafficManager.m in Sources */,
 				5E01762B235D3E56001D8554 /* YYWeakProxy.m in Sources */,
 				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,
+				5E017634235D65B5001D8554 /* UIApplication+Add.m in Sources */,
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
 				5E84365D231612FE006C8ED7 /* IDataBase.m in Sources */,
 				5ED1F73F23152C340095C5A9 /* Common.m in Sources */,
@@ -1458,6 +1469,7 @@
 				5E1CCCCD2318D34900F77E6F /* WKDelegateViewController.m in Sources */,
 				5EDE52032354503800204F67 /* JSONUtil.m in Sources */,
 				5EFFE8812356C52F00475E9B /* RetainCycleLoggerPlugin.m in Sources */,
+				5E017637235D661D001D8554 /* FileUtil.m in Sources */,
 				5EDE51FC23542DFB00204F67 /* UIView+Hook.m in Sources */,
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,

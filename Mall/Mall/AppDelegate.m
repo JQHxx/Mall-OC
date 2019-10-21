@@ -20,6 +20,9 @@
 #import "RetainCycleLoggerPlugin.h"
 
 #import "ONLDynamicLoader.h"
+#import "NKDelayedMonitor.h"
+#import "UIViewController+FPS.h"
+#import "UIViewController+LoadingTime.h"
 
 @interface AppDelegate ()
 {
@@ -35,6 +38,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // 卡顿检测
+    NKDelayedMonitor *monitor = [NKDelayedMonitor sharedInstance];
+    [monitor startOnlineMonitor];
+    [UIViewController recordViewLoadTime:YES];
+    
+    // 延时调用
     [ONLDynamicLoader executeFunctionsForKey:LEVEL_B];
     
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"AFL0"];

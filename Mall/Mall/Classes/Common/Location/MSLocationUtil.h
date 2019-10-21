@@ -9,8 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-typedef void(^ResultCityBlock)(CLLocation *location,CLPlacemark *pl,NSString *error);
+/**
+ <key>NSLocationWhenInUseUsageDescription</key>
+ <string>若不开启定位将无法获取商品的定位信息</string>
+ 
+ <key>NSLocationAlwaysUsageDescription</key>
+ <string>若不开启定位将无法获取商品的定位信息</string>
+ 
+ <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+ <string>若不开启定位将无法获取商品的定位信息</string>
+ */
 
+typedef void(^ResultCityBlock)(CLLocation *location,CLPlacemark *pl,NSString *error);
 
 @interface MSLocationUtil : NSObject
 

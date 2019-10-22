@@ -126,3 +126,4 @@ end
 # 网络框架封装：https://github.com/indulgeIn/YBNetwork
 # 粘性动画：http://kittenyang.com/deformationandgooey/
 # 圆形头像裁剪：https://github.com/ruslanskorb/RSKImageCropper
+# 微信连续多次崩溃解决方案：https://github.com/liuslevis/GYBootingProtection

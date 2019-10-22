@@ -16,7 +16,7 @@ typedef void (*ONLDynamicLoaderInjectFunction)(void);
 
 #define CRDYML_SEGMENTNAME "__DATA"
 #define QWLoadableSegmentName "__DATA"
-#define QWLoadableSectionName "__Section"
+#define QWLoadableSectionName "QWLoadable"
 #define CRDYML_ATTRIBUTE(sectionName) __attribute((used, section(CRDYML_SEGMENTNAME "," #sectionName )))
 
 #define CRDYML_FUNCTIONS_EXPORT_BEGIN(KEY) \

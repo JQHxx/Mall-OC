@@ -33,7 +33,7 @@ NSString *const kFileUrl = @"live.wav";
 #pragma mark -
 #pragma mark - play
 -(void)play{
-    NSLog(@"%d",_soundID);
+    NSLog(@"%u",(unsigned int)_soundID);
     switch (_audioServicesType) {
         case AudioServicesTypeAudioOnly:
             [self audioOnly];

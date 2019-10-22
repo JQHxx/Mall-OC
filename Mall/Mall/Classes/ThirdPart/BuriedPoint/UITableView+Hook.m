@@ -38,7 +38,7 @@
 
 - (void)hook_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // NSLog(@"%@ %@", self.class, [NSString stringWithFormat:@"%ld,%ld",indexPath.row,indexPath.section]);
-    [[HookObjcLog shareInstance] recordHookClass:self.class identifier:[NSString stringWithFormat:@"%ld,%ld",indexPath.row,indexPath.section]];
+    [[HookObjcLog shareInstance] recordHookClass:self.class identifier:[NSString stringWithFormat:@"%ld,%ld",(long)indexPath.row,(long)indexPath.section]];
     [self hook_tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 

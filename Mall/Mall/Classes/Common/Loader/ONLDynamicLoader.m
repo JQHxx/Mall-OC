@@ -21,7 +21,7 @@ static void ONLDynamicLoader_invoke_method(void *key){
 #ifndef __LP64__
     const struct mach_header *mhp = (struct mach_header*)info.dli_fbase;
     unsigned long size = 0;
-    uint32_t *memory = (uint32_t*)getsectiondata(mhp, QWLoadableSegmentName, QWLoadableSectionName, & size);
+    uint32_t *memory = (uint32_t*)getsectiondata(mhp, QWLoadableSegmentName, QWLoadableSectionName, &size);
 #else /* defined(__LP64__) */
     const struct mach_header_64 *mhp = (struct mach_header_64*)info.dli_fbase;
     unsigned long size = 0;

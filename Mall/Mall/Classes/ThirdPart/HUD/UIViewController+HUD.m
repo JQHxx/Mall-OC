@@ -11,7 +11,7 @@
 
 @implementation UIViewController (HUD)
 
-- (void)showSuccess:(NSString *)success icon: (NSString *) icon {
+- (void)showSuccess:(NSString *)message icon: (NSString *) icon {
     [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
@@ -21,14 +21,14 @@
     HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
     // 再设置模式
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.label.text = success;
+    HUD.label.text = message;
     HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];
     [HUD hideAnimated:YES afterDelay:1.5];
 }
 
-- (void)showSuccess:(NSString *)success isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
+- (void)showSuccess:(NSString *)message isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
     if ([MBProgressHUD HUDForView:[self getView]]) {
         if (!isEnabled) {
             return;
@@ -45,14 +45,14 @@
     HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
     // 再设置模式
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.label.text = success;
+    HUD.label.text = message;
     HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];
     [HUD hideAnimated:YES afterDelay:1.5];
 }
 
-- (void)showError:(NSString *)error icon: (NSString *) icon {
+- (void)showError:(NSString *)message icon: (NSString *) icon {
     [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
@@ -62,14 +62,14 @@
     HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
     // 再设置模式
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.label.text = error;
+    HUD.label.text = message;
     HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];
     [HUD hideAnimated:YES afterDelay:1.5];
 }
 
-- (void)showError:(NSString *)error isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
+- (void)showError:(NSString *)message isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
     if ([MBProgressHUD HUDForView:[self getView]]) {
         if (!isEnabled) {
             return;
@@ -86,7 +86,7 @@
     HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
     // 再设置模式
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.label.text = error;
+    HUD.label.text = message;
     HUD.removeFromSuperViewOnHide = YES;
     [[self getView] addSubview:HUD];
     [HUD showAnimated:YES];

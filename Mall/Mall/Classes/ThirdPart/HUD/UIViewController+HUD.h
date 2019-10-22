@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (HUD)
 
-- (void)showSuccess:(NSString *)success icon: (NSString *) icon;
-- (void)showSuccess:(NSString *)success isEnabled: (BOOL) isEnabled icon: (NSString *) icon;
+- (void)showSuccess:(NSString *)message icon: (NSString *) icon;
+- (void)showSuccess:(NSString *)message isEnabled: (BOOL) isEnabled icon: (NSString *) icon;
 
-- (void)showError:(NSString *)error icon: (NSString *) icon;
-- (void)showError:(NSString *)error isEnabled: (BOOL) isEnabled icon: (NSString *) icon;
+- (void)showError:(NSString *)message icon: (NSString *) icon;
+- (void)showError:(NSString *)message isEnabled: (BOOL) isEnabled icon: (NSString *) icon;
 
 - (void)showToast:(NSString *)message;
 

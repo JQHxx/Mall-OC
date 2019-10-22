@@ -20,12 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showError:(NSString *)error isEnabled: (BOOL) isEnabled icon: (NSString *) icon;
 
 - (void)showToast:(NSString *)message;
-- (void)showToast:(NSString *)message isEnabled: (BOOL) isEnabled;
 
 - (void)showLoading:(NSString *)message;
 - (void)showLoading:(NSString *)message isEnabled: (BOOL) isEnabled;
 
 - (void)hideHUD;
+- (void)hideHUDNoAnimated;
 
 @end
 

@@ -12,6 +12,7 @@
 @implementation UIViewController (HUD)
 
 - (void)showSuccess:(NSString *)success icon: (NSString *) icon {
+    [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
     HUD.contentColor = [UIColor whiteColor];
@@ -28,6 +29,13 @@
 }
 
 - (void)showSuccess:(NSString *)success isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
+    if ([MBProgressHUD HUDForView:[self getView]]) {
+        if (!isEnabled) {
+            return;
+        } else {
+            [self hideHUDNoAnimated];
+        }
+    }
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     [HUD setUserInteractionEnabled:isEnabled];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
@@ -45,6 +53,7 @@
 }
 
 - (void)showError:(NSString *)error icon: (NSString *) icon {
+    [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
     HUD.contentColor = [UIColor whiteColor];
@@ -61,6 +70,13 @@
 }
 
 - (void)showError:(NSString *)error isEnabled: (BOOL) isEnabled icon: (NSString *) icon {
+    if ([MBProgressHUD HUDForView:[self getView]]) {
+        if (!isEnabled) {
+            return;
+        } else {
+            [self hideHUDNoAnimated];
+        }
+    }
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     [HUD setUserInteractionEnabled:isEnabled];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
@@ -78,21 +94,8 @@
 }
 
 - (void)showToast:(NSString *)message {
+    [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
-    HUD.animationType = MBProgressHUDAnimationZoomOut;
-    HUD.contentColor = [UIColor whiteColor];
-    HUD.bezelView.color = [UIColor blackColor];
-    HUD.mode = MBProgressHUDModeText;
-    HUD.label.text = message;
-    HUD.removeFromSuperViewOnHide = YES;
-    [[self getView] addSubview:HUD];
-    [HUD showAnimated:YES];
-    [HUD hideAnimated:YES afterDelay:1.5];
-}
-
-- (void)showToast:(NSString *)message isEnabled: (BOOL) isEnabled {
-    MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
-    [HUD setUserInteractionEnabled:isEnabled];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
     HUD.contentColor = [UIColor whiteColor];
     HUD.bezelView.color = [UIColor blackColor];
@@ -105,6 +108,13 @@
 }
 
 - (void)showLoading:(NSString *)message isEnabled: (BOOL) isEnabled {
+    if ([MBProgressHUD HUDForView:[self getView]]) {
+        if (!isEnabled) {
+            return;
+        } else {
+            [self hideHUDNoAnimated];
+        }
+    }
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     [HUD setUserInteractionEnabled:isEnabled];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
@@ -118,6 +128,7 @@
 }
 
 - (void)showLoading:(NSString *)message {
+    [self hideHUDNoAnimated];
     MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:[self getView]];
     HUD.animationType = MBProgressHUDAnimationZoomOut;
     HUD.backgroundView.color = [UIColor colorWithWhite:1.f alpha:.2f];
@@ -131,6 +142,10 @@
 
 - (void)hideHUD {
     [MBProgressHUD hideHUDForView:[self getView] animated:YES];
+}
+
+- (void)hideHUDNoAnimated {
+    [MBProgressHUD hideHUDForView:[self getView] animated:NO];
 }
 
 - (UIView *)getView {

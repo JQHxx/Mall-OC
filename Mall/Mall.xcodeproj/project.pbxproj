@@ -73,6 +73,7 @@
 		5ED1F73F23152C340095C5A9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F73E23152C340095C5A9 /* Common.m */; };
 		5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F74323152D630095C5A9 /* NSString+Helper.m */; };
 		5ED1F749231530FB0095C5A9 /* UIDevice+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */; };
+		5ED6757F235ED8BD00BA453D /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6757E235ED8BD00BA453D /* NSBundle+Language.m */; };
 		5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51EA235407F400204F67 /* BLStopwatch.m */; };
 		5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F22354180400204F67 /* BFRefreshNormalHeader.m */; };
 		5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE51F52354185100204F67 /* BFRefreshBackNormalFooter.m */; };
@@ -285,6 +286,8 @@
 		5ED1F74623152F8B0095C5A9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		5ED1F747231530FB0095C5A9 /* UIDevice+Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Core.h"; sourceTree = "<group>"; };
 		5ED1F748231530FB0095C5A9 /* UIDevice+Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Core.m"; sourceTree = "<group>"; };
+		5ED6757D235ED8BD00BA453D /* NSBundle+Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		5ED6757E235ED8BD00BA453D /* NSBundle+Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
 		5EDE51EA235407F400204F67 /* BLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStopwatch.m; sourceTree = "<group>"; };
 		5EDE51EB235407F400204F67 /* BLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStopwatch.h; sourceTree = "<group>"; };
 		5EDE51F12354180400204F67 /* BFRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFRefreshNormalHeader.h; sourceTree = "<group>"; };
@@ -930,6 +933,8 @@
 				5E37D9E9233463E8005B2F7B /* NSTimer+AutoIncalidate.m */,
 				5EFFE8912356F14A00475E9B /* NSString+Crypto.h */,
 				5EFFE8922356F14A00475E9B /* NSString+Crypto.m */,
+				5ED6757D235ED8BD00BA453D /* NSBundle+Language.h */,
+				5ED6757E235ED8BD00BA453D /* NSBundle+Language.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1414,6 +1419,7 @@
 				5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */,
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
+				5ED6757F235ED8BD00BA453D /* NSBundle+Language.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
 				5EDE51FF2354304800204F67 /* UICollectionView+Hook.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,

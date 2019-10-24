@@ -133,6 +133,7 @@ end
 # 网络图片自适应：https://github.com/CoderZhuXH/XHWebImageAutoSize
 # 国家码json: https://github.com/ningjianwen/CountryCodeList
 # 导航栏菜单下拉：https://www.jianshu.com/p/49ed2a7d4752
+# 底部弹窗可拖动HWPanModal: https://github.com/HeathWang/HWPanModal
 
 # xcode 11添加Application Loader
 # ../Applications/Xcode.app/Contents/Applications/   添加完xcode需要重启

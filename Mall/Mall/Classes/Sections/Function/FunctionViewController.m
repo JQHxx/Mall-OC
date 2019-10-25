@@ -57,7 +57,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];
-    [self showLoading:@"加载中..." isEnabled:NO];
+    // [self showLoading:@"加载中..." isEnabled:NO];
+    
+    UIViewController *VC = [[UIViewController alloc]init];
+    [self presentViewController:VC animated:YES completion:nil];
     
 }
 

@@ -45,6 +45,7 @@
 #import "IQKeyboardManager.h"
 #import "MMKVUtil.h"
 
+/*
 #pragma mark - 埋点
 // 可参考：https://github.com/lanjiaoli/Objc_-Thread/tree/master/Runtime_HookLog
 // https://github.com/wanqingrongruo/HookCollection
@@ -54,14 +55,17 @@
 #import "UIGestureRecognizer+Hook.h"
 #import "UIControl+Hook.h"
 #import "UIView+Hook.h"
+ */
 
 #pragma mark - 暗黑模式
 #import "DarkModel.h"
 #import "UIColor+DarkMode.h"
 
+/*
 #pragma mark - 崩溃防护（方法转发、数组越界等）
 #import "NSObject+Selector.h"
 #import "NSArray+Safe.h"
+ */
 
 #pragma mark - 其他
 #ifdef DEBUG

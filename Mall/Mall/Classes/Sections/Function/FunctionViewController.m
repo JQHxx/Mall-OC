@@ -22,6 +22,7 @@
     [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"VDL0"];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"首页";
+    self.view.backgroundColor = [UIColor adaptColor:[UIColor orangeColor] darkColor:[UIColor blackColor]];
     [self setupUI];
     
     [DMNetworkTrafficManager start];

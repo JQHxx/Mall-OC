@@ -13,6 +13,10 @@
 #import "DMNetworkTrafficManager.h"
 #import "WSLSuspendingView.h"
 #import "WSLFPS.h"
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netdb.h>
 
 @interface AppDelegate ()
 
@@ -53,8 +57,11 @@
     [self adapterOSVersion];
     [self setupLogger];
     
-    DDLogWarn(@"[Warn]IS %@", @"");
-    
+    DDLogWarn(@"[Warn]IS %@", [self queryIpWithDomain:@"www.sjzvip.com"]);
+
+
+
+    /*
     WSLSuspendingView * suspendingView = [WSLSuspendingView sharedSuspendingView];
     WSLFPS * fps = [WSLFPS sharedFPSIndicator];
     [fps startMonitoring];
@@ -62,6 +69,7 @@
         suspendingView.fpsLabel.text = [NSString stringWithFormat:@"FPS = %.2f",fps];
         NSLog(@"%@",suspendingView.fpsLabel.text);
     };
+     */
     
     return YES;
 }
@@ -112,6 +120,28 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (NSString *)queryIpWithDomain:(NSString *)domain
+
+{
+
+    struct hostent *hs;
+
+    struct sockaddr_in server;
+
+    if ((hs = gethostbyname([domain UTF8String])) != NULL)
+
+    {
+
+        server.sin_addr = *((struct in_addr*)hs->h_addr_list[0]);
+
+        return [NSString stringWithUTF8String:inet_ntoa(server.sin_addr)];
+
+    }
+
+    return nil;
+
 }
 
 

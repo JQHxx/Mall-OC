@@ -9,7 +9,7 @@
 #import "NSObject+Codesign.h"
 
 @implementation NSObject (Codesign)
-
+/*
 void checkCodesign(NSString *id) {
     // 描述文件路径
     NSString *embeddedPath = [[NSBundle mainBundle] pathForResource:@"embedded" ofType:@"mobileprovision"];
@@ -51,5 +51,6 @@ void checkCodesign(NSString *id) {
         }
     }
 }
+ */
 
 @end

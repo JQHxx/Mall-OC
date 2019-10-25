@@ -85,6 +85,8 @@ post_install do |installer|
   end
 end
 
+# RAC MVVM 项目目录：https://www.jianshu.com/p/3beb21d5def2
+# TestFlight内外测试：https://www.jianshu.com/p/4be185e4069c
 # 微信最新SDK(SDK 1.8.6)Universal Links: https://www.jianshu.com/p/9b6833f70755
 # App重签名：https://github.com/DanTheMan827/ios-app-signer
 # LLDB调试利器和高级用法：https://www.jianshu.com/p/c91f843a64fc
@@ -107,7 +109,7 @@ end
 # iOS 13适配技巧：https://github.com/ChenYilong/iOS13AdaptationTips
 # 免费UI调试工具：https://lookin.work
 # 导航栏间距：https://github.com/spicyShrimp/UINavigation-SXFixSpace
-# 树形结构：https://github.com/wsl2ls/MultilevelList
+# 树形结构：https://github.com/wsl2ls/MultilevelList、https://github.com/wwmz/WMZTreeView
 # 设备支持包：https://github.com/iGhibli/iOS-DeviceSupport/tree/master/DeviceSupport
 # 输入框自定义键盘：https://github.com/cgmsuccess/CustomKeyBoard
 # 扩大自带手势范围和解决UIScrollView手势冲突的问题：https://gitee.com/aiwoba/BFBaseFrameworkKit/blob/swift4_0/Swift_baseFramework/Swift_baseFramework/BaseFrameworkKit/Main/BFPanBaseNavigationViewController.swift

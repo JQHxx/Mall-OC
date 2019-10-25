@@ -65,6 +65,39 @@
     return result;
 }
 
+- (NSString *)numberSuitScanfRange:(NSRange)range {
+    if (range.length + range.location <= self.length) {
+        NSString *randomString = @"";
+        
+        for (NSInteger i = 0; i < range.length; i++) {
+            randomString = [randomString stringByAppendingString:@"*"];
+        }
+        // 区域的字符串替换
+        NSString *numberString = [self stringByReplacingCharactersInRange:range withString:randomString];
+        return numberString;
+    }
+    return self;
+    
+}
+
+/*
+NSDecimalNumber *number = [NSDecimalNumber decimalNumberWithString:@"10000000.09"];
+NSLog(@"%@", [self positiveFormat:[number stringValue]]);
+NSDecimalNumber *number1 = [[NSDecimalNumber alloc] initWithMantissa:[number doubleValue] exponent:-5 isNegative:NO];
+NSLog(@"%@", [self positiveFormat:[number1 stringValue]]);
+*/
+// 金额： 如 1000000 => 1,000,000.00
+- (NSString*)positiveFormat {
+    if(!self || [self doubleValue] == 0){
+        return @"0.00";
+    } else {
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setPositiveFormat:@",###.00;"];
+        return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:[self doubleValue]]];
+    }
+    return @"";
+}
+
 /** 是将一串阿拉伯数字(包含小数点)转化为对应的大写汉字。
 实现思路如下：
 1.将这串阿拉伯数字格式化，只取小数点后两位；

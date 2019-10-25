@@ -30,7 +30,7 @@
     [self cyl_setBadgeValue:badgeValue];
 }
 
-#pragma mark -- Public Methods
+#pragma mark -- public methods
 
 /**
  *  show badge with red dot style and CYLBadgeAnimationTypeNone by default.
@@ -173,6 +173,14 @@
 
 - (void)cyl_setBadgeRadius:(CGFloat)badgeRadius {
     [kActualView cyl_setBadgeRadius:badgeRadius];
+}
+
+- (CGFloat)cyl_badgeCornerRadius {
+    return [kActualView cyl_badgeCornerRadius];
+}
+
+- (void)cyl_setBadgeCornerRadius:(CGFloat)cyl_badgeCornerRadius {
+    [kActualView cyl_setBadgeCornerRadius:cyl_badgeCornerRadius];
 }
 
 #pragma mark - private method

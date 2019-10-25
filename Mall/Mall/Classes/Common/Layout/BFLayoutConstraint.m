@@ -15,4 +15,8 @@
     self.constant = UIApplication.sharedApplication.statusBarFrame.size.height + 44.0;
 }
 
++ (void)initialize {
+    
+}
+
 @end

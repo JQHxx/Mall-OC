@@ -41,16 +41,24 @@ static IHttpRequest *_instance = nil;
 + (instancetype)shareRequest {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[IHttpRequest alloc]init];
+        _instance = [[IHttpRequest alloc] init];
     });
     return _instance;
 }
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
++(id)allocWithZone:(NSZone *)zone{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [super allocWithZone:zone];
     });
+    return _instance;
+}
+
+-(id)copyWithZone:(NSZone *)zone{
+    return _instance;
+}
+
+-(id)mutableCopyWithZone:(NSZone *)zone{
     return _instance;
 }
 

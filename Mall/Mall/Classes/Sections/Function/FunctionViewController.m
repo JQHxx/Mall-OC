@@ -19,9 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"VDL0"];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"首页";
-    // [self setupUI];
+    self.view.backgroundColor = [UIColor adaptColor:[UIColor orangeColor] darkColor:[UIColor blackColor]];
+    [self setupUI];
     
     [DMNetworkTrafficManager start];
     FunctionRequest *request = [[FunctionRequest alloc]init];
@@ -43,15 +45,28 @@
         NSLog(@"请求失败%@", error);
         [DMNetworkTrafficManager end];
     }];
-    
+    [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"VDL1"];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[BLStopwatch sharedStopwatch] splitWithType:BLStopwatchSplitTypeContinuous description:@"VDAP"];
+    [[BLStopwatch sharedStopwatch] stopAndPresentResultsThenReset];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];
+    // [self showLoading:@"加载中..." isEnabled:NO];
+    
+    UIViewController *VC = [[UIViewController alloc]init];
+    [self presentViewController:VC animated:YES completion:nil];
     
 }
 
+- (void)tapGes {
+    
+}
 
 - (void) setupUI {
     
@@ -59,12 +74,14 @@
     redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:redView];
     
-    /*
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGes)];
+    [redView addGestureRecognizer:tapGes];
+    
     [redView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
     [redView autoPinEdgeToSuperviewEdge:ALEdgeRight];
-     */
+
     
     /*
     [redView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(15, 15, 15, 15)];

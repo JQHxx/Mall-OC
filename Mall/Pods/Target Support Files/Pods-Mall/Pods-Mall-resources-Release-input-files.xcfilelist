@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mall/Pods-Mall-resources.sh
+${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle
+${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle
 ${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle

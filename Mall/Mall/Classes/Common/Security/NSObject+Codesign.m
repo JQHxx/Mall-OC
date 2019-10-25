@@ -9,6 +9,7 @@
 #import "NSObject+Codesign.h"
 
 @implementation NSObject (Codesign)
+
 /*
 void checkCodesign(NSString *id) {
     // 描述文件路径

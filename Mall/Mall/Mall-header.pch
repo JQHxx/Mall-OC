@@ -8,3 +8,23 @@
 
 #import "Header.h"
 
+
+/**  应用权限
+ 定位：NSLocationWhenInUseUsageDescription、NSLocationAlwaysUsageDescription、NSLocationAlwaysAndWhenInUseUsageDescription
+ 蓝牙权限：NSBluetoothPeripheralUsageDescription
+ 拍照：NSCameraUsageDescription
+ 麦克风：NSMicrophoneUsageDescription
+ 相册：NSPhotoLibraryAddUsageDescription（保存到相册）、NSPhotoLibraryUsageDescription（从相册中读取）
+ 通讯录：NSContactsUsageDescription
+ 日历：NSCalendarsUsageDescription
+ 提醒：NSRemindersUsageDescription
+ 运动与健身：NSMotionUsageDescription
+ 健康更新：NSHealthUpdateUsageDescription
+ 健康分享：NSHealthShareUsageDescription
+ 媒体库：NSAppleMusicUsageDescription
+ 
+ iOS https适配：
+ App Transport Security Settings --> Allow Arbitrary Loads
+ 
+*/
+

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
 
 typedef void(^SuccessBlock)(id result, BOOL isCache);
 typedef void(^FailureBlock)(NSError *error);

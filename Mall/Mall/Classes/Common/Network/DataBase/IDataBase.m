@@ -17,26 +17,25 @@
 
 @implementation IDataBase
 
-static IDataBase *_intance = nil;
+static IDataBase *_instance = nil;
 
 + (instancetype) shareDataBase {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _intance = [[IDataBase alloc]init];
+        _instance = [[IDataBase alloc]init];
     });
-    return _intance;
+    return _instance;
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _intance = [super allocWithZone:zone];
+        _instance = [super allocWithZone:zone];
     });
-    return _intance;
+    return _instance;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self openDB];

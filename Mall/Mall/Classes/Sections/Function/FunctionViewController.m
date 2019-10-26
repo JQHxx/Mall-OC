@@ -58,8 +58,12 @@
     
     // [self performSelector:@selector(string) withObject:nil afterDelay:0];
     // [self showLoading:@"加载中..." isEnabled:NO];
+
+    UIViewController *VC = [[CTMediator sharedInstance] Function_Objc_ViewControllerWithCallback:^(NSString * _Nonnull result) {
+
+    }];
     
-    UIViewController *VC = [[UIViewController alloc]init];
+    // UIViewController *VC = [[UIViewController alloc]init];
     [self presentViewController:VC animated:YES completion:nil];
     
 }

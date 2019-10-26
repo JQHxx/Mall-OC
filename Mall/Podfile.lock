@@ -9,6 +9,7 @@ PODS:
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
   - CocoaLumberjack/Core (3.5.3)
+  - CTMediator (25)
   - CYLTabBarController (1.28.3):
     - CYLTabBarController/Core (= 1.28.3)
   - CYLTabBarController/Core (1.28.3)
@@ -23,7 +24,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - GZIP (1.2.3)
-  - IQKeyboardManager (6.5.0)
+  - IQKeyboardManager (6.4.0)
   - LBXScan/LBXNative (2.3):
     - LBXScan/Types (~> 2.2)
   - LBXScan/LBXZXing (2.3):
@@ -31,7 +32,7 @@ PODS:
   - LBXScan/Types (2.3)
   - LBXScan/UI (2.3):
     - LBXScan/Types (~> 2.2)
-  - LYEmptyView (1.3.1)
+  - LYEmptyView (1.2.5)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.1.0)
   - MJRefresh (3.1.17)
@@ -42,9 +43,9 @@ PODS:
   - PureLayout (3.1.4)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.1.0):
-    - SDWebImage/Core (= 5.1.0)
-  - SDWebImage/Core (5.1.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - TOCropViewController (2.5.1)
   - TYPagerController (2.1.2)
   - TZImagePickerController (3.2.1)
@@ -58,13 +59,14 @@ DEPENDENCIES:
   - AFNetworking/Security (~> 3.2.1)
   - AFNetworking/Serialization (~> 3.2.1)
   - CocoaLumberjack (~> 3.5.3)
+  - CTMediator
   - CYLTabBarController (~> 1.28.3)
   - FBMemoryProfiler
   - FDStackView (~> 1.0.1)
   - fishhook
   - FMDB (~> 2.7.5)
   - GZIP (~> 1.2)
-  - IQKeyboardManager (~> 6.5.0)
+  - IQKeyboardManager
   - LBXScan/LBXNative (~> 2.3)
   - LBXScan/LBXZXing (~> 2.3)
   - LBXScan/UI (~> 2.3)
@@ -84,9 +86,10 @@ DEPENDENCIES:
   - YYImage (~> 1.0.4)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - CocoaLumberjack
+    - CTMediator
     - CYLTabBarController
     - FBAllocationTracker
     - FBMemoryProfiler
@@ -115,6 +118,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
@@ -123,9 +127,9 @@ SPEC CHECKSUMS:
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GZIP: af5c90ef903776a7e9afe6ebebd794a84a2929d4
-  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
-  LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
+  LYEmptyView: b17adfc2dd9ad2988ecaf7c9606efa916e24c767
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
@@ -134,12 +138,12 @@ SPEC CHECKSUMS:
   NullSafe: 948feba938f03abede5ed3758694a9fe5b3a65ce
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
-  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   TOCropViewController: 00dc36c4e4a0f4a45efa91adbf22df8a4fae01d3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 21406aac66cc9ebd07e37153f1f0044037b041b9
+PODFILE CHECKSUM: 15f95e48da9b609204f91b919606062f1481c9d6
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.7.5

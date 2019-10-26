@@ -44,6 +44,11 @@
 #import "PrintBeautifulLog.h"
 #import "IQKeyboardManager.h"
 #import "MMKVUtil.h"
+#import "CTMediator.h"
+
+#pragma mark - 中间件
+#import "Target_Function.h"
+#import "CTMediator+Function.h"
 
 /*
 #pragma mark - 埋点

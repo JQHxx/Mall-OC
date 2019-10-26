@@ -6,7 +6,7 @@ source "https://github.com/CocoaPods/Specs.git"
 
 target 'Mall' do
   
-  pod 'IQKeyboardManager', '~> 6.5.0'
+  pod 'IQKeyboardManager'
   pod 'CYLTabBarController', '~> 1.28.3'
   # OC风格自动布局 参考https://www.jianshu.com/p/f8d1a660ec30
   pod 'PureLayout', '~> 3.1.4'
@@ -61,6 +61,9 @@ target 'Mall' do
   pod 'MLeaksFinder'
   # 内存占用检测
   pod 'FBMemoryProfiler'
+
+  # 中间件
+  pod "CTMediator"
   
   target 'MallTests' do
     inherit! :search_paths

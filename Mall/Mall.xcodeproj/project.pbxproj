@@ -119,6 +119,8 @@
 		5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */; };
 		5EFFE8A523570AE800475E9B /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */; };
 		5EFFE8A923571C9900475E9B /* BFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A823571C9900475E9B /* BFScrollView.m */; };
+		662C99ED23648B4A00C48F95 /* Target_Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EC23648B4A00C48F95 /* Target_Function.m */; };
+		662C99F023648B8500C48F95 /* CTMediator+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EF23648B8500C48F95 /* CTMediator+Function.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -375,6 +377,10 @@
 		5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
 		5EFFE8A723571C9900475E9B /* BFScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFScrollView.h; sourceTree = "<group>"; };
 		5EFFE8A823571C9900475E9B /* BFScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFScrollView.m; sourceTree = "<group>"; };
+		662C99EB23648B4A00C48F95 /* Target_Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_Function.h; sourceTree = "<group>"; };
+		662C99EC23648B4A00C48F95 /* Target_Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_Function.m; sourceTree = "<group>"; };
+		662C99EE23648B8500C48F95 /* CTMediator+Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Function.h"; sourceTree = "<group>"; };
+		662C99EF23648B8500C48F95 /* CTMediator+Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+Function.m"; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -456,6 +462,7 @@
 		5E066766231387DF00EE3331 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				662C99E823648AF700C48F95 /* Mediator */,
 				5E06676C231388B300EE3331 /* Config */,
 				5E06676B231388A600EE3331 /* Main */,
 				5E06676A2313886E00EE3331 /* Extension */,
@@ -1176,6 +1183,33 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		662C99E823648AF700C48F95 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				662C99EA23648B1A00C48F95 /* MediatorEx */,
+				662C99E923648B0700C48F95 /* Target */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		662C99E923648B0700C48F95 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				662C99EB23648B4A00C48F95 /* Target_Function.h */,
+				662C99EC23648B4A00C48F95 /* Target_Function.m */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		662C99EA23648B1A00C48F95 /* MediatorEx */ = {
+			isa = PBXGroup;
+			children = (
+				662C99EE23648B8500C48F95 /* CTMediator+Function.h */,
+				662C99EF23648B8500C48F95 /* CTMediator+Function.m */,
+			);
+			path = MediatorEx;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1427,6 +1461,7 @@
 				5E9B8D072355C74F001E0160 /* UIButton+Action.m in Sources */,
 				5E06678623139D6400EE3331 /* FunctionViewController.m in Sources */,
 				5EB547E2233DC611003D0228 /* DMURLSessionConfiguration.m in Sources */,
+				662C99F023648B8500C48F95 /* CTMediator+Function.m in Sources */,
 				5E01763B235D91DE001D8554 /* MSLocationUtil.m in Sources */,
 				5EFFE87E2356C4ED00475E9B /* CacheCleanerPlugin.m in Sources */,
 				5ED1F72D2314E1240095C5A9 /* MainTabBarController.m in Sources */,
@@ -1500,6 +1535,7 @@
 				5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,
 				5EE6D71823584F3000682301 /* UIViewController+BackButtonHandler.m in Sources */,
+				662C99ED23648B4A00C48F95 /* Target_Function.m in Sources */,
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */,

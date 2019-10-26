@@ -30,7 +30,6 @@
 
 #import <UIKit/UIImage.h>
 #import <UIKit/UILabel.h>
-#import <UIKit/UIScreen.h>
 #import <UIKit/UIAccessibility.h>
 
 @implementation IQBarButtonItemConfiguration
@@ -232,9 +231,7 @@
         
         if (keyboardToolbar == nil)
         {
-            CGRect frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 44);
-
-            keyboardToolbar = [[IQToolbar alloc] initWithFrame:frame];
+            keyboardToolbar = [[IQToolbar alloc] init];
             
             objc_setAssociatedObject(self, @selector(keyboardToolbar), keyboardToolbar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         }

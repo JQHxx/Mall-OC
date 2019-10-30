@@ -92,6 +92,7 @@ end
 # 一个项目多个Target: https://www.jianshu.com/p/ae0c9726785e
 # RAC MVVM 项目目录：https://www.jianshu.com/p/3beb21d5def2
 # 仿微信图片浏览器：https://github.com/QuintGao/GKPhotoBrowser
+# 时间选择器： https://github.com/xiaozhuxiong121/PGDatePicker
 # TestFlight内外测试：https://www.jianshu.com/p/4be185e4069c
 # 微信最新SDK(SDK 1.8.6)Universal Links: https://www.jianshu.com/p/9b6833f70755
 # App重签名：https://github.com/DanTheMan827/ios-app-signer

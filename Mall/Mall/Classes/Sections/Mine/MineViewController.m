@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "BaseWebBrowserViewController.h"
 #import <AuthenticationServices/AuthenticationServices.h>
+#import "UserInfoViewController.h"
 
 @interface MineViewController () <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding>
 {
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.title = @"我的";
+
     // [self setupUI];
     
     // 1. 创建Sign in with Apple Button
@@ -91,6 +93,9 @@
     NSLog(@"json1: %@", json1);
     json1 = [JSONUtil clearParams:json1];
     NSLog(@"json2: %@", json1);
+
+    UserInfoViewController *VC = [UserInfoViewController new];
+    [self.navigationController pushViewController:VC animated:YES];
     
     /*
     BaseWebBrowserViewController *webVC = [[BaseWebBrowserViewController alloc]init];

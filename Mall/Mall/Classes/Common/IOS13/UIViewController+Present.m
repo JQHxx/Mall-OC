@@ -33,6 +33,7 @@
 - (void)ddy_PresentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
     if (@available(iOS 13.0, *)) {
         if (viewControllerToPresent.ddy_AutoSetModalPresentationStyle) {
+            if(viewControllerToPresent.modalPresentationStyle == UIModalPresentationPageSheet || viewControllerToPresent.modalPresentationStyle == UIModalPresentationAutomatic)
             viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
         }
     }

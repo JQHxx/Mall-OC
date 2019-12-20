@@ -119,6 +119,7 @@
 		5EFFE8A12356F94700475E9B /* UIButton+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A02356F94700475E9B /* UIButton+Indicator.m */; };
 		5EFFE8A523570AE800475E9B /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */; };
 		5EFFE8A923571C9900475E9B /* BFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFE8A823571C9900475E9B /* BFScrollView.m */; };
+		66210B3C23ACF6C000AAD3BF /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66210B3B23ACF6C000AAD3BF /* UserInfoViewController.m */; };
 		662C99ED23648B4A00C48F95 /* Target_Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EC23648B4A00C48F95 /* Target_Function.m */; };
 		662C99F023648B8500C48F95 /* CTMediator+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EF23648B8500C48F95 /* CTMediator+Function.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
@@ -377,6 +378,8 @@
 		5EFFE8A423570AE800475E9B /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
 		5EFFE8A723571C9900475E9B /* BFScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFScrollView.h; sourceTree = "<group>"; };
 		5EFFE8A823571C9900475E9B /* BFScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFScrollView.m; sourceTree = "<group>"; };
+		66210B3A23ACF6C000AAD3BF /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		66210B3B23ACF6C000AAD3BF /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		662C99EB23648B4A00C48F95 /* Target_Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_Function.h; sourceTree = "<group>"; };
 		662C99EC23648B4A00C48F95 /* Target_Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_Function.m; sourceTree = "<group>"; };
 		662C99EE23648B8500C48F95 /* CTMediator+Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Function.h"; sourceTree = "<group>"; };
@@ -591,6 +594,8 @@
 			children = (
 				5E06678723139D7000EE3331 /* MineViewController.h */,
 				5E06678823139D7000EE3331 /* MineViewController.m */,
+				66210B3A23ACF6C000AAD3BF /* UserInfoViewController.h */,
+				66210B3B23ACF6C000AAD3BF /* UserInfoViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1531,6 +1536,7 @@
 				5E1CCCCE2318D34900F77E6F /* WKWebViewModuleAPI.m in Sources */,
 				5E06677F231398AE00EE3331 /* IBaseRequest.m in Sources */,
 				5EDE51F32354180400204F67 /* BFRefreshNormalHeader.m in Sources */,
+				66210B3C23ACF6C000AAD3BF /* UserInfoViewController.m in Sources */,
 				5EFBFCFD2341A5B600CA3729 /* UIViewController+Swizzle.m in Sources */,
 				5EB547ED233DE7C7003D0228 /* TDNetFlowDataSource.m in Sources */,
 				5EBD3EBD2313786200DC2F8F /* AppDelegate.m in Sources */,

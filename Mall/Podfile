@@ -57,7 +57,7 @@ target 'Mall' do
   # pod 'LBXScan/LBXZBar','~> 2.3'
   pod 'LBXScan/UI','~> 2.3'
   
-  # 内存泄漏检测
+  # 内存泄漏检测 需要关闭全局断点
   pod 'MLeaksFinder'
   # 内存占用检测
   pod 'FBMemoryProfiler'

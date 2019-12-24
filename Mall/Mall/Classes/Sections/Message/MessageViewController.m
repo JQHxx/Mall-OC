@@ -33,7 +33,7 @@
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.backgroundColor = [UIColor redColor];
     self.button.frame = CGRectMake(0, 0, 100, 50);
-    @WeakObj(self);
+    //@WeakObj(self);
     /*
     [self.button handleEvent:UIControlEventTouchUpInside block:^(UIButton * _Nonnull btn) {
         @StrongSelf(weakSelf);
@@ -42,8 +42,10 @@
         [strongSelf.navigationController pushViewController:firstViewController animated:YES];
     }];
      */
+    WEAK_SELF
     [self.button bf_addTapActionWithBlock:^(UIGestureRecognizer * _Nullable gestureRecoginzer) {
-        @StrongObj(self);
+        STRONG_SELF
+        //@StrongObj(self);
         NSLog(@"%@", self.view);
         // sleep(2);
         MessageViewController *firstViewController = [[MessageViewController alloc] init];

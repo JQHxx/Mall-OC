@@ -122,6 +122,8 @@
 		66210B3C23ACF6C000AAD3BF /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66210B3B23ACF6C000AAD3BF /* UserInfoViewController.m */; };
 		662C99ED23648B4A00C48F95 /* Target_Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EC23648B4A00C48F95 /* Target_Function.m */; };
 		662C99F023648B8500C48F95 /* CTMediator+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 662C99EF23648B8500C48F95 /* CTMediator+Function.m */; };
+		663EE2AA23B25264008B8640 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 663EE2A823B25264008B8640 /* NSObject+Runtime.m */; };
+		663EE2AD23B25865008B8640 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 663EE2AC23B25865008B8640 /* NSArray+Safe.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
@@ -384,6 +386,10 @@
 		662C99EC23648B4A00C48F95 /* Target_Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_Function.m; sourceTree = "<group>"; };
 		662C99EE23648B8500C48F95 /* CTMediator+Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+Function.h"; sourceTree = "<group>"; };
 		662C99EF23648B8500C48F95 /* CTMediator+Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+Function.m"; sourceTree = "<group>"; };
+		663EE2A723B25264008B8640 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
+		663EE2A823B25264008B8640 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		663EE2AB23B25865008B8640 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		663EE2AC23B25865008B8640 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -939,6 +945,8 @@
 		5ED1F74123152D430095C5A9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				663EE2A723B25264008B8640 /* NSObject+Runtime.h */,
+				663EE2A823B25264008B8640 /* NSObject+Runtime.m */,
 				5ED1F74223152D630095C5A9 /* NSString+Helper.h */,
 				5ED1F74323152D630095C5A9 /* NSString+Helper.m */,
 				5E37D9E8233463E8005B2F7B /* NSTimer+AutoIncalidate.h */,
@@ -947,6 +955,8 @@
 				5EFFE8922356F14A00475E9B /* NSString+Crypto.m */,
 				5ED6757D235ED8BD00BA453D /* NSBundle+Language.h */,
 				5ED6757E235ED8BD00BA453D /* NSBundle+Language.m */,
+				663EE2AB23B25865008B8640 /* NSArray+Safe.h */,
+				663EE2AC23B25865008B8640 /* NSArray+Safe.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1483,6 +1493,7 @@
 				5EFBFD022341AD9500CA3729 /* UIViewController+Present.m in Sources */,
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */,
+				663EE2AA23B25264008B8640 /* NSObject+Runtime.m in Sources */,
 				5E9B8D032355B9DB001E0160 /* TextUtil.m in Sources */,
 				5EFBFCF5234195D900CA3729 /* CheckAppComplete.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
@@ -1498,6 +1509,7 @@
 				5E017629235D3E56001D8554 /* UIViewController+FPS.m in Sources */,
 				5EC37AB4234ED6AE004A8ABF /* UIView+Frame.m in Sources */,
 				5EB57E1E234D92820075AF9C /* UIControl+Hook.m in Sources */,
+				663EE2AD23B25865008B8640 /* NSArray+Safe.m in Sources */,
 				5EE6D70523583CE700682301 /* UIView+Radius.m in Sources */,
 				5E06678923139D7000EE3331 /* MineViewController.m in Sources */,
 				5E017630235D436D001D8554 /* DrawUtil.m in Sources */,

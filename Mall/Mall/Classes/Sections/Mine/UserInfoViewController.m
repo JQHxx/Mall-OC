@@ -29,6 +29,32 @@ typedef void(^FinishBlock)(void);
     // Do any additional setup after loading the view.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self testArray];
+}
+
+-(void)testArray{
+    /** 不可变数组 */
+    //角标越界
+    //数组 = nil
+    NSArray *array = nil;
+    NSLog(@"array[1] = %@",array[2]);
+
+    //count = 0
+    NSArray *array1 = @[];
+    NSLog(@"array1[1] = %@",array1[2]);
+
+    //只有一个元素
+    NSArray *array2 = @[@"123"];
+    NSLog(@"array2[2] = %@",array2[2]);
+
+    //多个元素
+    NSArray *array3 = @[@"123",@"321",@"456"];
+    NSLog(@"array3[8] = %@",array3[8]);
+
+    
+}
+
 - (void) addTimer {
     //self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countAction) userInfo:nil repeats:YES];
 }

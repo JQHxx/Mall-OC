@@ -248,3 +248,144 @@
 }
 
 @end
+
+/*
+#import "OFPrivacyAlertVC.h"
+#import <Masonry.h>
+#import <YYText.h>
+
+@interface OFPrivacyAlertVC ()
+
+@property (nonatomic, strong) UIButton *backgroundButton;
+@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIButton *sureButton;
+@property (nonatomic, strong) UILabel *privacyTileLabel;
+@property (nonatomic, strong) YYLabel *contentLabel;
+
+@end
+
+@implementation OFPrivacyAlertVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];;
+    [self setupUI];
+    [self setupContent];
+}
+
+#pragma mark - Private methods
+- (void) setupUI {
+    [self.view addSubview:self.backgroundButton];
+    [self.view addSubview:self.contentView];
+    [self.backgroundButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view).offset(45);
+        make.right.mas_equalTo(self.view).offset(-45);
+        make.centerY.mas_equalTo(self.view);
+    }];
+    
+    // 设置contentView上的内容
+    [self.contentView addSubview:self.privacyTileLabel];
+    [self.contentView addSubview:self.contentLabel];
+    [self.contentView addSubview:self.sureButton];
+    
+    [self.privacyTileLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+        make.right.mas_equalTo(self.contentView).offset(-15);
+        make.height.mas_equalTo(40);
+        make.top.mas_equalTo(self.contentView);
+    }];
+    
+    [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self.privacyTileLabel);
+        make.top.mas_equalTo(self.privacyTileLabel.mas_bottom);
+        make.height.mas_greaterThanOrEqualTo(20);
+    }];
+    
+    [self.sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self.contentView);
+        make.height.mas_equalTo(50);
+        make.top.mas_equalTo(self.contentLabel.mas_bottom);
+    }];
+    
+}
+
+- (void) setupContent {
+    
+    //设置整段字符串的颜色
+    UIColor *color = [UIColor blackColor];
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Regular" size:15], NSForegroundColorAttributeName: color};
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"1.在浏览使用时，我们会收集、使用设备标识信息用于推荐。\n2.你可以查看完整版《用户协议》和《隐私政策》以便了解我们收集、使用、共享、存储信息的情况，以及对信息的保护策施。\n\n如果你同意请点击下面的按钮以接受我们的服务。" attributes:attributes];
+    //设置高亮色和点击事件
+    [text yy_setTextHighlightRange:[[text string] rangeOfString:@"《用户协议》"] color:[UIColor orangeColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        NSLog(@"点击了《用户协议》");
+    }];
+    //设置高亮色和点击事件
+    [text yy_setTextHighlightRange:[[text string] rangeOfString:@"《隐私政策》"] color:[UIColor orangeColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        NSLog(@"点击了《隐私政策》");
+
+    }];
+    _contentLabel.attributedText = text;
+}
+
+#pragma mark - Public methods
+- (void) show {
+    
+}
+
+- (void) dismiss {
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+#pragma mark - Setter & Getter
+- (UIButton *)backgroundButton {
+    if (!_backgroundButton) {
+        _backgroundButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _backgroundButton.frame = UIScreen.mainScreen.bounds;
+        _backgroundButton.backgroundColor = [UIColor clearColor];
+    }
+    return _backgroundButton;
+}
+- (UIView *)contentView {
+    if (!_contentView) {
+        _contentView = [[UIView alloc]init];
+        _contentView.backgroundColor = [UIColor whiteColor];
+        _contentView.layer.cornerRadius = 15;
+        _contentView.clipsToBounds = YES;
+    }
+    return _contentView;
+}
+
+- (UIButton *)sureButton {
+    if (!_sureButton) {
+        _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_sureButton setTitle:@"知道了" forState:UIControlStateNormal];
+        [_sureButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    }
+    return _sureButton;
+}
+
+- (UILabel *)privacyTileLabel {
+    if (!_privacyTileLabel) {
+        _privacyTileLabel = [[UILabel alloc]init];
+        _privacyTileLabel.font = [UIFont systemFontOfSize:15];
+        _privacyTileLabel.text = @"个人信息保护指引";
+    }
+    return _privacyTileLabel;
+}
+
+- (YYLabel *)contentLabel {
+    if (!_contentLabel) {
+        _contentLabel = [[YYLabel alloc]init];
+        _contentLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:15];
+        _contentLabel.numberOfLines = 0;
+        _contentLabel.preferredMaxLayoutWidth = UIScreen.mainScreen.bounds.size.width - 2 * 45 - 2 * 15;
+    }
+    return _contentLabel;
+}
+
+@end
+*/

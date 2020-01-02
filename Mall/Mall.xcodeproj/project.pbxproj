@@ -125,6 +125,10 @@
 		663EE2AA23B25264008B8640 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 663EE2A823B25264008B8640 /* NSObject+Runtime.m */; };
 		663EE2AD23B25865008B8640 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 663EE2AC23B25865008B8640 /* NSArray+Safe.m */; };
 		6FE587EA958644AFDA7D79AD /* libPods-MallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */; };
+		A025DF5123BD87CC00B04C8E /* NSLayoutConstraint+Core.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF4F23BD87CB00B04C8E /* NSLayoutConstraint+Core.m */; };
+		A025DF5923BD87E800B04C8E /* OFAlertConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5323BD87E800B04C8E /* OFAlertConfig.m */; };
+		A025DF5A23BD87E800B04C8E /* OFPrivacyAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5723BD87E800B04C8E /* OFPrivacyAlertVC.m */; };
+		A025DF5B23BD87E800B04C8E /* OFCustomAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5823BD87E800B04C8E /* OFCustomAlertVC.m */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
 /* End PBXBuildFile section */
@@ -391,6 +395,14 @@
 		663EE2AB23B25865008B8640 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
 		663EE2AC23B25865008B8640 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
+		A025DF4F23BD87CB00B04C8E /* NSLayoutConstraint+Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Core.m"; sourceTree = "<group>"; };
+		A025DF5023BD87CC00B04C8E /* NSLayoutConstraint+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Core.h"; sourceTree = "<group>"; };
+		A025DF5323BD87E800B04C8E /* OFAlertConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAlertConfig.m; sourceTree = "<group>"; };
+		A025DF5423BD87E800B04C8E /* OFPrivacyAlertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFPrivacyAlertVC.h; sourceTree = "<group>"; };
+		A025DF5523BD87E800B04C8E /* OFCustomAlertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFCustomAlertVC.h; sourceTree = "<group>"; };
+		A025DF5623BD87E800B04C8E /* OFAlertConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAlertConfig.h; sourceTree = "<group>"; };
+		A025DF5723BD87E800B04C8E /* OFPrivacyAlertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFPrivacyAlertVC.m; sourceTree = "<group>"; };
+		A025DF5823BD87E800B04C8E /* OFCustomAlertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFCustomAlertVC.m; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E9AD8D5DC409AC6115E599 /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -496,6 +508,7 @@
 		5E0667682313885000EE3331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A025DF5223BD87E800B04C8E /* Alert */,
 				5E017638235D91CC001D8554 /* Location */,
 				5EE6D71C23586AF800682301 /* DateFormatter */,
 				5EE6D710235849B400682301 /* Audio */,
@@ -693,6 +706,8 @@
 		5E82B405234C62B10051E3CB /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				A025DF5023BD87CC00B04C8E /* NSLayoutConstraint+Core.h */,
+				A025DF4F23BD87CB00B04C8E /* NSLayoutConstraint+Core.m */,
 				5E82B406234C62E20051E3CB /* BFLayoutConstraint.h */,
 				5E82B407234C62E20051E3CB /* BFLayoutConstraint.m */,
 			);
@@ -1225,6 +1240,19 @@
 			path = MediatorEx;
 			sourceTree = "<group>";
 		};
+		A025DF5223BD87E800B04C8E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				A025DF5323BD87E800B04C8E /* OFAlertConfig.m */,
+				A025DF5423BD87E800B04C8E /* OFPrivacyAlertVC.h */,
+				A025DF5523BD87E800B04C8E /* OFCustomAlertVC.h */,
+				A025DF5623BD87E800B04C8E /* OFAlertConfig.h */,
+				A025DF5723BD87E800B04C8E /* OFPrivacyAlertVC.m */,
+				A025DF5823BD87E800B04C8E /* OFCustomAlertVC.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		F39A13CD5B840996165E0A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1470,6 +1498,7 @@
 				5EB223FE233B225300481D5C /* TrieNode.m in Sources */,
 				5ED6757F235ED8BD00BA453D /* NSBundle+Language.m in Sources */,
 				5E84365123160820006C8ED7 /* IHttpCache.m in Sources */,
+				A025DF5923BD87E800B04C8E /* OFAlertConfig.m in Sources */,
 				5EDE51FF2354304800204F67 /* UICollectionView+Hook.m in Sources */,
 				5E84366123161A0D006C8ED7 /* IDataManager.m in Sources */,
 				5E01762A235D3E56001D8554 /* NKDelayedMonitor.m in Sources */,
@@ -1523,6 +1552,7 @@
 				5E06678C23139D7E00EE3331 /* MessageViewController.m in Sources */,
 				5EE6D70223583B7A00682301 /* UIImage+Remote.m in Sources */,
 				5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */,
+				A025DF5B23BD87E800B04C8E /* OFCustomAlertVC.m in Sources */,
 				5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */,
 				5E017626235D3E56001D8554 /* YYFPSLabel.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
@@ -1533,6 +1563,7 @@
 				5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */,
 				5EB547DF233DC5DE003D0228 /* DMNetworkTrafficManager.m in Sources */,
 				5E01762B235D3E56001D8554 /* YYWeakProxy.m in Sources */,
+				A025DF5A23BD87E800B04C8E /* OFPrivacyAlertVC.m in Sources */,
 				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,
 				5E017634235D65B5001D8554 /* UIApplication+Add.m in Sources */,
 				5ED1F73123150AF80095C5A9 /* UIImageView+SDWebImage.m in Sources */,
@@ -1557,6 +1588,7 @@
 				5EB223FD233B225300481D5C /* searchManager.m in Sources */,
 				5E84365723160A35006C8ED7 /* ICacheKey.m in Sources */,
 				5E9B8CF823555501001E0160 /* UIColor+DarkMode.m in Sources */,
+				A025DF5123BD87CC00B04C8E /* NSLayoutConstraint+Core.m in Sources */,
 				5EB547E5233DCB0E003D0228 /* NSURLRequest+Core.m in Sources */,
 				5EB57E1B234D906F0075AF9C /* HookObjcLog.m in Sources */,
 				5EB547D8233DAFF2003D0228 /* CSFileLogger.m in Sources */,

@@ -64,6 +64,7 @@ target 'Mall' do
 
   # 中间件
   pod "CTMediator"
+  pod 'YYText', '~> 1.0.7'
   
   target 'MallTests' do
     inherit! :search_paths

@@ -6,6 +6,7 @@ source "https://github.com/CocoaPods/Specs.git"
 
 target 'Mall' do
   
+  pod 'Masonry', '~> 1.1.0'
   pod 'IQKeyboardManager'
   pod 'CYLTabBarController', '~> 1.28.3'
   # OC风格自动布局 参考https://www.jianshu.com/p/f8d1a660ec30

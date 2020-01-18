@@ -129,6 +129,12 @@
 		A025DF5923BD87E800B04C8E /* OFAlertConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5323BD87E800B04C8E /* OFAlertConfig.m */; };
 		A025DF5A23BD87E800B04C8E /* OFPrivacyAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5723BD87E800B04C8E /* OFPrivacyAlertVC.m */; };
 		A025DF5B23BD87E800B04C8E /* OFCustomAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A025DF5823BD87E800B04C8E /* OFCustomAlertVC.m */; };
+		A045F27023D29FA50093C5FE /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F26723D29FA40093C5FE /* NSObject+KVO.m */; };
+		A045F27123D29FA50093C5FE /* NSNumber+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F26823D29FA40093C5FE /* NSNumber+Safe.m */; };
+		A045F27223D29FA50093C5FE /* NSDictionary+CrashHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F26B23D29FA40093C5FE /* NSDictionary+CrashHandle.m */; };
+		A045F27323D29FA50093C5FE /* NSObject+SelectorDefender.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F26D23D29FA50093C5FE /* NSObject+SelectorDefender.m */; };
+		A045F27423D29FA50093C5FE /* UIControl+Limit.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F26F23D29FA50093C5FE /* UIControl+Limit.m */; };
+		A045F27723D29FF60093C5FE /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A045F27523D29FF60093C5FE /* NSObject+SwizzleMethod.m */; };
 		C8E07E1FB70CF4A0D7512E76 /* libPods-MallUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */; };
 		D6D72C4091F3A9182D39BEC6 /* libPods-Mall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */; };
 /* End PBXBuildFile section */
@@ -151,6 +157,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F0CFD7868260F10651B309D /* Pods-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MallUITests/Pods-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1AC5EC739EC9DF20760435FC /* libPods-MallTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MallTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F59CD7D89AE192AFB7FC32 /* libPods-MallUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MallUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E01761A235D3E53001D8554 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
@@ -395,6 +402,8 @@
 		663EE2AB23B25865008B8640 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
 		663EE2AC23B25865008B8640 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
+		772047C5BA612879432221FC /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A59B4C09581610FA222DDD5 /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		A025DF4F23BD87CB00B04C8E /* NSLayoutConstraint+Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Core.m"; sourceTree = "<group>"; };
 		A025DF5023BD87CC00B04C8E /* NSLayoutConstraint+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Core.h"; sourceTree = "<group>"; };
 		A025DF5323BD87E800B04C8E /* OFAlertConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAlertConfig.m; sourceTree = "<group>"; };
@@ -403,12 +412,27 @@
 		A025DF5623BD87E800B04C8E /* OFAlertConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAlertConfig.h; sourceTree = "<group>"; };
 		A025DF5723BD87E800B04C8E /* OFPrivacyAlertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFPrivacyAlertVC.m; sourceTree = "<group>"; };
 		A025DF5823BD87E800B04C8E /* OFCustomAlertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFCustomAlertVC.m; sourceTree = "<group>"; };
+		A045F26623D29FA40093C5FE /* NSObject+SelectorDefender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorDefender.h"; sourceTree = "<group>"; };
+		A045F26723D29FA40093C5FE /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		A045F26823D29FA40093C5FE /* NSNumber+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Safe.m"; sourceTree = "<group>"; };
+		A045F26923D29FA40093C5FE /* UIControl+Limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Limit.h"; sourceTree = "<group>"; };
+		A045F26A23D29FA40093C5FE /* NSDictionary+CrashHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CrashHandle.h"; sourceTree = "<group>"; };
+		A045F26B23D29FA40093C5FE /* NSDictionary+CrashHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CrashHandle.m"; sourceTree = "<group>"; };
+		A045F26C23D29FA50093C5FE /* NSNumber+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Safe.h"; sourceTree = "<group>"; };
+		A045F26D23D29FA50093C5FE /* NSObject+SelectorDefender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorDefender.m"; sourceTree = "<group>"; };
+		A045F26E23D29FA50093C5FE /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		A045F26F23D29FA50093C5FE /* UIControl+Limit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Limit.m"; sourceTree = "<group>"; };
+		A045F27523D29FF60093C5FE /* NSObject+SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleMethod.m"; sourceTree = "<group>"; };
+		A045F27623D29FF60093C5FE /* NSObject+SwizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwizzleMethod.h"; sourceTree = "<group>"; };
+		ACB309ADDB05830123DE4E7B /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9E9AD8D5DC409AC6115E599 /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD8BD9A1843EDE152E39E688 /* libPods-Mall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF01F7595E64FEE7218E02C /* Pods-MallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallUITests.debug.xcconfig"; path = "Target Support Files/Pods-MallUITests/Pods-MallUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D140722E5647C5FCEB96E71B /* Pods-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-MallUITests/Pods-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DDC9B6CC562403C13B21EBDB /* Pods-MallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MallUITests/Pods-MallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB525F3CBF2A93984C2CBA64 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +472,12 @@
 				B9E9AD8D5DC409AC6115E599 /* Pods-MallTests.release.xcconfig */,
 				BDF01F7595E64FEE7218E02C /* Pods-MallUITests.debug.xcconfig */,
 				D140722E5647C5FCEB96E71B /* Pods-MallUITests.release.xcconfig */,
+				EB525F3CBF2A93984C2CBA64 /* Pods-Mall.debug.xcconfig */,
+				ACB309ADDB05830123DE4E7B /* Pods-Mall.release.xcconfig */,
+				772047C5BA612879432221FC /* Pods-MallTests.debug.xcconfig */,
+				8A59B4C09581610FA222DDD5 /* Pods-MallTests.release.xcconfig */,
+				DDC9B6CC562403C13B21EBDB /* Pods-MallUITests.debug.xcconfig */,
+				0F0CFD7868260F10651B309D /* Pods-MallUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -960,6 +990,18 @@
 		5ED1F74123152D430095C5A9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A045F27623D29FF60093C5FE /* NSObject+SwizzleMethod.h */,
+				A045F27523D29FF60093C5FE /* NSObject+SwizzleMethod.m */,
+				A045F26A23D29FA40093C5FE /* NSDictionary+CrashHandle.h */,
+				A045F26B23D29FA40093C5FE /* NSDictionary+CrashHandle.m */,
+				A045F26C23D29FA50093C5FE /* NSNumber+Safe.h */,
+				A045F26823D29FA40093C5FE /* NSNumber+Safe.m */,
+				A045F26E23D29FA50093C5FE /* NSObject+KVO.h */,
+				A045F26723D29FA40093C5FE /* NSObject+KVO.m */,
+				A045F26623D29FA40093C5FE /* NSObject+SelectorDefender.h */,
+				A045F26D23D29FA50093C5FE /* NSObject+SelectorDefender.m */,
+				A045F26923D29FA40093C5FE /* UIControl+Limit.h */,
+				A045F26F23D29FA50093C5FE /* UIControl+Limit.m */,
 				663EE2A723B25264008B8640 /* NSObject+Runtime.h */,
 				663EE2A823B25264008B8640 /* NSObject+Runtime.m */,
 				5ED1F74223152D630095C5A9 /* NSString+Helper.h */,
@@ -1447,13 +1489,28 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mall/Pods-Mall-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mall/Pods-Mall-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mall/Pods-Mall-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mall/Pods-Mall-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mall/Pods-Mall-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCF9A37DACA42525B76BD131 /* [CP] Check Pods Manifest.lock */ = {
@@ -1492,6 +1549,7 @@
 				5EE6D70823583FE200682301 /* UIWindow+Hierarchy.m in Sources */,
 				5EE45465233C47C300035806 /* TopBannerNotificationsUtils.m in Sources */,
 				5EFBFD0F2341ED8C00CA3729 /* WSLSuspendingView.m in Sources */,
+				A045F27323D29FA50093C5FE /* NSObject+SelectorDefender.m in Sources */,
 				5EF2630F2326444E0008A605 /* StoryBoardNameUtil.m in Sources */,
 				5EDE51EC235407F400204F67 /* BLStopwatch.m in Sources */,
 				5EFBFD0E2341ED8C00CA3729 /* WSLFPS.m in Sources */,
@@ -1523,6 +1581,7 @@
 				5E06677423138DC600EE3331 /* Config.m in Sources */,
 				5E9B8CFB23555864001E0160 /* DarkModel.m in Sources */,
 				663EE2AA23B25264008B8640 /* NSObject+Runtime.m in Sources */,
+				A045F27123D29FA50093C5FE /* NSNumber+Safe.m in Sources */,
 				5E9B8D032355B9DB001E0160 /* TextUtil.m in Sources */,
 				5EFBFCF5234195D900CA3729 /* CheckAppComplete.m in Sources */,
 				5E8436542316094A006C8ED7 /* ICacheConfig.m in Sources */,
@@ -1530,6 +1589,7 @@
 				5EFBFD082341B49400CA3729 /* UIImage+Trait.m in Sources */,
 				5EB547DC233DC59B003D0228 /* DMURLProtocol.m in Sources */,
 				5EFFE89A2356F68B00475E9B /* TargetProxy.m in Sources */,
+				A045F27223D29FA50093C5FE /* NSDictionary+CrashHandle.m in Sources */,
 				5EFFE89E2356F90400475E9B /* UIButton+CountDown.m in Sources */,
 				5EE6D72223586BC300682301 /* NSDate+Format.m in Sources */,
 				5EE6D70B2358409A00682301 /* UIView+Action.m in Sources */,
@@ -1553,6 +1613,7 @@
 				5EE6D70223583B7A00682301 /* UIImage+Remote.m in Sources */,
 				5EFFE8932356F14A00475E9B /* NSString+Crypto.m in Sources */,
 				A025DF5B23BD87E800B04C8E /* OFCustomAlertVC.m in Sources */,
+				A045F27723D29FF60093C5FE /* NSObject+SwizzleMethod.m in Sources */,
 				5E82B408234C62E30051E3CB /* BFLayoutConstraint.m in Sources */,
 				5E017626235D3E56001D8554 /* YYFPSLabel.m in Sources */,
 				5ED1F73623151FEE0095C5A9 /* FunctionRequest.m in Sources */,
@@ -1562,6 +1623,7 @@
 				5EFFE88A2356EB5F00475E9B /* NSArray+Safe.m in Sources */,
 				5EB547E8233DCB67003D0228 /* NSURLResponse+Core.m in Sources */,
 				5EB547DF233DC5DE003D0228 /* DMNetworkTrafficManager.m in Sources */,
+				A045F27023D29FA50093C5FE /* NSObject+KVO.m in Sources */,
 				5E01762B235D3E56001D8554 /* YYWeakProxy.m in Sources */,
 				A025DF5A23BD87E800B04C8E /* OFPrivacyAlertVC.m in Sources */,
 				5E06677C2313986F00EE3331 /* IHttpRequest.m in Sources */,
@@ -1596,6 +1658,7 @@
 				5EE45468233C480200035806 /* ControllerUtils.m in Sources */,
 				5EDE51F62354185100204F67 /* BFRefreshBackNormalFooter.m in Sources */,
 				5EE6D713235849C200682301 /* AudioServicesManager.m in Sources */,
+				A045F27423D29FA50093C5FE /* UIControl+Limit.m in Sources */,
 				5ED1F74423152D630095C5A9 /* NSString+Helper.m in Sources */,
 				5EFBFD052341AEA500CA3729 /* NSObject+ModelExchange.m in Sources */,
 				5E37D9FD2334B911005B2F7B /* UIViewController+Hook.m in Sources */,
@@ -1759,7 +1822,7 @@
 		};
 		5EBD3EE52313786500DC2F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 756453DAA2767BE111BDC0D7 /* Pods-Mall.debug.xcconfig */;
+			baseConfigurationReference = EB525F3CBF2A93984C2CBA64 /* Pods-Mall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mall/Mall.entitlements;
@@ -1781,7 +1844,7 @@
 		};
 		5EBD3EE62313786500DC2F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE2719794C405D10ED27A2BB /* Pods-Mall.release.xcconfig */;
+			baseConfigurationReference = ACB309ADDB05830123DE4E7B /* Pods-Mall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mall/Mall.entitlements;
@@ -1803,7 +1866,7 @@
 		};
 		5EBD3EE82313786500DC2F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B639A109BFDBD3395564FEC1 /* Pods-MallTests.debug.xcconfig */;
+			baseConfigurationReference = 772047C5BA612879432221FC /* Pods-MallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1822,7 +1885,7 @@
 		};
 		5EBD3EE92313786500DC2F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9E9AD8D5DC409AC6115E599 /* Pods-MallTests.release.xcconfig */;
+			baseConfigurationReference = 8A59B4C09581610FA222DDD5 /* Pods-MallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1841,7 +1904,7 @@
 		};
 		5EBD3EEB2313786500DC2F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDF01F7595E64FEE7218E02C /* Pods-MallUITests.debug.xcconfig */;
+			baseConfigurationReference = DDC9B6CC562403C13B21EBDB /* Pods-MallUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MallUITests/Info.plist;
@@ -1859,7 +1922,7 @@
 		};
 		5EBD3EEC2313786500DC2F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D140722E5647C5FCEB96E71B /* Pods-MallUITests.release.xcconfig */;
+			baseConfigurationReference = 0F0CFD7868260F10651B309D /* Pods-MallUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MallUITests/Info.plist;
